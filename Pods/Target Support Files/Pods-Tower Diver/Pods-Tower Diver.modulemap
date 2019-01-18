@@ -1,0 +1,6 @@
+framework module Pods_Tower_Diver {
+  umbrella header "Pods-Tower Diver-umbrella.h"
+
+  export *
+  module * { export * }
+}
