@@ -516,29 +516,29 @@ class ViewController: UIViewController {
         NSLog("Generated Number: " + String(Result))
         if(Result >= 0 && Result <= CurseChance ){
             NSLog("Curse")
-            Curse(useString: true, isEvent: true)}
-        else if(Result > CurseChance && Result <= EnemyChance){
+            Curse(useString: true, isEvent: true, isBagCurse: false, ConfusionCurse: false)
+        }else if(Result > CurseChance && Result <= EnemyChance){
             NSLog("Battle")
-            Battle()}
-        else if(Result > EnemyChance && Result <= FindItemChance){
+            Battle()
+        }else if(Result > EnemyChance && Result <= FindItemChance){
             NSLog("Find Item")
-            FindItem();}
-        else if(Result > FindItemChance && Result <= MerchantChance){
+            FindItem()
+        }else if(Result > FindItemChance && Result <= MerchantChance){
             NSLog("Find Merchant")
-            FindMerchant()}
-        else if(Result > MerchantChance && Result <= ElevatorChance){
+            FindMerchant()
+        }else if(Result > MerchantChance && Result <= ElevatorChance){
             NSLog("Find Elevator")
-            FindElevator()}
-        else if(Result > ElevatorChance && Result <= FallChance && Floor > 10){
+            FindElevator()
+        }else if(Result > ElevatorChance && Result <= FallChance && Floor > 10){
             NSLog("Fall")
-            Fall()}
-        else if(Result > FallChance && Result <= MiscEventChance){
+            Fall()
+        }else if(Result > FallChance && Result <= MiscEventChance){
             NSLog("Generating Misc Event")
-            GenMiscEvent()}
-        else if(Result > MiscEventChance && Result <= CampChance){
+            GenMiscEvent()
+        }else if(Result > MiscEventChance && Result <= CampChance){
             NSLog("Find Camp")
-            FindCamp()}
-        else{
+            FindCamp()
+        }else{
             NSLog("FindNothing")
             DoNothing()
         }
@@ -585,6 +585,13 @@ class ViewController: UIViewController {
         CurrentHP += (CurrentHP / 20)
         if(CurrentHP > MaxHP)
         {CurrentHP = MaxHP}
+        if(isBleeding){
+            BleedingCounter += 3
+            if(BleedingCounter == 10){
+                isBleeding = false
+                BleedingCounter = 0
+            }
+        }
         SetLabels()
         Next()
     }
@@ -599,8 +606,11 @@ class ViewController: UIViewController {
         CurrentHP -= (MaxHP / 10)
         
         let Gen: UInt32 = arc4random_uniform(100)
-        if(Gen > 75){
+        if(Gen > 90){
             StartBleeding()
+        }
+        if(Gen > 50){
+            CurrentHP -= CurrentHP * (1/20)
         }
         
         SetLabels()
@@ -614,7 +624,9 @@ class ViewController: UIViewController {
     func StartBleeding(){
         if(isBleeding){
             AdventureLog.text = AdventureLog.text + "\n\n" + "Your wounds have reopened!"
-            if(BleedingCounter >= 5){
+            if(BleedingCounter >= 7){
+                BleedingCounter = 7
+            }else if(BleedingCounter >= 4 && BleedingCounter < 7){
                 BleedingCounter = 4
             }else{
                 BleedingCounter = 0
@@ -730,6 +742,7 @@ class ViewController: UIViewController {
         for _ in 0..<(Total){
         let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor))) + 50
         if(!SkipText && !UseContainer){
+            MainImage.image = UIImage(named: "Weapons.png")
             AdventureLog.text = "You obtained a " + GenWeaponType() + " with a power of " + DoubleString(Input: PowerLevel) + "!"
         }
         if(!SkipText && UseContainer){
@@ -820,7 +833,7 @@ class ViewController: UIViewController {
     
     func GiveGold(SkipText: Bool = false, UseContainer: Bool = true){
         MainImage.image = UIImage(named: "Gold.png")
-        let Gen: Double = Double(arc4random_uniform(UInt32(300 * Floor)))
+        let Gen: Double = Double(arc4random_uniform(UInt32(300 * Floor))) + 25
         if(Class == 4){
             Gold = Gold * 3
         }
@@ -1188,6 +1201,123 @@ class ViewController: UIViewController {
     }
     
     func HandleBattle() -> Double{
+        let EP: Double = Double(CurrentMonster[1]) ?? 0
+        let PP: Double = Power
+        var D: Double = 0
+        let EC: Int = Int(CurrentMonster[2]) ?? 3
+        let PC: Int = Class
+        var CA: Double = 2
+        
+        if (PC == 0 && EC == 1 || PC == 1 && EC == 2 || PC == 2 && EC == 0){
+            CA = 3
+        }else if (PC == 1 && EC == 0 || PC == 2 && EC == 1 || PC == 0 && EC == 2){
+            CA = 1.5
+        }
+        
+        D = (EP / CA) * (EP / (EP + PP))
+        
+        if(CurrentHP < MaxHP / 2){
+            D += D / 2
+        }
+        
+        if(EP > PP * 5){
+            D = MaxHP
+        }
+        
+        if(PP > EP * 5){
+            D = 0
+        }
+        
+        NSLog("Player Power: " + String(PP))
+        NSLog("Enemy Power: " + String(EP))
+        NSLog("Adjustment: " + String(CA))
+        NSLog("Damage: " + String(D))
+        
+        return D
+    }
+    
+    func HandleBattle_PokemonMod() -> Double{
+        let EP: Double = Double(CurrentMonster[1]) ?? 0
+        let PP: Double = Power
+        var D: Double = 0
+        let EC: Int = Int(CurrentMonster[2]) ?? 3
+        let PC: Int = Class
+        var CA: Double = 1
+        
+        if (PC == 0 && EC == 1 || PC == 1 && EC == 2 || PC == 2 && EC == 0){
+            CA = 0.75
+        }else if (PC == 1 && EC == 0 || PC == 2 && EC == 1 || PC == 0 && EC == 2){
+            CA = 1.5
+        }
+        
+        D = (((20 * EP) / (PP / 10))) * CA
+        
+        NSLog("Player Power: " + String(PP))
+        NSLog("Enemy Power: " + String(EP))
+        NSLog("Adjustment: " + String(CA))
+        NSLog("Damage: " + String(D))
+        
+        return D
+    }
+    
+    func HandleBattle_Attempt2() -> Double{
+        let EP: Double = Double(CurrentMonster[1]) ?? 0
+        let PP: Double = Power
+        var D: Double = 0
+        let EC: Int = Int(CurrentMonster[2]) ?? 3
+        let PC: Int = Class
+        NSLog("EP: " + String(EP))
+        NSLog("PP: " + String(PP))
+        
+        if(PP >= EP){
+            NSLog("D: " + String(D))
+            D = PP - EP
+            D -= PP / 10
+            NSLog("PP >= EP")
+            NSLog(String(D) + " - " + String(PP / 10))
+        }else{
+            NSLog("D: " + String(D))
+            D = EP - PP
+            D += EP / 10
+            NSLog("EP > PP")
+            NSLog(String(D) + " + " + String(EP / 10))
+        }
+        
+        if(CurrentHP < MaxHP / 2){
+            D += D / 10
+            NSLog("Below half health extra 10% damage")
+            NSLog("D: " + String(D))
+        }
+        
+        NSLog("D: " + String(D))
+        if (PC == 0 && EC == 1 || PC == 1 && EC == 2 || PC == 2 && EC == 0){
+            D -= (D / 10)
+        }else if (PC == 1 && EC == 0 || PC == 2 && EC == 1 || PC == 0 && EC == 2){
+            D += (D / 10)
+        }
+        NSLog("D: " + String(D))
+        
+        if(PP > EP * 2){
+            D = D / 4
+        }else if(EP > PP * 2){
+            D += D / 2
+        }
+        NSLog("D: " + String(D))
+        
+        if(EP > PP * 5){
+            D = MaxHP
+            NSLog("Instant Kill D: " + String(D))
+        }
+        
+        if(PP > EP * 5){
+            D = 0
+            NSLog("No Damage D: 0")
+        }
+        
+        return D
+    }
+    
+    func HandleBattle_OldFormula() -> Double{
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         //0-Warrior 1-Ranger 2-Mage 3-Haunted 4-King
         let EnemyClass: Int = Int(CurrentMonster[2]) ?? 0
@@ -1203,35 +1333,37 @@ class ViewController: UIViewController {
         //If HP is under half power reduced by a quarter
         if (CurrentHP == MaxHP / 2){
             PlayerPower -= PlayerPower * 1/4    }
-        
+        NSLog("HP Adjust Player Power: " + String(PlayerPower))
         //Warrior over Ranger, Ranger over Mage, Mage over Ranger.
         //If class adavantage exists, winning side gets additional quarter power.
         if (Class == 0 && EnemyClass == 1 || Class == 1 && EnemyClass == 2 || Class == 2 && EnemyClass == 0){
             ClassAdjust = PlayerPower / 10  }
         if (Class == 1 && EnemyClass == 0 || Class == 2 && EnemyClass == 1 || Class == 0 && EnemyClass == 2){
-            BadAdjust = EnemyPower / 10 }
-        
+            BadAdjust = PlayerPower / 10 }
+        NSLog("Class Adjust: " + String(ClassAdjust))
+        NSLog("Bad Adjust: " + String(BadAdjust))
 
-        EnemyPower += BadAdjust;
+
+        PlayerPower -= BadAdjust;
         PlayerPower += ClassAdjust;
         
         var Adjustment: Double = 1;
         if (PlayerPower > EnemyPower * 2){
-            Adjustment = 10
+            Adjustment = 5
         }else{
-            Adjustment = 5  }
-        
+            Adjustment = 2  }
+        NSLog("Adjustment: " + String(Adjustment))
         if (PlayerPower >= EnemyPower){
             Damage = ((EnemyPower / 5) + (PlayerPower - EnemyPower)) / Adjustment
         }else{
-            Damage = ((EnemyPower / 5) + (EnemyPower - PlayerPower)) / 5    }
-        
+            Damage = ((EnemyPower / 5) + (EnemyPower - PlayerPower))}
+        NSLog("Damage: " + String(Damage))
         //If Enemy power is greater than the players power add 25%.
         if (EnemyPower > PlayerPower){
             Damage += Damage / 4}
         if (EnemyPower > PlayerPower * 5){
             Damage = MaxHP}
-
+        NSLog("Damage: " + String(Damage))
         //Needs to be at the end to make sure no damage is taken if you hella over power the enemy
         if (PlayerPower >= (EnemyPower * 3)){
             Damage = 0}
@@ -1495,6 +1627,8 @@ class ViewController: UIViewController {
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
         
+        CurrentMonster = [TempArray[0], String(EnemyPower), TempArray[2]] as! [String]
+        
         if(hasESP && BattlePredict){
             let Damage: Double = HandleBattle()
             DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
@@ -1669,9 +1803,10 @@ class ViewController: UIViewController {
     func FindHotSpring(){
         MainImage.image = UIImage(named: "Hotspring.png")
         AdventureLog.text = "You find a hot spring and take a quick dip." + "\n" + "You feel refreshed!";
-        CurrentHP += CurrentHP / 10
+        CurrentHP += CurrentHP / 5
         if (CurrentHP > MaxHP){
             CurrentHP = MaxHP}
+        ClearBuffs()
         SetLabels()
         Next()
     }
@@ -1760,13 +1895,14 @@ class ViewController: UIViewController {
             AdventureLog.text = "You step into the room and see a goblin across the room smirking at you. You try to run to him to slay him, but he pulls a lever dropping you through the floor!";
         
             let Gen: UInt32 = arc4random_uniform(100)
-            if(Gen > 75){
+            if(Gen > 90){
                 StartBleeding()
             }
-        
             if(Gen > 50){
                 CurrentHP -= CurrentHP * (1/20)
             }
+            FixStats()
+            SetLabels()
         }
         else
         {
