@@ -54,34 +54,6 @@
 		30802E0521F170530061F213 /* Knight.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE221F170520061F213 /* Knight.png */; };
 		30802E0621F170530061F213 /* Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE321F170520061F213 /* Sack Mimic.png */; };
 		30802E0721F170530061F213 /* Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE421F170530061F213 /* Wizard.png */; };
-		30802E2421F1706F0061F213 /* Elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0821F1706D0061F213 /* Elevator.png */; };
-		30802E2521F1706F0061F213 /* Bricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0921F1706D0061F213 /* Bricks.png */; };
-		30802E2621F1706F0061F213 /* Weapons.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0A21F1706D0061F213 /* Weapons.png */; };
-		30802E2721F1706F0061F213 /* Hag.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0B21F1706D0061F213 /* Hag.png */; };
-		30802E2821F1706F0061F213 /* QuestionMark_.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0C21F1706D0061F213 /* QuestionMark_.png */; };
-		30802E2921F1706F0061F213 /* HellBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0D21F1706E0061F213 /* HellBricks.png */; };
-		30802E2A21F1706F0061F213 /* Staff.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0E21F1706E0061F213 /* Staff.png */; };
-		30802E2B21F1706F0061F213 /* Crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E0F21F1706E0061F213 /* Crown.png */; };
-		30802E2C21F1706F0061F213 /* BlackBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1021F1706E0061F213 /* BlackBricks.png */; };
-		30802E2D21F1706F0061F213 /* Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1121F1706E0061F213 /* Gold.png */; };
-		30802E2E21F1706F0061F213 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1221F1706E0061F213 /* Title.png */; };
-		30802E2F21F1706F0061F213 /* Merchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1321F1706E0061F213 /* Merchant.png */; };
-		30802E3021F1706F0061F213 /* Dead.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1421F1706E0061F213 /* Dead.png */; };
-		30802E3121F1706F0061F213 /* Hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1521F1706E0061F213 /* Hamburger.png */; };
-		30802E3221F1706F0061F213 /* Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1621F1706E0061F213 /* Hole.png */; };
-		30802E3321F1706F0061F213 /* TreasureChest.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1721F1706E0061F213 /* TreasureChest.png */; };
-		30802E3421F1706F0061F213 /* BadMerchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1821F1706E0061F213 /* BadMerchant.png */; };
-		30802E3521F1706F0061F213 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1921F1706E0061F213 /* Star.png */; };
-		30802E3621F1706F0061F213 /* Scythe.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1A21F1706E0061F213 /* Scythe.png */; };
-		30802E3721F1706F0061F213 /* Trap.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1B21F1706E0061F213 /* Trap.png */; };
-		30802E3821F1706F0061F213 /* Curse.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1C21F1706E0061F213 /* Curse.png */; };
-		30802E3921F1706F0061F213 /* Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1D21F1706E0061F213 /* Potion.png */; };
-		30802E3A21F1706F0061F213 /* Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1E21F1706E0061F213 /* Coffee.png */; };
-		30802E3B21F1706F0061F213 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E1F21F1706E0061F213 /* Arrow.png */; };
-		30802E3C21F1706F0061F213 /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E2021F1706F0061F213 /* Sword.png */; };
-		30802E3D21F1706F0061F213 /* Tent.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E2121F1706F0061F213 /* Tent.png */; };
-		30802E3E21F1706F0061F213 /* Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E2221F1706F0061F213 /* Mark.png */; };
-		30802E3F21F1706F0061F213 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E2321F1706F0061F213 /* TitleScreen.png */; };
 		30802E6121F1708B0061F213 /* Stick_Paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4021F170890061F213 /* Stick_Paladin.png */; };
 		30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4121F170890061F213 /* Stick_Lamia.png */; };
 		30802E6321F1708B0061F213 /* Stick_Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4221F170890061F213 /* Stick_Snake.png */; };
@@ -115,41 +87,70 @@
 		30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5E21F1708B0061F213 /* Stick_Kerberos.png */; };
 		30802E8021F1708B0061F213 /* Stick_Imp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5F21F1708B0061F213 /* Stick_Imp.png */; };
 		30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E6021F1708B0061F213 /* Stick_Wizard.png */; };
-		30802E8321F17AAE0061F213 /* Hotspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8221F17AAE0061F213 /* Hotspring.png */; };
 		30802E8521F2768C0061F213 /* Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8421F2768C0061F213 /* Demon.png */; };
-		30802EA821F277200061F213 /* Pixel_Ice Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8621F2771C0061F213 /* Pixel_Ice Sorceress.png */; };
-		30802EA921F277200061F213 /* Pixel_Chimera.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8721F2771C0061F213 /* Pixel_Chimera.png */; };
-		30802EAA21F277200061F213 /* Pixel_Kerberos.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8821F2771C0061F213 /* Pixel_Kerberos.png */; };
-		30802EAB21F277200061F213 /* Pixel_Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8921F2771C0061F213 /* Pixel_Ghost.png */; };
-		30802EAC21F277200061F213 /* Pixel_Squirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8A21F2771D0061F213 /* Pixel_Squirrel.png */; };
-		30802EAD21F277200061F213 /* Lamia_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8B21F2771D0061F213 /* Lamia_1.png */; };
-		30802EAE21F277200061F213 /* Pixel_Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8C21F2771D0061F213 /* Pixel_Spider.png */; };
-		30802EAF21F277200061F213 /* Pixel_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8D21F2771D0061F213 /* Pixel_Treasure Mimic.png */; };
-		30802EB021F277200061F213 /* Pixel_Skeleton.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8E21F2771D0061F213 /* Pixel_Skeleton.png */; };
-		30802EB121F277200061F213 /* Pixel_Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8F21F2771D0061F213 /* Pixel_Slime.png */; };
-		30802EB321F277200061F213 /* Pixel_Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9121F2771D0061F213 /* Pixel_Snake.png */; };
-		30802EB421F277200061F213 /* Pixel_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9221F2771D0061F213 /* Pixel_Sack Mimic.png */; };
-		30802EB521F277200061F213 /* Pixel_Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9321F2771D0061F213 /* Pixel_Goblin.png */; };
-		30802EB621F277200061F213 /* Pixel_Scorpian.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9421F2771D0061F213 /* Pixel_Scorpian.png */; };
-		30802EB721F277200061F213 /* Pixel_Cockatrice.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9521F2771D0061F213 /* Pixel_Cockatrice.png */; };
-		30802EB821F277200061F213 /* Pixel_Thief.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9621F2771D0061F213 /* Pixel_Thief.png */; };
-		30802EB921F277200061F213 /* Pixel_Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9721F2771D0061F213 /* Pixel_Soldier.png */; };
-		30802EBA21F277200061F213 /* Pixel_Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9821F2771E0061F213 /* Pixel_Wizard.png */; };
-		30802EBB21F277200061F213 /* Pixel_Paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9921F2771E0061F213 /* Pixel_Paladin.png */; };
-		30802EBC21F277200061F213 /* Pixel_FireSpirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9A21F2771E0061F213 /* Pixel_FireSpirit.png */; };
-		30802EBD21F277200061F213 /* Pixel_Lamia.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9B21F2771E0061F213 /* Pixel_Lamia.png */; };
-		30802EBE21F277200061F213 /* Pixel_Imp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9C21F2771E0061F213 /* Pixel_Imp.png */; };
-		30802EBF21F277200061F213 /* Pixel_Succubus.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9D21F2771E0061F213 /* Pixel_Succubus.png */; };
-		30802EC021F277200061F213 /* Pixel_Behemoth.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9E21F2771E0061F213 /* Pixel_Behemoth.png */; };
-		30802EC121F277200061F213 /* Pixel_Minotaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E9F21F2771E0061F213 /* Pixel_Minotaur.png */; };
-		30802EC221F277200061F213 /* Pixel_Bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA021F2771E0061F213 /* Pixel_Bat.png */; };
-		30802EC321F277200061F213 /* Pixel_Death.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA121F2771E0061F213 /* Pixel_Death.png */; };
-		30802EC421F277200061F213 /* Pixel_Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA221F2771F0061F213 /* Pixel_Demon.png */; };
-		30802EC521F277200061F213 /* Pixel_Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA321F2771F0061F213 /* Pixel_Dragon.png */; };
-		30802EC621F277200061F213 /* Pixel_SmolSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA421F2771F0061F213 /* Pixel_SmolSquirrel.png */; };
-		30802EC721F277200061F213 /* Pixel_Rat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA521F2771F0061F213 /* Pixel_Rat.png */; };
-		30802EC821F277200061F213 /* Pixel_Fire Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA621F2771F0061F213 /* Pixel_Fire Sorceress.png */; };
-		30802EC921F277200061F213 /* Pixel_Ogre.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EA721F2771F0061F213 /* Pixel_Ogre.png */; };
+		30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECD21F2AB5C0061F213 /* Bricks.png */; };
+		30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECE21F2AB5C0061F213 /* Weapons.png */; };
+		30802EEC21F2AB5E0061F213 /* Hag.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECF21F2AB5C0061F213 /* Hag.png */; };
+		30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED021F2AB5C0061F213 /* QuestionMark_.png */; };
+		30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED121F2AB5C0061F213 /* HellBricks.png */; };
+		30802EEF21F2AB5E0061F213 /* Staff.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED221F2AB5C0061F213 /* Staff.png */; };
+		30802EF021F2AB5E0061F213 /* Crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED321F2AB5C0061F213 /* Crown.png */; };
+		30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED421F2AB5C0061F213 /* BlackBricks.png */; };
+		30802EF221F2AB5E0061F213 /* Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED521F2AB5C0061F213 /* Gold.png */; };
+		30802EF321F2AB5E0061F213 /* Merchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED621F2AB5C0061F213 /* Merchant.png */; };
+		30802EF421F2AB5E0061F213 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED721F2AB5C0061F213 /* Title.png */; };
+		30802EF521F2AB5E0061F213 /* Dead.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED821F2AB5D0061F213 /* Dead.png */; };
+		30802EF621F2AB5E0061F213 /* Hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED921F2AB5D0061F213 /* Hamburger.png */; };
+		30802EF721F2AB5E0061F213 /* Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDA21F2AB5D0061F213 /* Hole.png */; };
+		30802EF821F2AB5E0061F213 /* TreasureChest.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDB21F2AB5D0061F213 /* TreasureChest.png */; };
+		30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDC21F2AB5D0061F213 /* BadMerchant.png */; };
+		30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDD21F2AB5D0061F213 /* Scythe.png */; };
+		30802EFB21F2AB5E0061F213 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDE21F2AB5D0061F213 /* Star.png */; };
+		30802EFC21F2AB5E0061F213 /* Elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDF21F2AB5D0061F213 /* Elevator.png */; };
+		30802EFD21F2AB5E0061F213 /* Trap.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE021F2AB5D0061F213 /* Trap.png */; };
+		30802EFE21F2AB5E0061F213 /* Curse.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE121F2AB5D0061F213 /* Curse.png */; };
+		30802EFF21F2AB5E0061F213 /* Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE221F2AB5D0061F213 /* Potion.png */; };
+		30802F0021F2AB5E0061F213 /* Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE321F2AB5D0061F213 /* Coffee.png */; };
+		30802F0121F2AB5E0061F213 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE421F2AB5E0061F213 /* Arrow.png */; };
+		30802F0221F2AB5E0061F213 /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE521F2AB5E0061F213 /* Sword.png */; };
+		30802F0321F2AB5E0061F213 /* Tent.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE621F2AB5E0061F213 /* Tent.png */; };
+		30802F0421F2AB5E0061F213 /* Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE721F2AB5E0061F213 /* Mark.png */; };
+		30802F0521F2AB5E0061F213 /* Hotspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE821F2AB5E0061F213 /* Hotspring.png */; };
+		30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE921F2AB5E0061F213 /* TitleScreen.png */; };
+		30802F2921F2AB6C0061F213 /* Pixel_Ice Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0721F2AB6A0061F213 /* Pixel_Ice Sorceress.png */; };
+		30802F2A21F2AB6C0061F213 /* Pixel_Chimera.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0821F2AB6A0061F213 /* Pixel_Chimera.png */; };
+		30802F2B21F2AB6C0061F213 /* Pixel_Kerberos.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0921F2AB6A0061F213 /* Pixel_Kerberos.png */; };
+		30802F2C21F2AB6C0061F213 /* Pixel_Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0A21F2AB6A0061F213 /* Pixel_Ghost.png */; };
+		30802F2D21F2AB6C0061F213 /* Pixel_Squirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0B21F2AB6A0061F213 /* Pixel_Squirrel.png */; };
+		30802F2E21F2AB6C0061F213 /* Lamia_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0C21F2AB6B0061F213 /* Lamia_1.png */; };
+		30802F2F21F2AB6C0061F213 /* Pixel_Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0D21F2AB6B0061F213 /* Pixel_Spider.png */; };
+		30802F3021F2AB6C0061F213 /* Pixel_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0E21F2AB6B0061F213 /* Pixel_Treasure Mimic.png */; };
+		30802F3121F2AB6C0061F213 /* Pixel_Skeleton.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F0F21F2AB6B0061F213 /* Pixel_Skeleton.png */; };
+		30802F3221F2AB6C0061F213 /* Pixel_Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1021F2AB6B0061F213 /* Pixel_Slime.png */; };
+		30802F3421F2AB6C0061F213 /* Pixel_Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1221F2AB6B0061F213 /* Pixel_Snake.png */; };
+		30802F3521F2AB6C0061F213 /* Pixel_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1321F2AB6B0061F213 /* Pixel_Sack Mimic.png */; };
+		30802F3621F2AB6C0061F213 /* Pixel_Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1421F2AB6B0061F213 /* Pixel_Goblin.png */; };
+		30802F3721F2AB6C0061F213 /* Pixel_Scorpian.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1521F2AB6B0061F213 /* Pixel_Scorpian.png */; };
+		30802F3821F2AB6C0061F213 /* Pixel_Cockatrice.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1621F2AB6B0061F213 /* Pixel_Cockatrice.png */; };
+		30802F3921F2AB6C0061F213 /* Pixel_Thief.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1721F2AB6B0061F213 /* Pixel_Thief.png */; };
+		30802F3A21F2AB6C0061F213 /* Pixel_Soldier.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1821F2AB6B0061F213 /* Pixel_Soldier.png */; };
+		30802F3B21F2AB6C0061F213 /* Pixel_Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1921F2AB6B0061F213 /* Pixel_Wizard.png */; };
+		30802F3C21F2AB6C0061F213 /* Pixel_Paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1A21F2AB6B0061F213 /* Pixel_Paladin.png */; };
+		30802F3D21F2AB6C0061F213 /* Pixel_FireSpirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1B21F2AB6B0061F213 /* Pixel_FireSpirit.png */; };
+		30802F3E21F2AB6C0061F213 /* Pixel_Lamia.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1C21F2AB6C0061F213 /* Pixel_Lamia.png */; };
+		30802F3F21F2AB6C0061F213 /* Pixel_Imp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1D21F2AB6C0061F213 /* Pixel_Imp.png */; };
+		30802F4021F2AB6C0061F213 /* Pixel_Succubus.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1E21F2AB6C0061F213 /* Pixel_Succubus.png */; };
+		30802F4121F2AB6C0061F213 /* Pixel_Behemoth.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F1F21F2AB6C0061F213 /* Pixel_Behemoth.png */; };
+		30802F4221F2AB6C0061F213 /* Pixel_Minotaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2021F2AB6C0061F213 /* Pixel_Minotaur.png */; };
+		30802F4321F2AB6C0061F213 /* Pixel_Bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2121F2AB6C0061F213 /* Pixel_Bat.png */; };
+		30802F4421F2AB6C0061F213 /* Pixel_Death.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2221F2AB6C0061F213 /* Pixel_Death.png */; };
+		30802F4521F2AB6C0061F213 /* Pixel_Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2321F2AB6C0061F213 /* Pixel_Demon.png */; };
+		30802F4621F2AB6C0061F213 /* Pixel_Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2421F2AB6C0061F213 /* Pixel_Dragon.png */; };
+		30802F4721F2AB6C0061F213 /* Pixel_SmolSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2521F2AB6C0061F213 /* Pixel_SmolSquirrel.png */; };
+		30802F4821F2AB6C0061F213 /* Pixel_Rat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2621F2AB6C0061F213 /* Pixel_Rat.png */; };
+		30802F4921F2AB6C0061F213 /* Pixel_Fire Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2721F2AB6C0061F213 /* Pixel_Fire Sorceress.png */; };
+		30802F4A21F2AB6C0061F213 /* Pixel_Ogre.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F2821F2AB6C0061F213 /* Pixel_Ogre.png */; };
+		30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F4B21F2CE4B0061F213 /* Tower_Icon.png */; };
 		308903D621D420D700C784CB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308903D521D420D700C784CB /* SideMenu.swift */; };
 		5E730F259448BB6EAB31DDF4 /* Pods_Tower_Diver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE64298F2D4C9C9FA4D8D46A /* Pods_Tower_Diver.framework */; };
 		730F0605A303294DCC9597EF /* Pods_Tower_DiverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED10F227344ABE919D7E5474 /* Pods_Tower_DiverUITests.framework */; };
@@ -228,34 +229,6 @@
 		30802DE221F170520061F213 /* Knight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Knight.png; path = "../../../Hand Drawn/Knight.png"; sourceTree = "<group>"; };
 		30802DE321F170520061F213 /* Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sack Mimic.png"; path = "../../../Hand Drawn/Sack Mimic.png"; sourceTree = "<group>"; };
 		30802DE421F170530061F213 /* Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wizard.png; path = "../../../Hand Drawn/Wizard.png"; sourceTree = "<group>"; };
-		30802E0821F1706D0061F213 /* Elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Elevator.png; path = ../../../Images/Elevator.png; sourceTree = "<group>"; };
-		30802E0921F1706D0061F213 /* Bricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bricks.png; path = ../../../Images/Bricks.png; sourceTree = "<group>"; };
-		30802E0A21F1706D0061F213 /* Weapons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Weapons.png; path = ../../../Images/Weapons.png; sourceTree = "<group>"; };
-		30802E0B21F1706D0061F213 /* Hag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hag.png; path = ../../../Images/Hag.png; sourceTree = "<group>"; };
-		30802E0C21F1706D0061F213 /* QuestionMark_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QuestionMark_.png; path = ../../../Images/QuestionMark_.png; sourceTree = "<group>"; };
-		30802E0D21F1706E0061F213 /* HellBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HellBricks.png; path = ../../../Images/HellBricks.png; sourceTree = "<group>"; };
-		30802E0E21F1706E0061F213 /* Staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Staff.png; path = ../../../Images/Staff.png; sourceTree = "<group>"; };
-		30802E0F21F1706E0061F213 /* Crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crown.png; path = ../../../Images/Crown.png; sourceTree = "<group>"; };
-		30802E1021F1706E0061F213 /* BlackBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlackBricks.png; path = ../../../Images/BlackBricks.png; sourceTree = "<group>"; };
-		30802E1121F1706E0061F213 /* Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gold.png; path = ../../../Images/Gold.png; sourceTree = "<group>"; };
-		30802E1221F1706E0061F213 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = ../../../Images/Title.png; sourceTree = "<group>"; };
-		30802E1321F1706E0061F213 /* Merchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Merchant.png; path = ../../../Images/Merchant.png; sourceTree = "<group>"; };
-		30802E1421F1706E0061F213 /* Dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dead.png; path = ../../../Images/Dead.png; sourceTree = "<group>"; };
-		30802E1521F1706E0061F213 /* Hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hamburger.png; path = ../../../Images/Hamburger.png; sourceTree = "<group>"; };
-		30802E1621F1706E0061F213 /* Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hole.png; path = ../../../Images/Hole.png; sourceTree = "<group>"; };
-		30802E1721F1706E0061F213 /* TreasureChest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TreasureChest.png; path = ../../../Images/TreasureChest.png; sourceTree = "<group>"; };
-		30802E1821F1706E0061F213 /* BadMerchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BadMerchant.png; path = ../../../Images/BadMerchant.png; sourceTree = "<group>"; };
-		30802E1921F1706E0061F213 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star.png; path = ../../../Images/Star.png; sourceTree = "<group>"; };
-		30802E1A21F1706E0061F213 /* Scythe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scythe.png; path = ../../../Images/Scythe.png; sourceTree = "<group>"; };
-		30802E1B21F1706E0061F213 /* Trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trap.png; path = ../../../Images/Trap.png; sourceTree = "<group>"; };
-		30802E1C21F1706E0061F213 /* Curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Curse.png; path = ../../../Images/Curse.png; sourceTree = "<group>"; };
-		30802E1D21F1706E0061F213 /* Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Potion.png; path = ../../../Images/Potion.png; sourceTree = "<group>"; };
-		30802E1E21F1706E0061F213 /* Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Coffee.png; path = ../../../Images/Coffee.png; sourceTree = "<group>"; };
-		30802E1F21F1706E0061F213 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow.png; path = ../../../Images/Arrow.png; sourceTree = "<group>"; };
-		30802E2021F1706F0061F213 /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sword.png; path = ../../../Images/Sword.png; sourceTree = "<group>"; };
-		30802E2121F1706F0061F213 /* Tent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tent.png; path = ../../../Images/Tent.png; sourceTree = "<group>"; };
-		30802E2221F1706F0061F213 /* Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mark.png; path = ../../../Images/Mark.png; sourceTree = "<group>"; };
-		30802E2321F1706F0061F213 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TitleScreen.png; path = ../../../Images/TitleScreen.png; sourceTree = "<group>"; };
 		30802E4021F170890061F213 /* Stick_Paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Paladin.png; path = ../../../Stick/Stick_Paladin.png; sourceTree = "<group>"; };
 		30802E4121F170890061F213 /* Stick_Lamia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Lamia.png; path = ../../../Stick/Stick_Lamia.png; sourceTree = "<group>"; };
 		30802E4221F170890061F213 /* Stick_Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Snake.png; path = ../../../Stick/Stick_Snake.png; sourceTree = "<group>"; };
@@ -289,41 +262,71 @@
 		30802E5E21F1708B0061F213 /* Stick_Kerberos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Kerberos.png; path = ../../../Stick/Stick_Kerberos.png; sourceTree = "<group>"; };
 		30802E5F21F1708B0061F213 /* Stick_Imp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Imp.png; path = ../../../Stick/Stick_Imp.png; sourceTree = "<group>"; };
 		30802E6021F1708B0061F213 /* Stick_Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Wizard.png; path = ../../../Stick/Stick_Wizard.png; sourceTree = "<group>"; };
-		30802E8221F17AAE0061F213 /* Hotspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hotspring.png; path = ../../../Images/Hotspring.png; sourceTree = "<group>"; };
 		30802E8421F2768C0061F213 /* Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Demon.png; path = "../../../Hand Drawn/Demon.png"; sourceTree = "<group>"; };
-		30802E8621F2771C0061F213 /* Pixel_Ice Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Ice Sorceress.png"; path = "../../../Pixel/Pixel_Ice Sorceress.png"; sourceTree = "<group>"; };
-		30802E8721F2771C0061F213 /* Pixel_Chimera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Chimera.png; path = ../../../Pixel/Pixel_Chimera.png; sourceTree = "<group>"; };
-		30802E8821F2771C0061F213 /* Pixel_Kerberos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Kerberos.png; path = ../../../Pixel/Pixel_Kerberos.png; sourceTree = "<group>"; };
-		30802E8921F2771C0061F213 /* Pixel_Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Ghost.png; path = ../../../Pixel/Pixel_Ghost.png; sourceTree = "<group>"; };
-		30802E8A21F2771D0061F213 /* Pixel_Squirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Squirrel.png; path = ../../../Pixel/Pixel_Squirrel.png; sourceTree = "<group>"; };
-		30802E8B21F2771D0061F213 /* Lamia_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lamia_1.png; path = ../../../Pixel/Lamia_1.png; sourceTree = "<group>"; };
-		30802E8C21F2771D0061F213 /* Pixel_Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Spider.png; path = ../../../Pixel/Pixel_Spider.png; sourceTree = "<group>"; };
-		30802E8D21F2771D0061F213 /* Pixel_Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Treasure Mimic.png"; path = "../../../Pixel/Pixel_Treasure Mimic.png"; sourceTree = "<group>"; };
-		30802E8E21F2771D0061F213 /* Pixel_Skeleton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Skeleton.png; path = ../../../Pixel/Pixel_Skeleton.png; sourceTree = "<group>"; };
-		30802E8F21F2771D0061F213 /* Pixel_Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Slime.png; path = ../../../Pixel/Pixel_Slime.png; sourceTree = "<group>"; };
-		30802E9121F2771D0061F213 /* Pixel_Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Snake.png; path = ../../../Pixel/Pixel_Snake.png; sourceTree = "<group>"; };
-		30802E9221F2771D0061F213 /* Pixel_Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Sack Mimic.png"; path = "../../../Pixel/Pixel_Sack Mimic.png"; sourceTree = "<group>"; };
-		30802E9321F2771D0061F213 /* Pixel_Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Goblin.png; path = ../../../Pixel/Pixel_Goblin.png; sourceTree = "<group>"; };
-		30802E9421F2771D0061F213 /* Pixel_Scorpian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Scorpian.png; path = ../../../Pixel/Pixel_Scorpian.png; sourceTree = "<group>"; };
-		30802E9521F2771D0061F213 /* Pixel_Cockatrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Cockatrice.png; path = ../../../Pixel/Pixel_Cockatrice.png; sourceTree = "<group>"; };
-		30802E9621F2771D0061F213 /* Pixel_Thief.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Thief.png; path = ../../../Pixel/Pixel_Thief.png; sourceTree = "<group>"; };
-		30802E9721F2771D0061F213 /* Pixel_Soldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Soldier.png; path = ../../../Pixel/Pixel_Soldier.png; sourceTree = "<group>"; };
-		30802E9821F2771E0061F213 /* Pixel_Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Wizard.png; path = ../../../Pixel/Pixel_Wizard.png; sourceTree = "<group>"; };
-		30802E9921F2771E0061F213 /* Pixel_Paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Paladin.png; path = ../../../Pixel/Pixel_Paladin.png; sourceTree = "<group>"; };
-		30802E9A21F2771E0061F213 /* Pixel_FireSpirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_FireSpirit.png; path = ../../../Pixel/Pixel_FireSpirit.png; sourceTree = "<group>"; };
-		30802E9B21F2771E0061F213 /* Pixel_Lamia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Lamia.png; path = ../../../Pixel/Pixel_Lamia.png; sourceTree = "<group>"; };
-		30802E9C21F2771E0061F213 /* Pixel_Imp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Imp.png; path = ../../../Pixel/Pixel_Imp.png; sourceTree = "<group>"; };
-		30802E9D21F2771E0061F213 /* Pixel_Succubus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Succubus.png; path = ../../../Pixel/Pixel_Succubus.png; sourceTree = "<group>"; };
-		30802E9E21F2771E0061F213 /* Pixel_Behemoth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Behemoth.png; path = ../../../Pixel/Pixel_Behemoth.png; sourceTree = "<group>"; };
-		30802E9F21F2771E0061F213 /* Pixel_Minotaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Minotaur.png; path = ../../../Pixel/Pixel_Minotaur.png; sourceTree = "<group>"; };
-		30802EA021F2771E0061F213 /* Pixel_Bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Bat.png; path = ../../../Pixel/Pixel_Bat.png; sourceTree = "<group>"; };
-		30802EA121F2771E0061F213 /* Pixel_Death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Death.png; path = ../../../Pixel/Pixel_Death.png; sourceTree = "<group>"; };
-		30802EA221F2771F0061F213 /* Pixel_Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Demon.png; path = ../../../Pixel/Pixel_Demon.png; sourceTree = "<group>"; };
-		30802EA321F2771F0061F213 /* Pixel_Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Dragon.png; path = ../../../Pixel/Pixel_Dragon.png; sourceTree = "<group>"; };
-		30802EA421F2771F0061F213 /* Pixel_SmolSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_SmolSquirrel.png; path = ../../../Pixel/Pixel_SmolSquirrel.png; sourceTree = "<group>"; };
-		30802EA521F2771F0061F213 /* Pixel_Rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Rat.png; path = ../../../Pixel/Pixel_Rat.png; sourceTree = "<group>"; };
-		30802EA621F2771F0061F213 /* Pixel_Fire Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Fire Sorceress.png"; path = "../../../Pixel/Pixel_Fire Sorceress.png"; sourceTree = "<group>"; };
-		30802EA721F2771F0061F213 /* Pixel_Ogre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Ogre.png; path = ../../../Pixel/Pixel_Ogre.png; sourceTree = "<group>"; };
+		30802ECD21F2AB5C0061F213 /* Bricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bricks.png; path = ../../../Images/Bricks.png; sourceTree = "<group>"; };
+		30802ECE21F2AB5C0061F213 /* Weapons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Weapons.png; path = ../../../Images/Weapons.png; sourceTree = "<group>"; };
+		30802ECF21F2AB5C0061F213 /* Hag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hag.png; path = ../../../Images/Hag.png; sourceTree = "<group>"; };
+		30802ED021F2AB5C0061F213 /* QuestionMark_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QuestionMark_.png; path = ../../../Images/QuestionMark_.png; sourceTree = "<group>"; };
+		30802ED121F2AB5C0061F213 /* HellBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HellBricks.png; path = ../../../Images/HellBricks.png; sourceTree = "<group>"; };
+		30802ED221F2AB5C0061F213 /* Staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Staff.png; path = ../../../Images/Staff.png; sourceTree = "<group>"; };
+		30802ED321F2AB5C0061F213 /* Crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crown.png; path = ../../../Images/Crown.png; sourceTree = "<group>"; };
+		30802ED421F2AB5C0061F213 /* BlackBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlackBricks.png; path = ../../../Images/BlackBricks.png; sourceTree = "<group>"; };
+		30802ED521F2AB5C0061F213 /* Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gold.png; path = ../../../Images/Gold.png; sourceTree = "<group>"; };
+		30802ED621F2AB5C0061F213 /* Merchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Merchant.png; path = ../../../Images/Merchant.png; sourceTree = "<group>"; };
+		30802ED721F2AB5C0061F213 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = ../../../Images/Title.png; sourceTree = "<group>"; };
+		30802ED821F2AB5D0061F213 /* Dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dead.png; path = ../../../Images/Dead.png; sourceTree = "<group>"; };
+		30802ED921F2AB5D0061F213 /* Hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hamburger.png; path = ../../../Images/Hamburger.png; sourceTree = "<group>"; };
+		30802EDA21F2AB5D0061F213 /* Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hole.png; path = ../../../Images/Hole.png; sourceTree = "<group>"; };
+		30802EDB21F2AB5D0061F213 /* TreasureChest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TreasureChest.png; path = ../../../Images/TreasureChest.png; sourceTree = "<group>"; };
+		30802EDC21F2AB5D0061F213 /* BadMerchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BadMerchant.png; path = ../../../Images/BadMerchant.png; sourceTree = "<group>"; };
+		30802EDD21F2AB5D0061F213 /* Scythe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scythe.png; path = ../../../Images/Scythe.png; sourceTree = "<group>"; };
+		30802EDE21F2AB5D0061F213 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star.png; path = ../../../Images/Star.png; sourceTree = "<group>"; };
+		30802EDF21F2AB5D0061F213 /* Elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Elevator.png; path = ../../../Images/Elevator.png; sourceTree = "<group>"; };
+		30802EE021F2AB5D0061F213 /* Trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trap.png; path = ../../../Images/Trap.png; sourceTree = "<group>"; };
+		30802EE121F2AB5D0061F213 /* Curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Curse.png; path = ../../../Images/Curse.png; sourceTree = "<group>"; };
+		30802EE221F2AB5D0061F213 /* Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Potion.png; path = ../../../Images/Potion.png; sourceTree = "<group>"; };
+		30802EE321F2AB5D0061F213 /* Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Coffee.png; path = ../../../Images/Coffee.png; sourceTree = "<group>"; };
+		30802EE421F2AB5E0061F213 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow.png; path = ../../../Images/Arrow.png; sourceTree = "<group>"; };
+		30802EE521F2AB5E0061F213 /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sword.png; path = ../../../Images/Sword.png; sourceTree = "<group>"; };
+		30802EE621F2AB5E0061F213 /* Tent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tent.png; path = ../../../Images/Tent.png; sourceTree = "<group>"; };
+		30802EE721F2AB5E0061F213 /* Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mark.png; path = ../../../Images/Mark.png; sourceTree = "<group>"; };
+		30802EE821F2AB5E0061F213 /* Hotspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hotspring.png; path = ../../../Images/Hotspring.png; sourceTree = "<group>"; };
+		30802EE921F2AB5E0061F213 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TitleScreen.png; path = ../../../Images/TitleScreen.png; sourceTree = "<group>"; };
+		30802F0721F2AB6A0061F213 /* Pixel_Ice Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Ice Sorceress.png"; path = "../../../Pixel/Pixel_Ice Sorceress.png"; sourceTree = "<group>"; };
+		30802F0821F2AB6A0061F213 /* Pixel_Chimera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Chimera.png; path = ../../../Pixel/Pixel_Chimera.png; sourceTree = "<group>"; };
+		30802F0921F2AB6A0061F213 /* Pixel_Kerberos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Kerberos.png; path = ../../../Pixel/Pixel_Kerberos.png; sourceTree = "<group>"; };
+		30802F0A21F2AB6A0061F213 /* Pixel_Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Ghost.png; path = ../../../Pixel/Pixel_Ghost.png; sourceTree = "<group>"; };
+		30802F0B21F2AB6A0061F213 /* Pixel_Squirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Squirrel.png; path = ../../../Pixel/Pixel_Squirrel.png; sourceTree = "<group>"; };
+		30802F0C21F2AB6B0061F213 /* Lamia_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lamia_1.png; path = ../../../Pixel/Lamia_1.png; sourceTree = "<group>"; };
+		30802F0D21F2AB6B0061F213 /* Pixel_Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Spider.png; path = ../../../Pixel/Pixel_Spider.png; sourceTree = "<group>"; };
+		30802F0E21F2AB6B0061F213 /* Pixel_Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Treasure Mimic.png"; path = "../../../Pixel/Pixel_Treasure Mimic.png"; sourceTree = "<group>"; };
+		30802F0F21F2AB6B0061F213 /* Pixel_Skeleton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Skeleton.png; path = ../../../Pixel/Pixel_Skeleton.png; sourceTree = "<group>"; };
+		30802F1021F2AB6B0061F213 /* Pixel_Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Slime.png; path = ../../../Pixel/Pixel_Slime.png; sourceTree = "<group>"; };
+		30802F1221F2AB6B0061F213 /* Pixel_Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Snake.png; path = ../../../Pixel/Pixel_Snake.png; sourceTree = "<group>"; };
+		30802F1321F2AB6B0061F213 /* Pixel_Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Sack Mimic.png"; path = "../../../Pixel/Pixel_Sack Mimic.png"; sourceTree = "<group>"; };
+		30802F1421F2AB6B0061F213 /* Pixel_Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Goblin.png; path = ../../../Pixel/Pixel_Goblin.png; sourceTree = "<group>"; };
+		30802F1521F2AB6B0061F213 /* Pixel_Scorpian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Scorpian.png; path = ../../../Pixel/Pixel_Scorpian.png; sourceTree = "<group>"; };
+		30802F1621F2AB6B0061F213 /* Pixel_Cockatrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Cockatrice.png; path = ../../../Pixel/Pixel_Cockatrice.png; sourceTree = "<group>"; };
+		30802F1721F2AB6B0061F213 /* Pixel_Thief.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Thief.png; path = ../../../Pixel/Pixel_Thief.png; sourceTree = "<group>"; };
+		30802F1821F2AB6B0061F213 /* Pixel_Soldier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Soldier.png; path = ../../../Pixel/Pixel_Soldier.png; sourceTree = "<group>"; };
+		30802F1921F2AB6B0061F213 /* Pixel_Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Wizard.png; path = ../../../Pixel/Pixel_Wizard.png; sourceTree = "<group>"; };
+		30802F1A21F2AB6B0061F213 /* Pixel_Paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Paladin.png; path = ../../../Pixel/Pixel_Paladin.png; sourceTree = "<group>"; };
+		30802F1B21F2AB6B0061F213 /* Pixel_FireSpirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_FireSpirit.png; path = ../../../Pixel/Pixel_FireSpirit.png; sourceTree = "<group>"; };
+		30802F1C21F2AB6C0061F213 /* Pixel_Lamia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Lamia.png; path = ../../../Pixel/Pixel_Lamia.png; sourceTree = "<group>"; };
+		30802F1D21F2AB6C0061F213 /* Pixel_Imp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Imp.png; path = ../../../Pixel/Pixel_Imp.png; sourceTree = "<group>"; };
+		30802F1E21F2AB6C0061F213 /* Pixel_Succubus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Succubus.png; path = ../../../Pixel/Pixel_Succubus.png; sourceTree = "<group>"; };
+		30802F1F21F2AB6C0061F213 /* Pixel_Behemoth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Behemoth.png; path = ../../../Pixel/Pixel_Behemoth.png; sourceTree = "<group>"; };
+		30802F2021F2AB6C0061F213 /* Pixel_Minotaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Minotaur.png; path = ../../../Pixel/Pixel_Minotaur.png; sourceTree = "<group>"; };
+		30802F2121F2AB6C0061F213 /* Pixel_Bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Bat.png; path = ../../../Pixel/Pixel_Bat.png; sourceTree = "<group>"; };
+		30802F2221F2AB6C0061F213 /* Pixel_Death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Death.png; path = ../../../Pixel/Pixel_Death.png; sourceTree = "<group>"; };
+		30802F2321F2AB6C0061F213 /* Pixel_Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Demon.png; path = ../../../Pixel/Pixel_Demon.png; sourceTree = "<group>"; };
+		30802F2421F2AB6C0061F213 /* Pixel_Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Dragon.png; path = ../../../Pixel/Pixel_Dragon.png; sourceTree = "<group>"; };
+		30802F2521F2AB6C0061F213 /* Pixel_SmolSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_SmolSquirrel.png; path = ../../../Pixel/Pixel_SmolSquirrel.png; sourceTree = "<group>"; };
+		30802F2621F2AB6C0061F213 /* Pixel_Rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Rat.png; path = ../../../Pixel/Pixel_Rat.png; sourceTree = "<group>"; };
+		30802F2721F2AB6C0061F213 /* Pixel_Fire Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Pixel_Fire Sorceress.png"; path = "../../../Pixel/Pixel_Fire Sorceress.png"; sourceTree = "<group>"; };
+		30802F2821F2AB6C0061F213 /* Pixel_Ogre.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel_Ogre.png; path = ../../../Pixel/Pixel_Ogre.png; sourceTree = "<group>"; };
+		30802F4B21F2CE4B0061F213 /* Tower_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tower_Icon.png; path = ../../../Tower_Icon.png; sourceTree = "<group>"; };
+		30802F4D21F2D8850061F213 /* Enchanted Land.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Enchanted Land.otf"; path = "../../../../Downloads/enchanted_land/Enchanted Land.otf"; sourceTree = "<group>"; };
 		308903D521D420D700C784CB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		30D3A388F3402CDDB358C87D /* Pods_Tower_DiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower_DiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1B2EC255C122B8967F6D252 /* Pods-Tower Diver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower Diver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver.debug.xcconfig"; sourceTree = "<group>"; };
@@ -391,9 +394,9 @@
 		3001FA7621CD5DB500FB14C9 /* Tower Diver */ = {
 			isa = PBXGroup;
 			children = (
+				30802ECC21F2AB4A0061F213 /* Images */,
+				30802ECB21F2AB3B0061F213 /* Pixel */,
 				30802DC121F1703A0061F213 /* Stick */,
-				30802DC021F170330061F213 /* Pixel */,
-				30802DBF21F170250061F213 /* Images */,
 				30802DBE21F1701C0061F213 /* Hand Drawn */,
 				3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */,
 				3001FA7921CD5DB500FB14C9 /* ViewController.swift */,
@@ -469,84 +472,6 @@
 			path = "Hand Drawn";
 			sourceTree = "<group>";
 		};
-		30802DBF21F170250061F213 /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				30802E1F21F1706E0061F213 /* Arrow.png */,
-				30802E1821F1706E0061F213 /* BadMerchant.png */,
-				30802E1021F1706E0061F213 /* BlackBricks.png */,
-				30802E0921F1706D0061F213 /* Bricks.png */,
-				30802E1E21F1706E0061F213 /* Coffee.png */,
-				30802E0F21F1706E0061F213 /* Crown.png */,
-				30802E1C21F1706E0061F213 /* Curse.png */,
-				30802E1421F1706E0061F213 /* Dead.png */,
-				30802E0821F1706D0061F213 /* Elevator.png */,
-				30802E1121F1706E0061F213 /* Gold.png */,
-				30802E0B21F1706D0061F213 /* Hag.png */,
-				30802E1521F1706E0061F213 /* Hamburger.png */,
-				30802E0D21F1706E0061F213 /* HellBricks.png */,
-				30802E1621F1706E0061F213 /* Hole.png */,
-				30802E8221F17AAE0061F213 /* Hotspring.png */,
-				30802E2221F1706F0061F213 /* Mark.png */,
-				30802E1321F1706E0061F213 /* Merchant.png */,
-				30802E1D21F1706E0061F213 /* Potion.png */,
-				30802E0C21F1706D0061F213 /* QuestionMark_.png */,
-				30802E1A21F1706E0061F213 /* Scythe.png */,
-				30802E0E21F1706E0061F213 /* Staff.png */,
-				30802E1921F1706E0061F213 /* Star.png */,
-				30802E2021F1706F0061F213 /* Sword.png */,
-				30802E2121F1706F0061F213 /* Tent.png */,
-				30802E1221F1706E0061F213 /* Title.png */,
-				30802E2321F1706F0061F213 /* TitleScreen.png */,
-				30802E1B21F1706E0061F213 /* Trap.png */,
-				30802E1721F1706E0061F213 /* TreasureChest.png */,
-				30802E0A21F1706D0061F213 /* Weapons.png */,
-			);
-			name = Images;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		30802DC021F170330061F213 /* Pixel */ = {
-			isa = PBXGroup;
-			children = (
-				30802E8B21F2771D0061F213 /* Lamia_1.png */,
-				30802EA021F2771E0061F213 /* Pixel_Bat.png */,
-				30802E9E21F2771E0061F213 /* Pixel_Behemoth.png */,
-				30802E8721F2771C0061F213 /* Pixel_Chimera.png */,
-				30802E9521F2771D0061F213 /* Pixel_Cockatrice.png */,
-				30802EA121F2771E0061F213 /* Pixel_Death.png */,
-				30802EA221F2771F0061F213 /* Pixel_Demon.png */,
-				30802EA321F2771F0061F213 /* Pixel_Dragon.png */,
-				30802EA621F2771F0061F213 /* Pixel_Fire Sorceress.png */,
-				30802E9A21F2771E0061F213 /* Pixel_FireSpirit.png */,
-				30802E8921F2771C0061F213 /* Pixel_Ghost.png */,
-				30802E9321F2771D0061F213 /* Pixel_Goblin.png */,
-				30802E8621F2771C0061F213 /* Pixel_Ice Sorceress.png */,
-				30802E9C21F2771E0061F213 /* Pixel_Imp.png */,
-				30802E8821F2771C0061F213 /* Pixel_Kerberos.png */,
-				30802E9B21F2771E0061F213 /* Pixel_Lamia.png */,
-				30802E9F21F2771E0061F213 /* Pixel_Minotaur.png */,
-				30802EA721F2771F0061F213 /* Pixel_Ogre.png */,
-				30802E9921F2771E0061F213 /* Pixel_Paladin.png */,
-				30802EA521F2771F0061F213 /* Pixel_Rat.png */,
-				30802E9221F2771D0061F213 /* Pixel_Sack Mimic.png */,
-				30802E9421F2771D0061F213 /* Pixel_Scorpian.png */,
-				30802E8E21F2771D0061F213 /* Pixel_Skeleton.png */,
-				30802E8F21F2771D0061F213 /* Pixel_Slime.png */,
-				30802EA421F2771F0061F213 /* Pixel_SmolSquirrel.png */,
-				30802E9121F2771D0061F213 /* Pixel_Snake.png */,
-				30802E9721F2771D0061F213 /* Pixel_Soldier.png */,
-				30802E8C21F2771D0061F213 /* Pixel_Spider.png */,
-				30802E8A21F2771D0061F213 /* Pixel_Squirrel.png */,
-				30802E9D21F2771E0061F213 /* Pixel_Succubus.png */,
-				30802E9621F2771D0061F213 /* Pixel_Thief.png */,
-				30802E8D21F2771D0061F213 /* Pixel_Treasure Mimic.png */,
-				30802E9821F2771E0061F213 /* Pixel_Wizard.png */,
-			);
-			name = Pixel;
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
 		30802DC121F1703A0061F213 /* Stick */ = {
 			isa = PBXGroup;
 			children = (
@@ -585,6 +510,84 @@
 				30802E5C21F1708B0061F213 /* Stick_Zombie.png */,
 			);
 			path = Stick;
+			sourceTree = "<group>";
+		};
+		30802ECB21F2AB3B0061F213 /* Pixel */ = {
+			isa = PBXGroup;
+			children = (
+				30802F0C21F2AB6B0061F213 /* Lamia_1.png */,
+				30802F2121F2AB6C0061F213 /* Pixel_Bat.png */,
+				30802F1F21F2AB6C0061F213 /* Pixel_Behemoth.png */,
+				30802F0821F2AB6A0061F213 /* Pixel_Chimera.png */,
+				30802F1621F2AB6B0061F213 /* Pixel_Cockatrice.png */,
+				30802F2221F2AB6C0061F213 /* Pixel_Death.png */,
+				30802F2321F2AB6C0061F213 /* Pixel_Demon.png */,
+				30802F2421F2AB6C0061F213 /* Pixel_Dragon.png */,
+				30802F2721F2AB6C0061F213 /* Pixel_Fire Sorceress.png */,
+				30802F1B21F2AB6B0061F213 /* Pixel_FireSpirit.png */,
+				30802F0A21F2AB6A0061F213 /* Pixel_Ghost.png */,
+				30802F1421F2AB6B0061F213 /* Pixel_Goblin.png */,
+				30802F0721F2AB6A0061F213 /* Pixel_Ice Sorceress.png */,
+				30802F1D21F2AB6C0061F213 /* Pixel_Imp.png */,
+				30802F0921F2AB6A0061F213 /* Pixel_Kerberos.png */,
+				30802F1C21F2AB6C0061F213 /* Pixel_Lamia.png */,
+				30802F2021F2AB6C0061F213 /* Pixel_Minotaur.png */,
+				30802F2821F2AB6C0061F213 /* Pixel_Ogre.png */,
+				30802F1A21F2AB6B0061F213 /* Pixel_Paladin.png */,
+				30802F2621F2AB6C0061F213 /* Pixel_Rat.png */,
+				30802F1321F2AB6B0061F213 /* Pixel_Sack Mimic.png */,
+				30802F1521F2AB6B0061F213 /* Pixel_Scorpian.png */,
+				30802F0F21F2AB6B0061F213 /* Pixel_Skeleton.png */,
+				30802F1021F2AB6B0061F213 /* Pixel_Slime.png */,
+				30802F2521F2AB6C0061F213 /* Pixel_SmolSquirrel.png */,
+				30802F1221F2AB6B0061F213 /* Pixel_Snake.png */,
+				30802F1821F2AB6B0061F213 /* Pixel_Soldier.png */,
+				30802F0D21F2AB6B0061F213 /* Pixel_Spider.png */,
+				30802F0B21F2AB6A0061F213 /* Pixel_Squirrel.png */,
+				30802F1E21F2AB6C0061F213 /* Pixel_Succubus.png */,
+				30802F1721F2AB6B0061F213 /* Pixel_Thief.png */,
+				30802F0E21F2AB6B0061F213 /* Pixel_Treasure Mimic.png */,
+				30802F1921F2AB6B0061F213 /* Pixel_Wizard.png */,
+			);
+			path = Pixel;
+			sourceTree = "<group>";
+		};
+		30802ECC21F2AB4A0061F213 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				30802F4D21F2D8850061F213 /* Enchanted Land.otf */,
+				30802F4B21F2CE4B0061F213 /* Tower_Icon.png */,
+				30802EE421F2AB5E0061F213 /* Arrow.png */,
+				30802EDC21F2AB5D0061F213 /* BadMerchant.png */,
+				30802ED421F2AB5C0061F213 /* BlackBricks.png */,
+				30802ECD21F2AB5C0061F213 /* Bricks.png */,
+				30802EE321F2AB5D0061F213 /* Coffee.png */,
+				30802ED321F2AB5C0061F213 /* Crown.png */,
+				30802EE121F2AB5D0061F213 /* Curse.png */,
+				30802ED821F2AB5D0061F213 /* Dead.png */,
+				30802EDF21F2AB5D0061F213 /* Elevator.png */,
+				30802ED521F2AB5C0061F213 /* Gold.png */,
+				30802ECF21F2AB5C0061F213 /* Hag.png */,
+				30802ED921F2AB5D0061F213 /* Hamburger.png */,
+				30802ED121F2AB5C0061F213 /* HellBricks.png */,
+				30802EDA21F2AB5D0061F213 /* Hole.png */,
+				30802EE821F2AB5E0061F213 /* Hotspring.png */,
+				30802EE721F2AB5E0061F213 /* Mark.png */,
+				30802ED621F2AB5C0061F213 /* Merchant.png */,
+				30802EE221F2AB5D0061F213 /* Potion.png */,
+				30802ED021F2AB5C0061F213 /* QuestionMark_.png */,
+				30802EDD21F2AB5D0061F213 /* Scythe.png */,
+				30802ED221F2AB5C0061F213 /* Staff.png */,
+				30802EDE21F2AB5D0061F213 /* Star.png */,
+				30802EE521F2AB5E0061F213 /* Sword.png */,
+				30802EE621F2AB5E0061F213 /* Tent.png */,
+				30802ED721F2AB5C0061F213 /* Title.png */,
+				30802EE921F2AB5E0061F213 /* TitleScreen.png */,
+				30802EE021F2AB5D0061F213 /* Trap.png */,
+				30802EDB21F2AB5D0061F213 /* TreasureChest.png */,
+				30802ECE21F2AB5C0061F213 /* Weapons.png */,
+			);
+			path = Images;
 			sourceTree = "<group>";
 		};
 		C7BF95758880A49DD6B32243 /* Pods */ = {
@@ -721,103 +724,106 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30802EAB21F277200061F213 /* Pixel_Ghost.png in Resources */,
-				30802EA921F277200061F213 /* Pixel_Chimera.png in Resources */,
-				30802EAF21F277200061F213 /* Pixel_Treasure Mimic.png in Resources */,
-				30802EAD21F277200061F213 /* Lamia_1.png in Resources */,
+				30802F2C21F2AB6C0061F213 /* Pixel_Ghost.png in Resources */,
+				30802F2A21F2AB6C0061F213 /* Pixel_Chimera.png in Resources */,
+				30802F3021F2AB6C0061F213 /* Pixel_Treasure Mimic.png in Resources */,
+				30802F2E21F2AB6C0061F213 /* Lamia_1.png in Resources */,
+				30802EFB21F2AB5E0061F213 /* Star.png in Resources */,
+				30802EFC21F2AB5E0061F213 /* Elevator.png in Resources */,
 				30802E6D21F1708B0061F213 /* Stick_Demon.png in Resources */,
+				30802F4321F2AB6C0061F213 /* Pixel_Bat.png in Resources */,
 				30802DE921F170530061F213 /* Imp.png in Resources */,
+				30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */,
+				30802EF721F2AB5E0061F213 /* Hole.png in Resources */,
+				30802F0121F2AB5E0061F213 /* Arrow.png in Resources */,
+				30802F3221F2AB6C0061F213 /* Pixel_Slime.png in Resources */,
 				3001FA8221CD5DB600FB14C9 /* LaunchScreen.storyboard in Resources */,
-				30802EC221F277200061F213 /* Pixel_Bat.png in Resources */,
+				30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */,
+				30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */,
 				30802E7E21F1708B0061F213 /* Stick_Fire Sorceress.png in Resources */,
+				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
 				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
+				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
 				30802DF621F170530061F213 /* Chimera.png in Resources */,
 				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
-				30802EB121F277200061F213 /* Pixel_Slime.png in Resources */,
-				30802E3421F1706F0061F213 /* BadMerchant.png in Resources */,
+				30802EEC21F2AB5E0061F213 /* Hag.png in Resources */,
+				30802EF821F2AB5E0061F213 /* TreasureChest.png in Resources */,
+				30802F0521F2AB5E0061F213 /* Hotspring.png in Resources */,
+				30802EF621F2AB5E0061F213 /* Hamburger.png in Resources */,
 				30802E0421F170530061F213 /* Succubus.png in Resources */,
 				30802E7121F1708B0061F213 /* Stick_Minotaur.png in Resources */,
 				30802DF921F170530061F213 /* Fire Spirit.png in Resources */,
-				30802E3E21F1706F0061F213 /* Mark.png in Resources */,
 				30802DF121F170530061F213 /* Ice Sorceress_Alt.png in Resources */,
 				3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */,
-				30802E2B21F1706F0061F213 /* Crown.png in Resources */,
+				30802F4221F2AB6C0061F213 /* Pixel_Minotaur.png in Resources */,
 				30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */,
-				30802E8321F17AAE0061F213 /* Hotspring.png in Resources */,
+				30802F4821F2AB6C0061F213 /* Pixel_Rat.png in Resources */,
 				30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */,
 				30802E6C21F1708B0061F213 /* Stick_Thief.png in Resources */,
-				30802E2D21F1706F0061F213 /* Gold.png in Resources */,
+				30802EF221F2AB5E0061F213 /* Gold.png in Resources */,
 				3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */,
+				30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */,
+				30802F3E21F2AB6C0061F213 /* Pixel_Lamia.png in Resources */,
+				30802F4521F2AB6C0061F213 /* Pixel_Demon.png in Resources */,
+				30802EFF21F2AB5E0061F213 /* Potion.png in Resources */,
+				30802F3821F2AB6C0061F213 /* Pixel_Cockatrice.png in Resources */,
+				30802F4721F2AB6C0061F213 /* Pixel_SmolSquirrel.png in Resources */,
 				30802DFF21F170530061F213 /* Gilgamesh.png in Resources */,
+				30802F3C21F2AB6C0061F213 /* Pixel_Paladin.png in Resources */,
 				30802E7621F1708B0061F213 /* Stick_Bat.png in Resources */,
 				30802E7021F1708B0061F213 /* Stick_Soldier.png in Resources */,
-				30802EC121F277200061F213 /* Pixel_Minotaur.png in Resources */,
+				30802F4621F2AB6C0061F213 /* Pixel_Dragon.png in Resources */,
 				30802DFB21F170530061F213 /* SmolSquirrel.png in Resources */,
-				30802EC721F277200061F213 /* Pixel_Rat.png in Resources */,
-				30802E3A21F1706F0061F213 /* Coffee.png in Resources */,
-				30802E2821F1706F0061F213 /* QuestionMark_.png in Resources */,
+				30802F0021F2AB5E0061F213 /* Coffee.png in Resources */,
 				30802E0321F170530061F213 /* Cockatrice.png in Resources */,
+				30802F3121F2AB6C0061F213 /* Pixel_Skeleton.png in Resources */,
 				30802DEF21F170530061F213 /* Minotaur.png in Resources */,
 				30802DEB21F170530061F213 /* Dragon.png in Resources */,
-				30802EBD21F277200061F213 /* Pixel_Lamia.png in Resources */,
-				30802EC421F277200061F213 /* Pixel_Demon.png in Resources */,
+				30802EEF21F2AB5E0061F213 /* Staff.png in Resources */,
 				30802E6921F1708B0061F213 /* Stick_Giant.png in Resources */,
-				30802EB721F277200061F213 /* Pixel_Cockatrice.png in Resources */,
-				30802EC621F277200061F213 /* Pixel_SmolSquirrel.png in Resources */,
-				30802E3F21F1706F0061F213 /* TitleScreen.png in Resources */,
-				30802EBB21F277200061F213 /* Pixel_Paladin.png in Resources */,
 				30802E7921F1708B0061F213 /* Stick_Ice Sorceress.png in Resources */,
-				30802E3D21F1706F0061F213 /* Tent.png in Resources */,
-				30802EC521F277200061F213 /* Pixel_Dragon.png in Resources */,
+				30802F0421F2AB5E0061F213 /* Mark.png in Resources */,
 				30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */,
+				30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */,
+				30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */,
 				30802DE621F170530061F213 /* Spider.png in Resources */,
+				30802F3421F2AB6C0061F213 /* Pixel_Snake.png in Resources */,
+				30802F3921F2AB6C0061F213 /* Pixel_Thief.png in Resources */,
 				30802E0521F170530061F213 /* Knight.png in Resources */,
-				30802EB021F277200061F213 /* Pixel_Skeleton.png in Resources */,
-				30802E2521F1706F0061F213 /* Bricks.png in Resources */,
-				30802E3C21F1706F0061F213 /* Sword.png in Resources */,
+				30802EFD21F2AB5E0061F213 /* Trap.png in Resources */,
 				30802E6E21F1708B0061F213 /* Stick_Orc.png in Resources */,
-				30802E3821F1706F0061F213 /* Curse.png in Resources */,
-				30802E3221F1706F0061F213 /* Hole.png in Resources */,
+				30802F3621F2AB6C0061F213 /* Pixel_Goblin.png in Resources */,
+				30802F3521F2AB6C0061F213 /* Pixel_Sack Mimic.png in Resources */,
 				30802DF721F170530061F213 /* Behemoth.png in Resources */,
-				30802E3521F1706F0061F213 /* Star.png in Resources */,
-				30802E2421F1706F0061F213 /* Elevator.png in Resources */,
-				30802E2921F1706F0061F213 /* HellBricks.png in Resources */,
-				30802E3B21F1706F0061F213 /* Arrow.png in Resources */,
-				30802EB321F277200061F213 /* Pixel_Snake.png in Resources */,
-				30802EB821F277200061F213 /* Pixel_Thief.png in Resources */,
 				30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */,
 				30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */,
 				30802DEA21F170530061F213 /* Bandit.png in Resources */,
-				30802EB521F277200061F213 /* Pixel_Goblin.png in Resources */,
-				30802EB421F277200061F213 /* Pixel_Sack Mimic.png in Resources */,
 				30802E7421F1708B0061F213 /* Stick_FireSpirit.png in Resources */,
+				30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */,
+				30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */,
+				30802F4421F2AB6C0061F213 /* Pixel_Death.png in Resources */,
 				30802E6721F1708B0061F213 /* Stick_Dragon.png in Resources */,
 				30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */,
-				30802E2621F1706F0061F213 /* Weapons.png in Resources */,
 				30802E0221F170530061F213 /* Fire Sorceress.png in Resources */,
 				30802DFE21F170530061F213 /* Goblin.png in Resources */,
 				30802E6B21F1708B0061F213 /* Stick_Scorpian.png in Resources */,
-				30802EC321F277200061F213 /* Pixel_Death.png in Resources */,
 				30802E0121F170530061F213 /* Cleric.png in Resources */,
-				30802E3021F1706F0061F213 /* Dead.png in Resources */,
 				30802E7D21F1708B0061F213 /* Stick_Zombie.png in Resources */,
 				30802E6621F1708B0061F213 /* Stick_Goblin.png in Resources */,
-				30802E2721F1706F0061F213 /* Hag.png in Resources */,
-				30802E2C21F1706F0061F213 /* BlackBricks.png in Resources */,
 				30802E6A21F1708B0061F213 /* Stick_Rat.png in Resources */,
+				30802F3B21F2AB6C0061F213 /* Pixel_Wizard.png in Resources */,
+				30802F0321F2AB5E0061F213 /* Tent.png in Resources */,
 				30802E6121F1708B0061F213 /* Stick_Paladin.png in Resources */,
 				30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */,
-				30802EBA21F277200061F213 /* Pixel_Wizard.png in Resources */,
+				30802EF321F2AB5E0061F213 /* Merchant.png in Resources */,
+				30802EF421F2AB5E0061F213 /* Title.png in Resources */,
 				30802DE821F170530061F213 /* Ghost.png in Resources */,
-				30802E3921F1706F0061F213 /* Potion.png in Resources */,
-				30802E2E21F1706F0061F213 /* Title.png in Resources */,
 				30802DF021F170530061F213 /* Skeleton.png in Resources */,
 				30802DE521F170530061F213 /* Treasure Mimic.png in Resources */,
 				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
+				30802F2F21F2AB6C0061F213 /* Pixel_Spider.png in Resources */,
 				30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */,
 				30802DED21F170530061F213 /* Bat.png in Resources */,
-				30802E3321F1706F0061F213 /* TreasureChest.png in Resources */,
-				30802EAE21F277200061F213 /* Pixel_Spider.png in Resources */,
 				30802DE721F170530061F213 /* Giant.png in Resources */,
 				30802E6421F1708B0061F213 /* Stick_Chimera.png in Resources */,
 				30802DFC21F170530061F213 /* Zombie.png in Resources */,
@@ -825,34 +831,32 @@
 				30802DF821F170530061F213 /* Snake.png in Resources */,
 				30802DF221F170530061F213 /* Rat.png in Resources */,
 				30802E0021F170530061F213 /* Paladin.png in Resources */,
-				30802E2A21F1706F0061F213 /* Staff.png in Resources */,
 				30802DEC21F170530061F213 /* Slime.png in Resources */,
 				30802E6321F1708B0061F213 /* Stick_Snake.png in Resources */,
 				30802DFD21F170530061F213 /* Lamia.png in Resources */,
-				30802E3721F1706F0061F213 /* Trap.png in Resources */,
-				30802E2F21F1706F0061F213 /* Merchant.png in Resources */,
+				30802EF021F2AB5E0061F213 /* Crown.png in Resources */,
+				30802EF521F2AB5E0061F213 /* Dead.png in Resources */,
+				30802F2D21F2AB6C0061F213 /* Pixel_Squirrel.png in Resources */,
 				30802E8021F1708B0061F213 /* Stick_Imp.png in Resources */,
-				30802EAC21F277200061F213 /* Pixel_Squirrel.png in Resources */,
+				30802F2921F2AB6C0061F213 /* Pixel_Ice Sorceress.png in Resources */,
+				30802EFE21F2AB5E0061F213 /* Curse.png in Resources */,
 				30802E7521F1708B0061F213 /* Stick_Death.png in Resources */,
-				30802EA821F277200061F213 /* Pixel_Ice Sorceress.png in Resources */,
+				30802F3721F2AB6C0061F213 /* Pixel_Scorpian.png in Resources */,
 				30802E7C21F1708B0061F213 /* Stick_Spider.png in Resources */,
+				30802F3A21F2AB6C0061F213 /* Pixel_Soldier.png in Resources */,
 				30802E7221F1708B0061F213 /* Stick_Sack Mimic.png in Resources */,
-				30802EB621F277200061F213 /* Pixel_Scorpian.png in Resources */,
 				30802DF521F170530061F213 /* Green Slime.png in Resources */,
-				30802EB921F277200061F213 /* Pixel_Soldier.png in Resources */,
 				30802DEE21F170530061F213 /* Ice Sorceress.png in Resources */,
+				30802F2B21F2AB6C0061F213 /* Pixel_Kerberos.png in Resources */,
 				30802DF421F170530061F213 /* Squirrel.png in Resources */,
-				30802E3121F1706F0061F213 /* Hamburger.png in Resources */,
-				30802EAA21F277200061F213 /* Pixel_Kerberos.png in Resources */,
-				30802E3621F1706F0061F213 /* Scythe.png in Resources */,
-				30802EC921F277200061F213 /* Pixel_Ogre.png in Resources */,
-				30802EBC21F277200061F213 /* Pixel_FireSpirit.png in Resources */,
-				30802EBF21F277200061F213 /* Pixel_Succubus.png in Resources */,
-				30802EBE21F277200061F213 /* Pixel_Imp.png in Resources */,
-				30802EC821F277200061F213 /* Pixel_Fire Sorceress.png in Resources */,
+				30802F4A21F2AB6C0061F213 /* Pixel_Ogre.png in Resources */,
+				30802F3D21F2AB6C0061F213 /* Pixel_FireSpirit.png in Resources */,
+				30802F4021F2AB6C0061F213 /* Pixel_Succubus.png in Resources */,
+				30802F3F21F2AB6C0061F213 /* Pixel_Imp.png in Resources */,
+				30802F4921F2AB6C0061F213 /* Pixel_Fire Sorceress.png in Resources */,
 				30802E0721F170530061F213 /* Wizard.png in Resources */,
 				30802E0621F170530061F213 /* Sack Mimic.png in Resources */,
-				30802EC021F277200061F213 /* Pixel_Behemoth.png in Resources */,
+				30802F4121F2AB6C0061F213 /* Pixel_Behemoth.png in Resources */,
 				30802E8521F2768C0061F213 /* Demon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

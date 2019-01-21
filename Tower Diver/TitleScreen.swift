@@ -18,23 +18,14 @@ class TitleScreen: UIViewController {
         self.view.backgroundColor = UIColor.white
         Top_Button.layer.borderWidth = 2
         Top_Button.layer.borderColor = UIColor.gray.cgColor
+        SetBackground()
+    }
+    
+    func SetBackground(){
         let image = UIImage(named: "Bricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)
         
         view.backgroundColor = UIColor(patternImage: scaled)
-    }
-    
-    func SetBackground(){
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        UIImage(named: "TitleScreen.png")?.draw(in: self.view.bounds)
-        
-        if let image = UIGraphicsGetImageFromCurrentImageContext(){
-            UIGraphicsEndImageContext()
-            self.view.backgroundColor = UIColor(patternImage: image)
-        }else{
-            UIGraphicsEndImageContext()
-            debugPrint("Image not available")
-        }
     }
     @IBAction func Button(_ sender: Any) {
     }
@@ -47,7 +38,7 @@ class TitleScreen: UIViewController {
     }
     @IBAction func InfoButton(_ sender: Any) {
         //DisplayAlert(title: "Info", message: "v0.0.2 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney", button: "OK")
-        let alert = UIAlertController(title: "Info", message: "v0.0.2 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Info", message: "v0.0.6 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         alert.addAction(UIAlertAction(title: "How To Play", style: .default, handler: { action in
             self.GotoWiki()

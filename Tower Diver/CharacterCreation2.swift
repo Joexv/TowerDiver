@@ -88,19 +88,26 @@ class CharacterCreation2: UIViewController {
             Adjustments = 0
             BaseHP = 0
         }
-        
+        if(Class == 5){
+            HP = 500
+            Power = 500
+            Gold = 500
+            Potions = 500
+            Adjustments = 0
+            BaseHP = 500
+        }
     }
     
     var BaseHP: Int = 0
     
     @IBAction func HP_Stepper_OnChange(_ sender: Any) {
-        if ( HP_Stepper.value == 0 && HP > (BaseHP - 50) && Class != 4) {
+        if ( HP_Stepper.value == 0 && HP > (BaseHP - 50) && Class != 4 && Class != 5) {
             HP -= 25
             if(HP < 10){
                 HP = 10
             }
             Adjustments += 1
-        } else if (HP_Stepper.value == 2 && Class != 4){ // else up
+        } else if (HP_Stepper.value == 2 && Class != 4 && Class != 5){ // else up
             if(Adjustments != 0)
             {
                 HP += 25
@@ -113,10 +120,10 @@ class CharacterCreation2: UIViewController {
     
     
     @IBAction func Power_Stepper_OnChange(_ sender: Any) {
-        if ( Power_Stepper.value == 0 && Power > 10 && Class != 4) {
+        if ( Power_Stepper.value == 0 && Power > 10 && Class != 4 && Class != 5) {
             Power -= 10
             Adjustments += 1
-        } else if (Power_Stepper.value == 2 && Class != 4){ // else up
+        } else if (Power_Stepper.value == 2 && Class != 4 && Class != 5){ // else up
             if(Adjustments != 0)
             {
                 Power += 10
@@ -128,10 +135,10 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Gold_Stepper_OnChange(_ sender: Any) {
-        if ( Gold_Stepper.value == 0 && Gold > 0 && Class != 4) {
+        if ( Gold_Stepper.value == 0 && Gold > 0 && Class != 4 && Class != 5) {
             Gold -= 25
             Adjustments += 1
-        } else if (Gold_Stepper.value == 2 && Class != 4){ // else up
+        } else if (Gold_Stepper.value == 2 && Class != 4 && Class != 5){ // else up
             if(Adjustments != 0)
             {
                 Gold += 25
@@ -143,10 +150,10 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Potions_Stepper_OnChange(_ sender: Any) {
-        if ( Potions_Stepper.value == 0 && Potions > 0 && Class != 4) {
+        if ( Potions_Stepper.value == 0 && Potions > 0 && Class != 4 && Class != 5) {
             Potions -= 1
             Adjustments += 1
-        } else if (Potions_Stepper.value == 2 && Class != 4){ // else up
+        } else if (Potions_Stepper.value == 2 && Class != 4 && Class != 5){ // else up
             if(Adjustments != 0)
             {
                 Potions += 1
@@ -165,6 +172,8 @@ class CharacterCreation2: UIViewController {
             Adjustments = 5
         }else if (Class == 4){
             Adjustments = 0
+        }else if(Class == 5){
+            Adjustments = 0
         }
     }
     
@@ -179,6 +188,9 @@ class CharacterCreation2: UIViewController {
         defaults.set(false, forKey: "hasKilledDeath")
         defaults.set(false, forKey: "hasESP")
         defaults.set(false, forKey: "isCrazy")
+        defaults.set(false, forKey: "isBleeding")
+        defaults.set(false, forKey: "isConfused")
+        defaults.set(0, forKey: "BleedingCounter")
         
         defaults.set(1, forKey: "Floor")
         defaults.set(1, forKey: "AfterDeath")

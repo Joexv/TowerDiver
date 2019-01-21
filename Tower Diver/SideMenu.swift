@@ -192,7 +192,13 @@ class SideMenu: UITableViewController {
     }
     @IBAction func About_Button(_ sender: Any) {
         DisplayAlert(title: "Info", message: "v0.0.1 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", button: "OK")
+        
+        //Until Production the About button will be a Debug Menu.
+        //defaults.set(true, forKey: "DebugMenu")
+        //dismiss(animated: true, completion: nil)
     }
+    
+
     
     @IBAction func Donate_Button(_ sender: Any) {
         let alert = UIAlertController(title: "Donate?", message: "Would you like to donate $1? Each donation adds 5000 Power and Gold to your current character.", preferredStyle: UIAlertController.Style.alert)

@@ -45,7 +45,7 @@
                                     <segue destination="BYZ-38-t0r" kind="modal" identifier="EnterDungeonSegue" id="q4H-jp-eBF"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Vd-jd-rrc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Vd-jd-rrc">
                                 <rect key="frame" x="16" y="44" width="331" height="177"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="177" id="c8X-pD-MWk"/>
@@ -55,7 +55,7 @@
                                 <rect key="frame" x="16" y="160" width="343" height="447"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0078431372550000003" green="0.76470588240000004" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1777055561542511" green="0.41335827112197876" blue="0.5765107274055481" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="3Vd-jd-rrc" firstAttribute="trailing" secondItem="jfA-NU-pHF" secondAttribute="trailing" id="E20-JF-vLA"/>
                             <constraint firstItem="Dam-hm-4nf" firstAttribute="trailing" secondItem="Ggr-FE-ezM" secondAttribute="trailingMargin" id="EQW-NO-u5R"/>
@@ -95,6 +95,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="f0W-M4-04N"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" title="Top_Button">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -178,7 +179,7 @@
                                     <constraint firstAttribute="height" constant="50" id="oih-IT-TFj"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" editable="NO" text="Adventure Log" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOi-GD-Jr7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" editable="NO" text="Welcome Adventurer!" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOi-GD-Jr7">
                                 <rect key="frame" x="47.666666666666657" y="394" width="280" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -203,7 +204,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BcB-a1-bSe">
                                 <rect key="frame" x="16" y="735" width="95" height="36"/>
-                                <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Use Potion">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
@@ -925,11 +926,11 @@
     </scenes>
     <resources>
         <image name="Hamburger.png" width="50" height="50"/>
-        <image name="Title.png" width="800" height="300"/>
-        <image name="TitleScreen.png" width="1536" height="2048"/>
+        <image name="Title.png" width="525" height="113"/>
+        <image name="TitleScreen.png" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HEg-3x-W23"/>
+        <segue reference="m2R-Ai-czz"/>
         <segue reference="q4H-jp-eBF"/>
     </inferredMetricsTieBreakers>
 </document>

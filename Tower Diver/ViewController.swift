@@ -55,40 +55,39 @@ class ViewController: UIViewController {
             })
         }
         else{
-            ReadStats()
-            FixStats()
-            SetLabels()
-            Next()
             MainImage.image = UIImage(named: "QuestionMark_.png")
             MainImage.layer.borderWidth = 2
-            MainImage.layer.borderColor = UIColor.gray.cgColor
+            MainImage.layer.borderColor = UIColor.darkGray.cgColor
             
             Top_Button.layer.borderWidth = 2
-            Top_Button.layer.borderColor = UIColor.gray.cgColor
+            Top_Button.layer.borderColor = UIColor.darkGray.cgColor
             
             Bottom_Button.layer.borderWidth = 2
-            Bottom_Button.layer.borderColor = UIColor.gray.cgColor
+            Bottom_Button.layer.borderColor = UIColor.darkGray.cgColor
             
             AdventureLog.layer.borderWidth = 2
-            AdventureLog.layer.borderColor = UIColor.gray.cgColor
+            AdventureLog.layer.borderColor = UIColor.darkGray.cgColor
             
             Potion_Label.layer.borderWidth = 2
-            Potion_Label.layer.borderColor = UIColor.gray.cgColor
+            Potion_Label.layer.borderColor = UIColor.darkGray.cgColor
             
             HP_Label.layer.borderWidth = 2
-            HP_Label.layer.borderColor = UIColor.gray.cgColor
+            HP_Label.layer.borderColor = UIColor.darkGray.cgColor
             
             Gold_Label.layer.borderWidth = 2
-            Gold_Label.layer.borderColor = UIColor.gray.cgColor
+            Gold_Label.layer.borderColor = UIColor.darkGray.cgColor
             
             Power_Label.layer.borderWidth = 2
-            Power_Label.layer.borderColor = UIColor.gray.cgColor
+            Power_Label.layer.borderColor = UIColor.darkGray.cgColor
             
             Name_Label.layer.borderWidth = 2
-            Name_Label.layer.borderColor = UIColor.gray.cgColor
+            Name_Label.layer.borderColor = UIColor.darkGray.cgColor
             
             Side_Button.layer.borderWidth = 2
-            Side_Button.layer.borderColor = UIColor.gray.cgColor
+            Side_Button.layer.borderColor = UIColor.darkGray.cgColor
+            
+            UsePotion_Button.layer.borderWidth = 2
+            UsePotion_Button.layer.borderColor = UIColor.darkGray.cgColor
             
             let tap = UITapGestureRecognizer(target: self, action: #selector(DisplayHP))
             HP_Label.isUserInteractionEnabled = true
@@ -102,10 +101,23 @@ class ViewController: UIViewController {
             Gold_Label.isUserInteractionEnabled = true
             Gold_Label.addGestureRecognizer(tap3)
             
+            let tap4 = UITapGestureRecognizer(target: self, action: #selector(Debug))
+            Name_Label.isUserInteractionEnabled = true
+            Name_Label.addGestureRecognizer(tap4)
+            
             if(defaults.string(forKey: "MonsterTheme") == nil){
                 defaults.set("", forKey: "MonsterTheme")
                 Theme = ""
             }
+            
+            if(defaults.string(forKey: "isBleeding") == nil){
+                isBleeding = false
+            }
+            
+            ReadStats()
+            FixStats()
+            SetLabels()
+            Next()
         }
     }
     
@@ -161,7 +173,26 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var Side_Button: UIButton!
     
+    let MaxValue: Double = 5000000000000000
+    let OverFlowed: Double = -100000000000000
+    
+    func FixOverflowMaybe(){
+        if(Power >= MaxValue || Power < OverFlowed){
+            Power = MaxValue
+        }
+        if(MaxHP >= MaxValue || MaxHP < OverFlowed){
+            MaxHP = MaxValue
+        }
+        if(CurrentHP >= MaxValue || CurrentHP < OverFlowed){
+            CurrentHP = MaxValue
+        }
+        if(Gold >= MaxValue || Gold < OverFlowed){
+            Gold = MaxValue
+        }
+    }
+    
     func FixStats(){
+        FixOverflowMaybe()
         Power = Power.rounded(toPlaces: 0)
         CurrentHP = CurrentHP.rounded(toPlaces: 0)
         MaxHP = MaxHP.rounded(toPlaces: 0)
@@ -174,7 +205,7 @@ class ViewController: UIViewController {
             Gold = 0}
         if(Potions < 1){
             Potions = 0}
-        if(CurrentHP < 1){
+        if(CurrentHP < 1 && CurrentHP > -100000000000){
             Dead()
         }
     }
@@ -210,7 +241,10 @@ class ViewController: UIViewController {
     func CutLabel(_ Input: Double) -> String{
         var Letter: String = ""
         var Number = DoubleString(Input: Input)
-        if(Input >= 1000000000000){
+        if(Input >= 1000000000000000){
+            Letter = "Quad"
+            Number.removeLast(15)
+        }else if(Input >= 1000000000000){
             Letter = "T"
             Number.removeLast(12)
         }else if(Input >= 1000000000 && Input < 1000000000000){
@@ -255,6 +289,7 @@ class ViewController: UIViewController {
         HauntedUnlocked = PullBool(Stat: "HauntedUnlocked")
         
         isBleeding = PullBool(Stat: "isBleeding")
+        isConfused = PullBool(Stat: "Confused")
         BattlePredict = PullBool(Stat: "BattlePredict")
         
         Theme = PullString(Stat: "MonsterTheme")
@@ -472,7 +507,53 @@ class ViewController: UIViewController {
         }
     }
     
+    let MaxToast: Double = 100000000000000
+    
+    func DoToasterChange_Old(){
+        if(Class == 5){
+            let TempMax: Double = (MaxToast * 5) / 320
+            Power = Double.random(in: 32...TempMax)
+            let HPPercent = CurrentHP / MaxHP
+            MaxHP = Double.random(in: 32...TempMax)
+            CurrentHP = MaxHP * HPPercent
+            Gold = Double.random(in: 23...TempMax)
+        }
+    }
+    
+    func DoToasterChange(){
+        if(Class == 5){
+            let Max: Double = Double(Floor * 200) * Double(arc4random_uniform(32)) + 100
+            var Gen: Double = Double.random(in: 1...Max)
+            NSLog(String(Gen))
+            AdjustHP(Gen, Add: Bool.random())
+            Gen = Double.random(in: 1...Max)
+            NSLog(String(Gen))
+            AdjustGold(Gen, Add: Bool.random())
+            Gen = Double.random(in: 1...Max)
+            NSLog(String(Gen))
+            Adjustpower(Gen, Add: Bool.random())
+            Gen = Double.random(in: 1...Max)
+            NSLog(String(Gen))
+            AdjustPotions(Gen, Add: Bool.random())
+            if(CurrentHP < 1){
+                CurrentHP = 1
+            }
+            if(Power < 1){
+                Power = 1
+            }
+            if(MaxHP < 1){
+                MaxHP = 1
+            }
+            
+            if(CurrentHP > MaxHP){
+                CurrentHP = MaxHP
+            }
+        }
+    }
+    
     func GenEvent(){
+        NSLog("Toaster Stat Change")
+        DoToasterChange()
         NSLog("Checking for Bleeding")
         DoBleedDamage()
         NSLog("Checking for confusion")
@@ -507,6 +588,10 @@ class ViewController: UIViewController {
         if(Floor < 1){
             Floor = 1
         }
+        
+        if(Floor >= 251){
+            FinalFloor()
+        }else{
         Name_Label.text = "Floor: " + String(Floor)
         MainImage.image = nil
         
@@ -542,6 +627,81 @@ class ViewController: UIViewController {
             NSLog("FindNothing")
             DoNothing()
         }
+        }
+    }
+    
+    func FinalFloor(){
+        AdventureLog.text = "As you advance up the flight of stairs to the next floor, you're blinded by a bright light. You walk towards the light up to a majestic set of double doors."
+        
+        MainImage.image = UIImage(named: "QuestionMark_.png")
+
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Open Doors", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(OpenFinalDoors), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Open Doors", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(OpenFinalDoors), for: .touchUpInside)
+    }
+    
+    @IBAction func OpenFinalDoors(){
+        AdventureLog.text = "Through the double doors you enter into a small white room, with no windows, no doors. Only a banner that hangs from the ceiling that says 'Congratulations'. You look to the back of the room and there is a pedestal..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Approach Toaster", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ApproachToaster), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Approach Toaster", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ApproachToaster), for: .touchUpInside)
+    }
+    
+    @IBAction func ApproachToaster(){
+        AdventureLog.text = "The pedestal has a nice silver 4 slot toaster, and a tiny index card that simply says 'Free Toaster'."
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Grab Toaster", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(GrabToaster), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Grab Toaster", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(GrabToaster), for: .touchUpInside)
+    }
+    
+    @IBAction func GrabToaster(){
+        AdventureLog.text = "As you pick up the toaster, the doors behind you close and vanish. Leaving you alone and trapped with no way out. Nothing but the banner hanging above you, acknowledging your existance."
+        
+        defaults.set(true, forKey: "ToasterUnlocked")
+        defaults.set(false, forKey: "HasCharacter")
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Search For A Way Out", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(AttemptEscape), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Search For A Way Out", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(AttemptEscape), for: .touchUpInside)
+    }
+    
+    @IBAction func AttemptEscape(){
+        AdventureLog.text = "After a while of searching for a way out, you realize you're trapped, and soon you give up hope of ever leaving. So you sit down on the ground, hold your free toaster, and cry... The lights flicker and go out. Leaving nothing but the sound of your pitiful sobs, echoing in an empty void."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("The End...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("The End...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
     }
     
     func DoNothing(){
@@ -603,14 +763,12 @@ class ViewController: UIViewController {
         MainImage.image = UIImage(named: "Hole.png")
         Floor -= Drop
         FloorTenths = 0
-        CurrentHP -= (MaxHP / 10)
-        
         let Gen: UInt32 = arc4random_uniform(100)
         if(Gen > 90){
             StartBleeding()
         }
         if(Gen > 50){
-            CurrentHP -= CurrentHP * (1/20)
+            CurrentHP -= MaxHP * (1/20)
         }
         
         SetLabels()
@@ -681,7 +839,7 @@ class ViewController: UIViewController {
         if(Type == "Mystery Sack"){
             Total = 1
         }
-        let Cost: Double = Double(arc4random_uniform(UInt32(1000 * Floor)))
+        let Cost: Double = Double(arc4random_uniform(UInt32(800 * Floor)) + 100)
         let Result: [String] = [Type, String(Total), DoubleString(Input: Cost)]
         return Result
     }
@@ -740,10 +898,9 @@ class ViewController: UIViewController {
     
     func GiveWeapon(SkipText: Bool = false, UseContainer: Bool = false, Total: Int = 1, UseNext: Bool = false, isCursed: Bool = false){
         for _ in 0..<(Total){
-        let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor))) + 50
+        let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor))) + 1
         if(!SkipText && !UseContainer){
-            MainImage.image = UIImage(named: "Weapons.png")
-            AdventureLog.text = "You obtained a " + GenWeaponType() + " with a power of " + DoubleString(Input: PowerLevel) + "!"
+            AdventureLog.text = AdventureLog.text + "\n" + "You obtained a " + GenWeaponType() + " with a power of " + DoubleString(Input: PowerLevel) + "!"
         }
         if(!SkipText && UseContainer){
             MainImage.image = UIImage(named: "Weapons.png")
@@ -789,6 +946,8 @@ class ViewController: UIViewController {
             return "scythe"
         case 4:
             return "scepter"
+        case 5:
+            return "loaf"
         default:
             return "dagger"
         }
@@ -825,7 +984,7 @@ class ViewController: UIViewController {
             }
             else{
                 AdventureLog.text = "The sack contained some potions!"
-                GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor * 3))))
+                GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor * 3)) + 1))
                 Next()
             }
         }
@@ -833,9 +992,9 @@ class ViewController: UIViewController {
     
     func GiveGold(SkipText: Bool = false, UseContainer: Bool = true){
         MainImage.image = UIImage(named: "Gold.png")
-        let Gen: Double = Double(arc4random_uniform(UInt32(300 * Floor))) + 25
+        var Gen: Double = Double(arc4random_uniform(UInt32(100 * Floor))) + 10
         if(Class == 4){
-            Gold = Gold * 3
+            Gen = Gen * 3
         }
         Gold += Gen
         if(!SkipText){
@@ -912,6 +1071,10 @@ class ViewController: UIViewController {
             })
         }
         
+        if(defaults.bool(forKey: "DebugMenu")){
+            
+        }
+        
         if(defaults.bool(forKey: "DonationAddition")){
             Power += 5000
             Gold += 5000
@@ -935,7 +1098,7 @@ class ViewController: UIViewController {
             Next()
         }else if (a > 50 && a <= 80){
             AdventureLog.text = "The chest contained Potions!"
-            GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor * 3))))
+            GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor * 3)) + 1))
             Next()
         }else if (a > 90 && a <= 100)
         {
@@ -983,7 +1146,7 @@ class ViewController: UIViewController {
     func GetMonster(Type: Int = 1) -> [String]{
         let Gen: Int = Int(arc4random_uniform(UInt32(MonsterArray.count)))
         let TempArray: [String] = MonsterArray[Gen].components(separatedBy: ",")
-        var Adjustment: Double = (Double(Floor) / 25).rounded(toPlaces: 1)
+        var Adjustment: Double = (Double(Floor) / 10)
         if(Adjustment < 1){
             Adjustment = 1
         }
@@ -1040,7 +1203,7 @@ class ViewController: UIViewController {
             let LootedGold: Double = Double(arc4random_uniform(UInt32(Floor * 200)))
             AdventureLog.text = "You slayed the beast! You looted the body and gained " + CutLabel(LootedGold) + "G."
             Gold += LootedGold
-            MaxHP += (MaxHP * (10/100)).rounded(toPlaces: 0)
+            AdjustHP(MaxHP * (5/100))
             SetLabels()
             if(isSquirrelFight){
                 AdventureLog.text = AdventureLog.text + "\n" + "After slaying the squirrel you can feel the burn on your face fade away. It seems you have bested the squirrels... For now..."
@@ -1048,7 +1211,7 @@ class ViewController: UIViewController {
                 defaults.set(false, forKey: "SquirrelMark")
             }
             let Gen: UInt32 = arc4random_uniform(100)
-            if(Gen > 75){
+            if(Gen > 85){
                 StartBleeding()
             }
             Next()
@@ -1086,6 +1249,8 @@ class ViewController: UIViewController {
             return UIImage(named:"Scythe.png")!
         case "4":
             return UIImage(named: "Scepter.png")!
+        case "5":
+            return UIImage(named: "Toaster.png")!
         default:
             return UIImage(named:"Dagger.png")!
         }
@@ -1236,87 +1401,6 @@ class ViewController: UIViewController {
         return D
     }
     
-    func HandleBattle_PokemonMod() -> Double{
-        let EP: Double = Double(CurrentMonster[1]) ?? 0
-        let PP: Double = Power
-        var D: Double = 0
-        let EC: Int = Int(CurrentMonster[2]) ?? 3
-        let PC: Int = Class
-        var CA: Double = 1
-        
-        if (PC == 0 && EC == 1 || PC == 1 && EC == 2 || PC == 2 && EC == 0){
-            CA = 0.75
-        }else if (PC == 1 && EC == 0 || PC == 2 && EC == 1 || PC == 0 && EC == 2){
-            CA = 1.5
-        }
-        
-        D = (((20 * EP) / (PP / 10))) * CA
-        
-        NSLog("Player Power: " + String(PP))
-        NSLog("Enemy Power: " + String(EP))
-        NSLog("Adjustment: " + String(CA))
-        NSLog("Damage: " + String(D))
-        
-        return D
-    }
-    
-    func HandleBattle_Attempt2() -> Double{
-        let EP: Double = Double(CurrentMonster[1]) ?? 0
-        let PP: Double = Power
-        var D: Double = 0
-        let EC: Int = Int(CurrentMonster[2]) ?? 3
-        let PC: Int = Class
-        NSLog("EP: " + String(EP))
-        NSLog("PP: " + String(PP))
-        
-        if(PP >= EP){
-            NSLog("D: " + String(D))
-            D = PP - EP
-            D -= PP / 10
-            NSLog("PP >= EP")
-            NSLog(String(D) + " - " + String(PP / 10))
-        }else{
-            NSLog("D: " + String(D))
-            D = EP - PP
-            D += EP / 10
-            NSLog("EP > PP")
-            NSLog(String(D) + " + " + String(EP / 10))
-        }
-        
-        if(CurrentHP < MaxHP / 2){
-            D += D / 10
-            NSLog("Below half health extra 10% damage")
-            NSLog("D: " + String(D))
-        }
-        
-        NSLog("D: " + String(D))
-        if (PC == 0 && EC == 1 || PC == 1 && EC == 2 || PC == 2 && EC == 0){
-            D -= (D / 10)
-        }else if (PC == 1 && EC == 0 || PC == 2 && EC == 1 || PC == 0 && EC == 2){
-            D += (D / 10)
-        }
-        NSLog("D: " + String(D))
-        
-        if(PP > EP * 2){
-            D = D / 4
-        }else if(EP > PP * 2){
-            D += D / 2
-        }
-        NSLog("D: " + String(D))
-        
-        if(EP > PP * 5){
-            D = MaxHP
-            NSLog("Instant Kill D: " + String(D))
-        }
-        
-        if(PP > EP * 5){
-            D = 0
-            NSLog("No Damage D: 0")
-        }
-        
-        return D
-    }
-    
     func HandleBattle_OldFormula() -> Double{
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         //0-Warrior 1-Ranger 2-Mage 3-Haunted 4-King
@@ -1450,7 +1534,7 @@ class ViewController: UIViewController {
                 CurrentHP = MaxHP}
             
             if(Class == 2){
-                Power += Power * (5 / 100)
+                Adjustpower(Power * (1 / 100))
             }
         }
         SetLabels()
@@ -1539,12 +1623,12 @@ class ViewController: UIViewController {
         else{
             let LootedGold: Double = Double(arc4random_uniform(UInt32(Floor * 4000))) + 4000
             AdventureLog.text = "You defeated Gilgamesh! He rewards you with " + DoubleString(Input: LootedGold) + "G and a weapon!"
-            GiveWeapon(SkipText: false, UseContainer: false, Total: 1, UseNext: false, isCursed: false)
+            GiveWeapon(SkipText: true, UseContainer: false, Total: 1, UseNext: false, isCursed: false)
             Gold += LootedGold
-            MaxHP += (MaxHP * (20/100)).rounded(toPlaces: 0)
+            AdjustHP(MaxHP * (15/100).rounded(toPlaces: 0))
             SetLabels()
             let Gen: UInt32 = arc4random_uniform(100)
-            if(Gen > 90){
+            if(Gen > 70){
                 StartBleeding()
             }
             Next()
@@ -1786,16 +1870,16 @@ class ViewController: UIViewController {
             switch CurrentProduct[0] {
             case "Potion":
                 GivePotion(SkipText: true, UseContainer: false, Total: Double(CurrentProduct[1]) ?? 1)
-                SetLabels()
             case "Weapon":
                 GiveWeapon(SkipText: true, UseContainer: false, Total: Int(CurrentProduct[1]) ?? 1)
-                SetLabels()
             case "Mystery Sack":
                 GiveMysterySack()
             default:
                 GivePotion(SkipText: true, UseContainer: false, Total: Double(CurrentProduct[1]) ?? 1)
-                SetLabels()
             }
+            
+            SetLabels()
+            SaveStats()
         }
         Next()
     }
@@ -2062,7 +2146,6 @@ class ViewController: UIViewController {
     @IBAction func DefeatDeath()
     {
         defaults.set(true, forKey: "hasKilledDeath")
-        defaults.set(true, forKey: "HauntedUnlocked")
         MainImage.image = UIImage(named: "TreasureChest.png")
         AdventureLog.text = "You stand over Death victorious. You pick up Death's Sythe and with one great swing you slay Death with his own weapon. As you do so you once again feel your body and soul being ripped apart. But unlike last time it quickly fades. You look around and see a chest."
         
@@ -2103,8 +2186,8 @@ class ViewController: UIViewController {
     @IBAction func GiveUp()
     {
         AdventureLog.text = "You give up on finding a way out of the darkness and let it engulf you. You can feel the power in the darkness, you understand more than ever what true power is." + "\n" + "And after what feels like an eternity in darkness, a light shines trhough the darkness. The light slowly engulfs you with no hesitation. After a minute the light fades. You awake back in the dungeon..."
-        Class = 4
-        Power = Power * 2
+        Class = 3
+        Adjustpower(Power * 2)
         ClearBuffs()
         AfterDeath = 6
         //defaults.set(true, forKey: "PowerOfDarkness")
@@ -2114,15 +2197,20 @@ class ViewController: UIViewController {
         MainView.backgroundColor = UIColor.gray
         MainView.backgroundColor = UIColor(patternImage: scaled)
         CurrentHP = (MaxHP / 4).rounded(toPlaces: 0)
-        DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
+        if(!defaults.bool(forKey: "HauntedUnlocked")){
+            DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
+            defaults.set(true, forKey: "HauntedUnlocked")
+        }
+        SetLabels()
+        SaveStats()
         Next()
     }
     
     @IBAction func CallOut()
     {
         AdventureLog.text = "You call out repeatedly, hundreds, thousands of times. Over and over and over again. The words quickly begin to mean less and less to you. Eventually your thoughts are of only escaping the darkness." + "\n" + "And after what feels like an eternity a light shines trhough the darkness. The light slowly engulfs you with no hesitation. After a minute the light fades. You awake back in the dungeon... Or are you?"
-        Class = 4
-        Power = Power + (Power / 50)
+        Class = 3
+        Adjustpower(Power / 50)
         AfterDeath = 3
         CurseImmunity = true
         defaults.set(true, forKey: "isCrazy")
@@ -2132,7 +2220,12 @@ class ViewController: UIViewController {
         MainView.backgroundColor = UIColor.gray
         MainView.backgroundColor = UIColor(patternImage: scaled)
         CurrentHP = (MaxHP / 4).rounded(toPlaces: 0)
-        DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
+        if(!defaults.bool(forKey: "HauntedUnlocked")){
+                    DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
+                    defaults.set(true, forKey: "HauntedUnlocked")
+        }
+        SetLabels()
+        SaveStats()
         Next()
     }
     
@@ -2339,6 +2432,190 @@ class ViewController: UIViewController {
         HellFloor = 0
         CurrentHP = 1
         HellNext()
+    }
+    
+    func AdjustHP(_ Value: Double, Add: Bool = true){
+        if(Value <= MaxValue && Value > OverFlowed){
+            if(MaxHP < MaxValue){
+                if(Add){
+                    MaxHP += Value
+                }else{
+                    MaxHP -= Value
+                }
+            }
+        }else{
+            MaxHP = MaxValue
+        }
+    }
+    
+    func Adjustpower(_ Value: Double, Add: Bool = true){
+        if(Value <= MaxValue && Value > OverFlowed){
+            if(Power < MaxValue){
+                if(Add){
+                    Power += Value
+                }else{
+                    Power -= Value
+                }
+            }
+        }else{
+            Power = MaxValue
+        }
+    }
+    
+    func AdjustGold(_ Value: Double, Add: Bool = true){
+        if(Gold < MaxValue){
+            if(Add){
+                Gold += Value
+            }else{
+                Gold -= Value
+            }
+        }
+    }
+    
+    func AdjustPotions(_ Value: Double, Add: Bool = true){
+        if(Potions < MaxValue){
+            if(Add){
+                Potions += Value
+            }else{
+                Potions -= Value
+            }
+        }
+    }
+    
+    @IBAction func Debug(){
+        let alert = UIAlertController(title: "Debug Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Change Stats", style: UIAlertAction.Style.default, handler: { action in
+            self.StatDebug()
+        }))
+        alert.addAction(UIAlertAction(title: "Do Event", style: .default, handler: { action in
+            self.EventDebug()
+        }))
+        alert.addAction(UIAlertAction(title: "Update Labels", style: .default, handler: { action in
+            self.SetLabels()
+        }))
+        alert.addAction(UIAlertAction(title: "Save Stats", style: .default, handler: { action in
+            self.SaveStats()
+        }))
+        alert.addAction(UIAlertAction(title: "Reload Stats", style: .default, handler: { action in
+            self.ReadStats()
+            self.SetLabels()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func EventDebug(){
+        let alert = UIAlertController(title: "Event Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Find Item", style: UIAlertAction.Style.default, handler: { action in
+            self.FindItemDebug()
+        }))
+        alert.addAction(UIAlertAction(title: "Fight Enemys", style: UIAlertAction.Style.default, handler: { action in
+            self.EnemyDebug()
+        }))
+        alert.addAction(UIAlertAction(title: "Find Camp", style: UIAlertAction.Style.default, handler: { action in
+            self.FindCamp()
+        }))
+        alert.addAction(UIAlertAction(title: "Find Hell", style: UIAlertAction.Style.default, handler: { action in
+            self.FindHell()
+        }))
+        alert.addAction(UIAlertAction(title: "Elevator", style: UIAlertAction.Style.default, handler: { action in
+            self.FindElevator()
+        }))
+        alert.addAction(UIAlertAction(title: "Pitfall", style: UIAlertAction.Style.default, handler: { action in
+            self.Fall()
+        }))
+        alert.addAction(UIAlertAction(title: "Find Trap", style: UIAlertAction.Style.default, handler: { action in
+            self.FindTrap()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func EnemyDebug(){
+        let alert = UIAlertController(title: "Enemy Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Normal", style: UIAlertAction.Style.default, handler: { action in
+            self.NormalEnemy()
+        }))
+        alert.addAction(UIAlertAction(title: "Enhanced", style: UIAlertAction.Style.default, handler: { action in
+            self.EnhancedEnemy()
+        }))
+        alert.addAction(UIAlertAction(title: "Boss", style: UIAlertAction.Style.default, handler: { action in
+            self.Boss()
+        }))
+        alert.addAction(UIAlertAction(title: "Find Squirrel", style: UIAlertAction.Style.default, handler: { action in
+            self.FindSquirrel()
+        }))
+        alert.addAction(UIAlertAction(title: "Gilgamesh", style: UIAlertAction.Style.default, handler: { action in
+            self.EncounterGilgamesh()
+        }))
+        alert.addAction(UIAlertAction(title: "Find Hag", style: UIAlertAction.Style.default, handler: { action in
+            self.FindOldHag()
+        }))
+        alert.addAction(UIAlertAction(title: "Fight Death", style: UIAlertAction.Style.default, handler: { action in
+            self.FightDeath()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func FindItemDebug(){
+        let alert = UIAlertController(title: "Item Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Weapon", style: UIAlertAction.Style.default, handler: { action in
+            self.GiveWeapon(SkipText: false, UseContainer: false, Total: 1, UseNext: true, isCursed: false)
+        }))
+        alert.addAction(UIAlertAction(title: "Gold", style: UIAlertAction.Style.default, handler: { action in
+            self.GiveGold(SkipText: false, UseContainer: false)
+        }))
+        alert.addAction(UIAlertAction(title: "Potion (100)", style: UIAlertAction.Style.default, handler: { action in
+            self.GivePotion(SkipText: false, UseContainer: false, Total: 100)
+        }))
+        alert.addAction(UIAlertAction(title: "Treasure Chest", style: UIAlertAction.Style.default, handler: { action in
+            self.FindTreasure()
+        }))
+        alert.addAction(UIAlertAction(title: "Mimic", style: UIAlertAction.Style.default, handler: { action in
+            self.MimicBattle(MimicName: "Treasure Mimic")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func StatDebug(){
+        let alert = UIAlertController(title: "Stat Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Set All To Max", style: UIAlertAction.Style.default, handler: { action in
+            self.Power = self.MaxValue
+            self.CurrentHP = self.MaxValue
+            self.MaxHP = self.MaxValue
+            self.Gold = self.MaxValue
+            self.SetLabels()
+        }))
+        alert.addAction(UIAlertAction(title: "Halve All Stats", style: UIAlertAction.Style.default, handler: { action in
+            self.Power = self.Power / 2
+            self.Gold = self.Gold / 2
+            self.MaxHP = self.MaxHP / 2
+            self.CurrentHP = self.MaxHP
+            self.SetLabels()
+        }))
+        alert.addAction(UIAlertAction(title: "Set all to 1", style: UIAlertAction.Style.default, handler: { action in
+            self.Power = 1
+            self.CurrentHP = 1
+            self.MaxHP = 1
+            self.Gold = 1
+            self.SetLabels()
+        }))
+        alert.addAction(UIAlertAction(title: "Set Floor To 250", style: UIAlertAction.Style.default, handler: { action in
+            self.Floor = 250
+            self.FloorTenths = 0
+            self.SetLabels()
+        }))
+        alert.addAction(UIAlertAction(title: "Change ESP Status", style: UIAlertAction.Style.default, handler: { action in
+            self.hasESP = !self.hasESP
+        }))
+        alert.addAction(UIAlertAction(title: "Change Bleeding Status", style: UIAlertAction.Style.default, handler: { action in
+            self.isBleeding = !self.isBleeding
+        }))
+        alert.addAction(UIAlertAction(title: "Change Confusion Status", style: UIAlertAction.Style.default, handler: { action in
+            self.isConfused = !self.isConfused
+        }))
+        alert.addAction(UIAlertAction(title: "Kill Yourself", style: UIAlertAction.Style.default, handler: { action in
+            self.Dead()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }

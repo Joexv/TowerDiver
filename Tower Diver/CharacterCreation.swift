@@ -24,10 +24,18 @@ class CharacterCreation: UIViewController {
         //view.backgroundColor = UIColor(patternImage: scaled)
         KingUnlocked = defaults.bool(forKey: "KingUnlocked")
         HauntedUnlocked = defaults.bool(forKey: "HauntedUnlocked")
+        ToastUnlocked = defaults.bool(forKey: "ToasterUnlocked")
+        if(ToastUnlocked){
+            ClassStepper.maximumValue = 5
+            ClassStepper.value = 5
+            ClassLabel.text = "Toaster"
+            ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."
+        }
     }
     
     var KingUnlocked: Bool = false
     var HauntedUnlocked: Bool = false
+    var ToastUnlocked: Bool = false
     
     @IBAction func ClassStepper_OnChange(_ sender: Any) {
         if(ClassStepper.value == 0){
@@ -44,8 +52,10 @@ class CharacterCreation: UIViewController {
             ClassDescriptionLabel.text = "   -The Haunted is a class that is not strong against nor weak against any other class. They begin with only 5 Adjustment points for their base stats and they begin with 0 stats." + "\n\n" + "In order to play as this class you must have beaten Death."}
         if(ClassStepper.value == 4){
             ClassLabel.text = "King"
-            ClassDescriptionLabel.text = "   -As the King you control all the gold in the land. You begin with 7500 Gold and will find larger stacks of gold. As the King you are also not trained in teh art of war and your power starts at 50 and cannot be increased with Adjustments. As the King you have knowledge of all of secrets and tactics of your kingdom and will not fall for traps." + "\n\n" + "In order to play as this class eyou must obtain 75,000 gold on a single run."
-        }
+            ClassDescriptionLabel.text = "   -As the King you control all the gold in the land. You begin with 7500 Gold and will find larger stacks of gold. As the King you are also not trained in teh art of war and your power starts at 50 and cannot be increased with Adjustments. As the King you have knowledge of all of secrets and tactics of your kingdom and will not fall for traps." + "\n\n" + "In order to play as this class eyou must obtain 75,000 gold on a single run."}
+         if(ClassStepper.value == 5){
+            ClassLabel.text = "Toaster"
+            ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."}
     }
     @IBAction func NextPage_Button(_ sender: Any) {
         //defaults.set(Name_Box.text, forKey: "Name")
