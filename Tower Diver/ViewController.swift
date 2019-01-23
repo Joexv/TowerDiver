@@ -257,7 +257,7 @@ class ViewController: UIViewController {
         }else if(Input >= 10000000000 && Input < 1000000000000){
             Letter = "b"
             Number.removeLast(9)
-        }else if(Input >= 10000000 && Input < 1000000000){
+        }else if(Input >= 10000000 && Input < 10000000000){
             Letter = "m"
             Number.removeLast(6)
         }else if(Input >= 100000 && Input < 10000000){
@@ -558,6 +558,67 @@ class ViewController: UIViewController {
         }
     }
     
+    var DecensionAdjustment: Int = 1
+    
+    func Escape(){
+        MainImage.image = UIImage(named: "DoubleDoors.png")
+        AdventureLog.text = "You finally see the entrance to this dreadful Tower.... It's within your grasps..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Escape_2), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Escape_2), for: .touchUpInside)
+    }
+    
+    @IBAction func Escape_2(){
+        MainImage.image = UIImage(named: "Outside.png")
+        AdventureLog.text = "You push open the doors. Fresh air and sunlight feel like the greatest things to ever have graced your face. You are finally free..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Escape_3), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Escape_3), for: .touchUpInside)
+    }
+    
+    @IBAction func Escape_3(){
+        MainImage.image = UIImage(named: "DeadSquirrel.png")
+        AdventureLog.text = "As you take your first step outside, you feel something is off... You brush it off as probably dehydration... But who cares, you're finally free." + "\n" + "Once you get to your house, you find something truely horrifying... you forgot to feed your squirrel! You see his body laying in his little squirrel bed... Cold... Lifeless.... What was the point of escaping that nightmare to just go into another?"
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("The End?", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Escape_4), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("The End?", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Escape_4), for: .touchUpInside)
+    }
+    
+    @IBAction func Escape_4(){
+        AdventureLog.text = "As you moarn for your fallen friend, you vow to take revenge against that dreadful Tower, and everything that it stands for."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("The End?", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("The End?", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
+    }
+    
     func GenEvent(){
         NSLog("Toaster Stat Change")
         DoToasterChange()
@@ -577,26 +638,39 @@ class ViewController: UIViewController {
         ClassImage.image = nil
         MainImage.image = UIImage(named: "QuestionMark_.png")
         AdventureLog.text = "Generating Event"
-        FloorTenths += 1
-        if(FloorTenths >= 6){
-            Floor += 1
-            FloorTenths = 0
-        }
-        NSLog("Floor: " + String(Floor))
-        NSLog("Floor Tenths: " + String(FloorTenths))
-        if(Floor > HighestFloor){
-            NSLog("Setting highest floor")
-            defaults.set(Floor, forKey: "HighestFloor")
-            defaults.set(GenClassName(), forKey: "HF_Class")
-            defaults.set(Power, forKey: "HF_Power")
-            defaults.set(hasKilledDeath, forKey: "HF_KilledDeath")
-            defaults.set(SquirrelMark, forKey: "HF_SquirrelMark")
-        }
-        if(Floor < 1){
-            Floor = 1
-        }
         
-        if(Floor >= 251){
+        if(!defaults.bool(forKey: "ReturnTrip")){
+            FloorTenths += 1
+            if(FloorTenths >= 6){
+                Floor += 1
+                FloorTenths = 0
+            }
+            NSLog("Floor: " + String(Floor))
+            NSLog("Floor Tenths: " + String(FloorTenths))
+            if(Floor > HighestFloor){
+                NSLog("Setting highest floor")
+                defaults.set(Floor, forKey: "HighestFloor")
+                defaults.set(GenClassName(), forKey: "HF_Class")
+                defaults.set(Power, forKey: "HF_Power")
+                defaults.set(hasKilledDeath, forKey: "HF_KilledDeath")
+                defaults.set(SquirrelMark, forKey: "HF_SquirrelMark")
+            }
+            if(Floor < 1){
+                Floor = 1
+            }
+        }else{
+            FloorTenths += 1
+            if(FloorTenths >= 6){
+                Floor -= 1
+                FloorTenths = 0
+            }
+            
+            DecensionAdjustment = 4200 - Floor
+            NSLog(String(DecensionAdjustment))
+        }
+        if(Floor <= 1 && FloorTenths > 4 && defaults.bool(forKey: "ReturnTrip")){
+            Escape()
+        }else if(Floor >= 251 && !defaults.bool(forKey: "ReturnTrip")){
             FinalFloor()
         }else{
         Name_Label.text = "Floor: " + String(Floor)
@@ -640,7 +714,7 @@ class ViewController: UIViewController {
     func FinalFloor(){
         AdventureLog.text = "As you advance up the flight of stairs to the next floor, you're blinded by a bright light. You walk towards the light up to a majestic set of double doors."
         
-        MainImage.image = UIImage(named: "QuestionMark_.png")
+        MainImage.image = UIImage(named: "DoubleDoors.png")
 
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Open Doors", for: .normal)
@@ -654,6 +728,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func OpenFinalDoors(){
+        MainImage.image = UIImage(named: "FinalRoom.png")
         AdventureLog.text = "Through the double doors you enter into a small white room, with no windows, no doors. Only a banner that hangs from the ceiling that says 'Congratulations'. You look to the back of the room and there is a pedestal..."
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -668,6 +743,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ApproachToaster(){
+        MainImage.image = UIImage(named: "Toaster.png")
         AdventureLog.text = "The pedestal has a nice silver 4 slot toaster, and a tiny index card that simply says 'Free Toaster'."
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Grab Toaster", for: .normal)
@@ -681,6 +757,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func GrabToaster(){
+        MainImage.image = nil
         AdventureLog.text = "As you pick up the toaster, the doors behind you close and vanish. Leaving you alone and trapped with no way out. Nothing but the banner hanging above you, acknowledging your existance."
         
         defaults.set(true, forKey: "ToasterUnlocked")
@@ -701,14 +778,62 @@ class ViewController: UIViewController {
         AdventureLog.text = "After a while of searching for a way out, you realize you're trapped, and soon you give up hope of ever leaving. So you sit down on the ground, hold your free toaster, and cry... The lights flicker and go out. Leaving nothing but the sound of your pitiful sobs, echoing in an empty void."
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Top_Button.setTitle("The End...", for: .normal)
+        Top_Button.setTitle("Wait For Rescue", for: .normal)
         Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        Top_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
+        Top_Button.addTarget(self, action: #selector(Rescue), for: .touchUpInside)
         
         Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Bottom_Button.setTitle("The End...", for: .normal)
+        Bottom_Button.setTitle("Give Up", for: .normal)
         Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         Bottom_Button.addTarget(self, action: #selector(Restart), for: .touchUpInside)
+    }
+    
+    @IBAction func Rescue(){
+        AdventureLog.text = "You wait...."
+        Rescue_Count = 0
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Rescue_Loop), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Rescue_Loop), for: .touchUpInside)
+    }
+    var Rescue_Count: Int = 0
+    @IBAction func Rescue_Loop(){
+        Rescue_Count += 1
+        if(Rescue_Count < 10){
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("...", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(Rescue_Loop), for: .touchUpInside)
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("...", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(Rescue_Loop), for: .touchUpInside)
+        }else{
+            AdventureLog.text = "It's been what feels like years since you last saw the light of day. You've been trapped in this Tower for days, and are barely hanging onto life. Suddenly, the doors reappear and open as another unsuspecting adventurer enters the final room."
+            
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("...", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(Decend), for: .touchUpInside)
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("...", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(Decend), for: .touchUpInside)
+        }
+    }
+    
+    @IBAction func Decend(){
+        AdventureLog.text = "You quickly put the Toaster back on the pedestal anbd hide behind the pedestal waiting for them to come close. As they reach for your toaster you jump out, and kill them. You grab your precious toaster and run out the rapidly closing doors! You made it! You're alive!! But you still have to escape this Tower..."
+        defaults.set(true, forKey: "ReturnTrip")
+        Next()
     }
     
     func DoNothing(){
@@ -766,18 +891,42 @@ class ViewController: UIViewController {
     
     func Fall(){
         let Drop: Int = Int(arc4random_uniform(4)) + 1
-        AdventureLog.text = "The ground around you starts to collapse! You don't jump out of the way in time and fall " + String(Drop) + " floor(s)!"
         MainImage.image = UIImage(named: "Hole.png")
-        Floor -= Drop
-        FloorTenths = 0
-        let Gen: UInt32 = arc4random_uniform(100)
-        if(Gen > 90){
-            StartBleeding()
-        }
-        if(Gen > 50){
-            CurrentHP -= MaxHP * (1/20)
+        if(!defaults.bool(forKey: "ReturnTrip")){
+            AdventureLog.text = "The ground around you starts to collapse! You don't jump out of the way in time and fall " + String(Drop) + " floor(s)!"
+            Floor -= Drop
+            FloorTenths = 0
+            let Gen: UInt32 = arc4random_uniform(100)
+            if(Gen > 90){
+                StartBleeding()
+            }
+            if(Gen > 50){
+                CurrentHP -= MaxHP * (1/20)
+            }
+        }else{
+            AdventureLog.text = "The ground in front of you collapses!"
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Jump Down", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(SafeFall), for: .touchUpInside)
+            
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Continue On This Floor", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(GenerateEventButton), for: .touchUpInside)
         }
         
+        SetLabels()
+        SaveStats()
+        Next()
+    }
+    
+    @IBAction func SafeFall(){
+        let Drop: Int = Int(arc4random_uniform(4)) + 1
+        Floor -= Drop
+        FloorTenths = 0
+        AdventureLog.text = "You jump down " + String(Drop) + " floor(s)!"
         SetLabels()
         SaveStats()
         Next()
@@ -804,22 +953,32 @@ class ViewController: UIViewController {
     }
     
     func FindElevator(){
-        AdventureLog.text = "An elevator in a dungeon? How odd..."
-        MainImage.image = UIImage(named: "Elevator.png")
-        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Top_Button.setTitle("Ride Elevator", for: .normal)
-        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        Top_Button.addTarget(self, action: #selector(DoElevator), for: .touchUpInside)
+        if(!defaults.bool(forKey: "ReturnTrip")){
+            AdventureLog.text = "An elevator in a dungeon? How odd..."
+            MainImage.image = UIImage(named: "Elevator.png")
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Ride Elevator", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(DoElevator), for: .touchUpInside)
         
         
-        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Bottom_Button.setTitle("Continue On This Floor", for: .normal)
-        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
-        Bottom_Button.addTarget(self, action: #selector(GenerateEventButton), for: .touchUpInside)
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Continue On This Floor", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(GenerateEventButton), for: .touchUpInside)
+        }else{
+            MainImage.image = UIImage(named: "QuestionMark_.png")
+            let Raise: Int = Int(arc4random_uniform(5)) + 1
+            AdventureLog.text = "You hear something above you, as you look up a giant hand grabs you and pulls you up " + String(Raise) + " floor(s)!"
+            MainImage.image = UIImage(named: "Elevator.png")
+            
+            SetLabels()
+            Next()
+        }
     }
     
     @IBAction func DoElevator(_ sender: Any){
-        let Raise: Int = Int(arc4random_uniform(3)) + 1
+        let Raise: Int = Int(arc4random_uniform(5)) + 1
         FloorTenths = 0
         Floor += Raise
         AdventureLog.text = "You rose " + String(Raise) + " floor(s)!"
@@ -846,7 +1005,7 @@ class ViewController: UIViewController {
         if(Type == "Mystery Sack"){
             Total = 1
         }
-        let Cost: Double = Double(arc4random_uniform(UInt32(800 * Floor)) + 100)
+        let Cost: Double = Double(arc4random_uniform(UInt32(800 * Floor * DecensionAdjustment)) + 100)
         let Result: [String] = [Type, String(Total), DoubleString(Input: Cost)]
         return Result
     }
@@ -905,7 +1064,7 @@ class ViewController: UIViewController {
     
     func GiveWeapon(SkipText: Bool = false, UseContainer: Bool = false, Total: Int = 1, UseNext: Bool = false, isCursed: Bool = false){
         for _ in 0..<(Total){
-        let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor))) + 1
+        let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor * DecensionAdjustment))) + 1
         if(!SkipText && !UseContainer){
             AdventureLog.text = AdventureLog.text + "\n" + "You obtained a " + GenWeaponType() + " with a power of " + DoubleString(Input: PowerLevel) + "!"
         }
@@ -913,7 +1072,7 @@ class ViewController: UIViewController {
             MainImage.image = UIImage(named: "Weapons.png")
             AdventureLog.text = "You found a " + GenContainer() + " containing a " + GenWeaponType() + " with a power of " + DoubleString(Input: PowerLevel) + "!"
         }
-        Power += PowerLevel
+        Adjustpower(PowerLevel)
             SetLabels()
         }
         if(isCursed){
@@ -999,7 +1158,7 @@ class ViewController: UIViewController {
     
     func GiveGold(SkipText: Bool = false, UseContainer: Bool = true){
         MainImage.image = UIImage(named: "Gold.png")
-        var Gen: Double = Double(arc4random_uniform(UInt32(100 * Floor))) + 10
+        var Gen: Double = Double(arc4random_uniform(UInt32(100 * Floor * DecensionAdjustment))) + 10
         if(Class == 4){
             Gen = Gen * 3
         }
@@ -1108,7 +1267,7 @@ class ViewController: UIViewController {
             Next()
         }else if (a > 50 && a <= 80){
             AdventureLog.text = "The chest contained Potions!"
-            GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor * 3)) + 1))
+            GivePotion(SkipText: false, UseContainer: false, Total: Double(arc4random_uniform(UInt32(Floor + 1))))
             Next()
         }else if (a > 90 && a <= 100)
         {
@@ -1156,11 +1315,11 @@ class ViewController: UIViewController {
     func GetMonster(Type: Int = 1) -> [String]{
         let Gen: Int = Int(arc4random_uniform(UInt32(MonsterArray.count)))
         let TempArray: [String] = MonsterArray[Gen].components(separatedBy: ",")
-        var Adjustment: Double = (Double(Floor) / 10)
+        var Adjustment: Int = (Floor / 25)
         if(Adjustment < 1){
             Adjustment = 1
         }
-        let TempPower: String = String(Double(TempArray[1])! * Double(Type) * Double(AfterDeath) * Double(Floor) * 2 * Adjustment)
+        let TempPower: String = String(Double(TempArray[1])! * Double(Type * AfterDeath * Floor * 2 * Adjustment * DecensionAdjustment))
         let FinalResult: [String] = [TempArray[0], TempPower , TempArray[2]]
         return FinalResult
     }
@@ -1326,7 +1485,7 @@ class ViewController: UIViewController {
     var isSquirrelFight: Bool = false
     
     func SquirrelBattle(){
-        CurrentMonster = ["Squirrel", String(600 * Floor * AfterDeath * 4), "3"]
+        CurrentMonster = ["Squirrel", String(500 * Floor * AfterDeath * 4 * DecensionAdjustment), "3"]
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         if(isEasyMode){
             EnemyPower = EnemyPower / 2
@@ -1482,8 +1641,8 @@ class ViewController: UIViewController {
         let CurseModifier: Int = PullInt(Buff: FullCurse[0])
         
         if(!ConfusionCurse){
-        defaults.set(String(Int(FullCurse[1])! + CurseModifier), forKey: FullCurse[0])
-        LoadChances()
+            defaults.set(String(Int(FullCurse[1])! + CurseModifier), forKey: FullCurse[0])
+            LoadChances()
         }
         
         if(isEvent){
@@ -1591,11 +1750,11 @@ class ViewController: UIViewController {
     }
     
     func EncounterGilgamesh(){
-        var Adjustment: Double = (Double(Floor) / 25).rounded(toPlaces: 1)
+        var Adjustment: Int = (Floor / 25)
         if(Adjustment < 1){
             Adjustment = 1
         }
-        CurrentMonster = ["Gilgamesh", String(1000 * Double(Floor) * 4 * Double(AfterDeath) * Adjustment), "0"]
+        CurrentMonster = ["Gilgamesh", String(1000 * Double(Floor * 4 * AfterDeath * Adjustment * DecensionAdjustment)), "0"]
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
         if(isEasyMode){
             EnemyPower = EnemyPower / 2
@@ -1701,7 +1860,7 @@ class ViewController: UIViewController {
     let HagChanges: [String] = ["Ice Sorceress,200,2", "Fire Sorceress,250,2", "Succubus,220,2"]
     
     @IBAction func FightHag(_ Attacked: Bool = false){
-        var Adjustment: Double = (Double(Floor) / 25).rounded(toPlaces: 1)
+        var Adjustment: Int = (Floor / 25)
         if(Adjustment < 1){
             Adjustment = 1
         }
@@ -1710,7 +1869,7 @@ class ViewController: UIViewController {
         let TempArray: [String] = HagChanges[Gen].components(separatedBy: ",")
         
         CurrentMonster = TempArray
-        var EnemyPower: Double = (Double(CurrentMonster[1]) ?? 0) * Double(Floor) * Adjustment * 2
+        var EnemyPower: Double = (Double(CurrentMonster[1]) ?? 0) * Double(Floor * Adjustment * 2 * DecensionAdjustment)
         if(isEasyMode){
             EnemyPower = EnemyPower / 2
         }
@@ -2125,7 +2284,7 @@ class ViewController: UIViewController {
     
     @IBAction func FightDeath()
     {
-        CurrentMonster = ["Death", String(666 * 20 * Double(AfterDeath) * Double(Floor)), "3"]
+        CurrentMonster = ["Death", String(666 * 20 * Double(AfterDeath * Floor * DecensionAdjustment)), "3"]
         MainImage.image = UIImage(named: Theme + "Death.png")
         ClassImage.image = UIImage(named: "Scythe.png")
         TypeImage.image = UIImage(named: "Crown.png")
@@ -2199,10 +2358,10 @@ class ViewController: UIViewController {
     @IBAction func GiveUp()
     {
         AdventureLog.text = "You give up on finding a way out of the darkness and let it engulf you. You can feel the power in the darkness, you understand more than ever what true power is." + "\n" + "And after what feels like an eternity in darkness, a light shines trhough the darkness. The light slowly engulfs you with no hesitation. After a minute the light fades. You awake back in the dungeon..."
-        Class = 3
+        //Class = 3
         Adjustpower(Power * 2)
         ClearBuffs()
-        AfterDeath = 6
+        AfterDeath += 6
         //defaults.set(true, forKey: "PowerOfDarkness")
         
         let image = UIImage(named: "Bricks.png")
@@ -2225,9 +2384,9 @@ class ViewController: UIViewController {
     @IBAction func CallOut()
     {
         AdventureLog.text = "You call out repeatedly, hundreds, thousands of times. Over and over and over again. The words quickly begin to mean less and less to you. Eventually your thoughts are of only escaping the darkness." + "\n" + "And after what feels like an eternity a light shines trhough the darkness. The light slowly engulfs you with no hesitation. After a minute the light fades. You awake back in the dungeon... Or are you?"
-        Class = 3
+        //Class = 3
         Adjustpower(Power / 50)
-        AfterDeath = 3
+        AfterDeath += 3
         CurseImmunity = true
         defaults.set(true, forKey: "isCrazy")
         
@@ -2299,7 +2458,7 @@ class ViewController: UIViewController {
     {
         let Gen: Int = Int(arc4random_uniform(UInt32(MonsterArray.count)))
         let TempArray: [String] = MonsterArray[Gen].components(separatedBy: ",")
-        let TempPower: String = String(Double(TempArray[1])! * 20 * Double(AfterDeath) * Double(Floor))
+        let TempPower: String = String(Double(TempArray[1])! * 15 * Double(AfterDeath * Floor * DecensionAdjustment))
         let FinalResult: [String] = [TempArray[0], TempPower , TempArray[2]]
         return FinalResult
     }
@@ -2632,6 +2791,17 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Set Floor To 250", style: UIAlertAction.Style.default, handler: { action in
             self.Floor = 250
             self.FloorTenths = 0
+            self.SetLabels()
+            self.SaveStats()
+        }))
+        alert.addAction(UIAlertAction(title: "Set Floor To 2", style: UIAlertAction.Style.default, handler: { action in
+            self.Floor = 2
+            self.FloorTenths = 0
+            self.SetLabels()
+            self.SaveStats()
+        }))
+        alert.addAction(UIAlertAction(title: "Change Decension Status", style: UIAlertAction.Style.default, handler: { action in
+            self.defaults.set(!self.defaults.bool(forKey: "ReturnTrip"), forKey: "ReturnTrip")
             self.SetLabels()
             self.SaveStats()
         }))

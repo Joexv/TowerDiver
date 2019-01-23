@@ -194,6 +194,7 @@ class CharacterCreation2: UIViewController {
         
         defaults.set(1, forKey: "Floor")
         defaults.set(1, forKey: "AfterDeath")
+        defaults.set(false, forKey: "ReturnTrip")
         
         if(defaults.object(forKey: "HighestFloor") as? Int == nil){
             defaults.set(1, forKey: "HighestFloor")

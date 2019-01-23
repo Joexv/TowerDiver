@@ -17,6 +17,11 @@
 		3001FABE21CD793400FB14C9 /* CharacterCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABD21CD793400FB14C9 /* CharacterCreation.swift */; };
 		3001FAC021CD7BD600FB14C9 /* CharacterCreation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */; };
 		306F15D421D40C8000E91EF6 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F15D321D40C8000E91EF6 /* TitleScreen.swift */; };
+		307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283521F9206100B8A646 /* DeadSquirrel.png */; };
+		307F283A21F9206100B8A646 /* Toaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283621F9206100B8A646 /* Toaster.png */; };
+		307F283B21F9206100B8A646 /* FinalRoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283721F9206100B8A646 /* FinalRoom.png */; };
+		307F283C21F9206100B8A646 /* DoubleDoors.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283821F9206100B8A646 /* DoubleDoors.png */; };
+		307F283E21F9240F00B8A646 /* Outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283D21F9240F00B8A646 /* Outside.png */; };
 		30802DB521DFE8B70061F213 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */; };
 		30802DB721DFE8BC0061F213 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB621DFE8BC0061F213 /* SideMenu.framework */; };
 		30802DB921DFE8EA0061F213 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB821DFE8EA0061F213 /* StoreKit.framework */; };
@@ -192,6 +197,11 @@
 		3001FABD21CD793400FB14C9 /* CharacterCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation.swift; sourceTree = "<group>"; };
 		3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation2.swift; sourceTree = "<group>"; };
 		306F15D321D40C8000E91EF6 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		307F283521F9206100B8A646 /* DeadSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DeadSquirrel.png; path = ../../../Images/DeadSquirrel.png; sourceTree = "<group>"; };
+		307F283621F9206100B8A646 /* Toaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Toaster.png; path = ../../../Images/Toaster.png; sourceTree = "<group>"; };
+		307F283721F9206100B8A646 /* FinalRoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FinalRoom.png; path = ../../../Images/FinalRoom.png; sourceTree = "<group>"; };
+		307F283821F9206100B8A646 /* DoubleDoors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoubleDoors.png; path = ../../../Images/DoubleDoors.png; sourceTree = "<group>"; };
+		307F283D21F9240F00B8A646 /* Outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Outside.png; path = ../../../Images/Outside.png; sourceTree = "<group>"; };
 		30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30802DB621DFE8BC0061F213 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30802DB821DFE8EA0061F213 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -555,6 +565,11 @@
 		30802ECC21F2AB4A0061F213 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				307F283D21F9240F00B8A646 /* Outside.png */,
+				307F283521F9206100B8A646 /* DeadSquirrel.png */,
+				307F283821F9206100B8A646 /* DoubleDoors.png */,
+				307F283721F9206100B8A646 /* FinalRoom.png */,
+				307F283621F9206100B8A646 /* Toaster.png */,
 				30802F4D21F2D8850061F213 /* Enchanted Land.otf */,
 				30802F4B21F2CE4B0061F213 /* Tower_Icon.png */,
 				30802EE421F2AB5E0061F213 /* Arrow.png */,
@@ -749,6 +764,7 @@
 				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
 				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
 				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
+				307F283E21F9240F00B8A646 /* Outside.png in Resources */,
 				30802DF621F170530061F213 /* Chimera.png in Resources */,
 				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
 				30802EEC21F2AB5E0061F213 /* Hag.png in Resources */,
@@ -800,6 +816,7 @@
 				30802F3621F2AB6C0061F213 /* Pixel_Goblin.png in Resources */,
 				30802F3521F2AB6C0061F213 /* Pixel_Sack Mimic.png in Resources */,
 				30802DF721F170530061F213 /* Behemoth.png in Resources */,
+				307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */,
 				30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */,
 				30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */,
 				30802DEA21F170530061F213 /* Bandit.png in Resources */,
@@ -824,6 +841,7 @@
 				30802EF421F2AB5E0061F213 /* Title.png in Resources */,
 				30802DE821F170530061F213 /* Ghost.png in Resources */,
 				30802DF021F170530061F213 /* Skeleton.png in Resources */,
+				307F283A21F9206100B8A646 /* Toaster.png in Resources */,
 				30802DE521F170530061F213 /* Treasure Mimic.png in Resources */,
 				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
 				30802F2F21F2AB6C0061F213 /* Pixel_Spider.png in Resources */,
@@ -831,8 +849,10 @@
 				30802DED21F170530061F213 /* Bat.png in Resources */,
 				30802DE721F170530061F213 /* Giant.png in Resources */,
 				30802E6421F1708B0061F213 /* Stick_Chimera.png in Resources */,
+				307F283C21F9206100B8A646 /* DoubleDoors.png in Resources */,
 				30802DFC21F170530061F213 /* Zombie.png in Resources */,
 				30802DF321F170530061F213 /* Death.png in Resources */,
+				307F283B21F9206100B8A646 /* FinalRoom.png in Resources */,
 				30802DF821F170530061F213 /* Snake.png in Resources */,
 				30802DF221F170530061F213 /* Rat.png in Resources */,
 				30802E0021F170530061F213 /* Paladin.png in Resources */,
