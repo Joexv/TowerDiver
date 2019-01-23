@@ -116,6 +116,8 @@ class ViewController: UIViewController {
                 isBleeding = false
             }
             
+            AdventureLog.text = "Welcome Adventurer!" + "\n" + "Press a button to begin!"
+            
             ReadStats()
             FixStats()
             SetLabels()

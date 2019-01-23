@@ -49,7 +49,7 @@ class TitleScreen: UIViewController {
     let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     
     func GotoWiki(){
-        let url = URL(string: "https://github.com/Joexv/SwipeRPG/wiki")
+        let url = URL(string: "https://slimwiki.com/alt-apps-unlimited")
         let svc = SFSafariViewController(url: url!)
         present(svc, animated: true, completion: nil)
     }

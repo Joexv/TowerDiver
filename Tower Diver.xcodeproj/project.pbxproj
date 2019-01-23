@@ -688,6 +688,11 @@
 				TargetAttributes = {
 					3001FA7321CD5DB500FB14C9 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					3001FA8721CD5DB600FB14C9 = {
 						CreatedOnToolsVersion = 10.1;

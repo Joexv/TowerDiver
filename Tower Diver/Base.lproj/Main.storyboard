@@ -35,7 +35,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Yh9-jH-FkW"/>
                                 </constraints>
-                                <state key="normal" title="Enter Tower -Alpha-">
+                                <state key="normal" title="Enter Tower">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -179,7 +179,7 @@
                                     <constraint firstAttribute="height" constant="50" id="oih-IT-TFj"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" editable="NO" text="Welcome Adventurer!" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOi-GD-Jr7">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" keyboardDismissMode="interactive" editable="NO" text="Welcome Adventurer! \n Press a button to begin!" textAlignment="center" adjustsFontForContentSizeCategory="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOi-GD-Jr7">
                                 <rect key="frame" x="47.666666666666657" y="394" width="280" height="197"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -930,7 +930,7 @@
         <image name="TitleScreen.png" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="HEg-3x-W23"/>
+        <segue reference="m2R-Ai-czz"/>
         <segue reference="q4H-jp-eBF"/>
     </inferredMetricsTieBreakers>
 </document>
