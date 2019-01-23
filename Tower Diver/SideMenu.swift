@@ -67,6 +67,12 @@ class SideMenu: UITableViewController {
         alert.addAction(UIAlertAction(title: button, style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    func Alert(_ message: String){
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
 
     //@IBOutlet weak var Floor_label: UILabel!
     @IBOutlet weak var FloorLabel: UIButton!
@@ -79,17 +85,17 @@ class SideMenu: UITableViewController {
             SaveStats()
             let Total: Int = Int(LoadChances())
             
-            CurseChance = 5
-            EnemyChance = 18
-            FindItemChance = 34
-            MerchantChance = 10
-            ElevatorChance = 3
-            FallChance = 3
-            MiscEventChance = 9
-            CampChance = 5
+            CurseChance = 10
+            EnemyChance = 25
+            FindItemChance = 35
+            MerchantChance = 13
+            ElevatorChance = 2
+            FallChance = 2
+            MiscEventChance = 14
+            CampChance = 6
             
-            EnhancedChance = 4
-            BossChance = 2
+            EnhancedChance = 15
+            BossChance = 5
             BadMerchantChance = 5
             WeaponChance = 50
             GoldChance = 20
@@ -176,13 +182,13 @@ class SideMenu: UITableViewController {
     @IBOutlet weak var BattleSwitch: UISwitch!
     
     @IBAction func Report_Button(_ sender: Any) {
-        let url = URL(string: "https://github.com/Joexv/SwipeRPG/issues/new")
+        let url = URL(string: "https://github.com/Joexv/TowerDiver/issues/new")
         let svc = SFSafariViewController(url: url!)
         present(svc, animated: true, completion: nil)
     }
     
     @IBAction func Wiki_Button(_ sender: Any) {
-        let url = URL(string: "https://github.com/Joexv/SwipeRPG/wiki")
+        let url = URL(string: "https://slimwiki.com/alt-apps-unlimited")
         let svc = SFSafariViewController(url: url!)
         present(svc, animated: true, completion: nil)
         
@@ -190,8 +196,11 @@ class SideMenu: UITableViewController {
     @IBAction func ReturnButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+    
     @IBAction func About_Button(_ sender: Any) {
-        DisplayAlert(title: "Info", message: "v0.0.1 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", button: "OK")
+        DisplayAlert(title: "Info", message: "v" + Version + " - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", button: "OK")
         
         //Until Production the About button will be a Debug Menu.
         //defaults.set(true, forKey: "DebugMenu")
@@ -201,11 +210,12 @@ class SideMenu: UITableViewController {
 
     
     @IBAction func Donate_Button(_ sender: Any) {
-        let alert = UIAlertController(title: "Donate?", message: "Would you like to donate $1? Each donation adds 5000 Power and Gold to your current character.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Donate?", message: "Would you like to donate $1? Each donation adds 5000 Power, Gold and HP along with 50 potions, to your current character.", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
             self.DoBuy2()
         }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -237,9 +247,11 @@ class SideMenu: UITableViewController {
      present(svc, animated: true, completion: nil)
      }
     */
+    
     func DoBuy2(){
         if(SKPaymentQueue.canMakePayments())
         {
+            //DisplayAlert(title: "Alert", message: "Cannot buy products while testing", button: "OK")
             self.BuyProd()
         }else{
             DisplayAlert(title: "Error", message: "Cannot make purchases on this device!", button: "OK")
@@ -272,19 +284,18 @@ class SideMenu: UITableViewController {
                 defaults.set(true, forKey: "DonationAddition")
             case .error(let error):
                 switch error.code {
-                case .unknown: print("Unknown error. Please contact support")
-                case .clientInvalid: print("Not allowed to make the payment")
+                case .unknown: self.Alert("Unknown error. Please contact support")
+                case .clientInvalid: self.Alert("Not allowed to make the payment")
                 case .paymentCancelled: break
-                case .paymentInvalid: print("The purchase identifier was invalid")
-                case .paymentNotAllowed: print("The device is not allowed to make the payment")
-                case .storeProductNotAvailable: print("The product is not available in the current storefront")
-                case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
-                case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
-                case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                case .paymentInvalid: self.Alert("The purchase identifier was invalid")
+                case .paymentNotAllowed: self.Alert("The device is not allowed to make the payment")
+                case .storeProductNotAvailable: self.Alert("The product is not available in the current storefront")
+                case .cloudServicePermissionDenied: self.Alert("Access to cloud service information is not allowed")
+                case .cloudServiceNetworkConnectionFailed: self.Alert("Could not connect to the network")
+                case .cloudServiceRevoked: self.Alert("User has revoked permission to use this cloud service")
                 }
             }
         }
-        
     }
     // MARK: - Table view data source
 /*

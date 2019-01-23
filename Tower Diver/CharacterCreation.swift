@@ -25,11 +25,15 @@ class CharacterCreation: UIViewController {
         KingUnlocked = defaults.bool(forKey: "KingUnlocked")
         HauntedUnlocked = defaults.bool(forKey: "HauntedUnlocked")
         ToastUnlocked = defaults.bool(forKey: "ToasterUnlocked")
+        let FirstToast: Bool = defaults.bool(forKey: "FirstToast")
         if(ToastUnlocked){
             ClassStepper.maximumValue = 5
+            if(!FirstToast){
             ClassStepper.value = 5
             ClassLabel.text = "Toaster"
-            ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."
+                ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."
+                defaults.set(true, forKey: "FirstToast")
+            }
         }
     }
     

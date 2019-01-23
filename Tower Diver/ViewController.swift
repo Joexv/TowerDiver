@@ -13,6 +13,8 @@ class ViewController: UIViewController {
 
     let defaults = UserDefaults.standard
     
+    let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+    
     var MaxHP: Double = 0
     var CurrentHP: Double  = 0
     var Power: Double = 0
@@ -54,7 +56,7 @@ class ViewController: UIViewController {
                 self.performSegue(withIdentifier: "CharacterCreationSegue", sender: nil)
             })
         }
-        else{
+        else{            
             MainImage.image = UIImage(named: "QuestionMark_.png")
             MainImage.layer.borderWidth = 2
             MainImage.layer.borderColor = UIColor.darkGray.cgColor
@@ -129,6 +131,9 @@ class ViewController: UIViewController {
         }
         if(isConfused){
             HealthString = HealthString + "\n" + "Confusion: " + String(10 - ConfusionCounter) + " events until recovered."
+        }
+        if(hasESP){
+            HealthString = HealthString + "\n" + "Has ESP"
         }
         if(SquirrelMark){
             HealthString = HealthString + "\n" + "Has the Mark of The Squirrel."
@@ -242,19 +247,19 @@ class ViewController: UIViewController {
         var Letter: String = ""
         var Number = DoubleString(Input: Input)
         if(Input >= 1000000000000000){
-            Letter = "Quad"
+            Letter = "q"
             Number.removeLast(15)
-        }else if(Input >= 1000000000000){
-            Letter = "T"
+        }else if(Input >= 1000000000000 && Input < 1000000000000000){
+            Letter = "t"
             Number.removeLast(12)
-        }else if(Input >= 1000000000 && Input < 1000000000000){
-            Letter = "B"
+        }else if(Input >= 10000000000 && Input < 1000000000000){
+            Letter = "b"
             Number.removeLast(9)
-        }else if(Input >= 1000000 && Input < 1000000000){
-            Letter = "M"
+        }else if(Input >= 10000000 && Input < 1000000000){
+            Letter = "m"
             Number.removeLast(6)
-        }else if(Input >= 100000 && Input < 1000000){
-            Letter = "K"
+        }else if(Input >= 100000 && Input < 10000000){
+            Letter = "k"
             Number.removeLast(3)
         }
         return String(Number) + Letter
@@ -389,17 +394,17 @@ class ViewController: UIViewController {
     var MimicChance: Int = 10
     
     func LoadChances() -> UInt32{
-        CurseChance = 5
-        EnemyChance = 20
-        FindItemChance = 30
-        MerchantChance = 8
+        CurseChance = 10
+        EnemyChance = 25
+        FindItemChance = 35
+        MerchantChance = 13
         ElevatorChance = 2
         FallChance = 2
-        MiscEventChance = 9
-        CampChance = 4
+        MiscEventChance = 14
+        CampChance = 6
         
-        EnhancedChance = 6
-        BossChance = 4
+        EnhancedChance = 15
+        BossChance = 5
         BadMerchantChance = 5
         WeaponChance = 50
         GoldChance = 20
@@ -1019,7 +1024,7 @@ class ViewController: UIViewController {
     
     func FindItem(UseContainer: Bool = true){
         let Total: UInt32 = LoadItemChances()
-        let Gen: Int = Int(arc4random_uniform(Total) + 10)
+        let Gen: Int = Int(arc4random_uniform(Total) + 15)
         if(Gen >= 0 && Gen <= WeaponChance){
             GenWeapon(SkipText: false, UseContainer: true, Total: 1, CanBeCursed: true)
             Next()
@@ -1056,7 +1061,7 @@ class ViewController: UIViewController {
             defaults.set(false, forKey: "TempPotionCheck")
             
             if(Class == 2){
-                Power += Power * (40 / 100)
+                Adjustpower(Power * 8/100)
             }
         }
         if(defaults.bool(forKey: "ReturnToTitle")){
@@ -1076,9 +1081,12 @@ class ViewController: UIViewController {
         }
         
         if(defaults.bool(forKey: "DonationAddition")){
-            Power += 5000
-            Gold += 5000
+            Adjustpower(5000)
+            AdjustGold(5000)
+            AdjustHP(5000)
+            AdjustPotions(50)
             SaveStats()
+            defaults.set(false, forKey: "DonationAddition")
         }
         ReadStats()
         SetLabels()
@@ -1086,7 +1094,7 @@ class ViewController: UIViewController {
     
     @IBAction func FindTreasure(){
         
-        let a: Int = Int(arc4random_uniform(106))
+        let a: Int = Int(arc4random_uniform(110))
         if (a >= 0 && a <= 25)
         {
             AdventureLog.text = "The treasure chest contains a weapon, take it?"
@@ -1208,6 +1216,7 @@ class ViewController: UIViewController {
             if(isSquirrelFight){
                 AdventureLog.text = AdventureLog.text + "\n" + "After slaying the squirrel you can feel the burn on your face fade away. It seems you have bested the squirrels... For now..."
                 SquirrelMark = false
+                isSquirrelFight = false
                 defaults.set(false, forKey: "SquirrelMark")
             }
             let Gen: UInt32 = arc4random_uniform(100)
@@ -1402,7 +1411,7 @@ class ViewController: UIViewController {
     }
     
     func HandleBattle_OldFormula() -> Double{
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         //0-Warrior 1-Ranger 2-Mage 3-Haunted 4-King
         let EnemyClass: Int = Int(CurrentMonster[2]) ?? 0
         var PlayerPower: Double = Power
@@ -1711,7 +1720,7 @@ class ViewController: UIViewController {
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
         
-        CurrentMonster = [TempArray[0], String(EnemyPower), TempArray[2]] as! [String]
+        CurrentMonster = [TempArray[0], String(EnemyPower), TempArray[2]] 
         
         if(hasESP && BattlePredict){
             let Damage: Double = HandleBattle()
@@ -2114,11 +2123,11 @@ class ViewController: UIViewController {
     
     @IBAction func FightDeath()
     {
-        CurrentMonster = ["Death", String(666 * 4 * Double(AfterDeath) * Double(Floor)), "4"]
+        CurrentMonster = ["Death", String(666 * 20 * Double(AfterDeath) * Double(Floor)), "3"]
         MainImage.image = UIImage(named: Theme + "Death.png")
         ClassImage.image = UIImage(named: "Scythe.png")
         TypeImage.image = UIImage(named: "Crown.png")
-        AdventureLog.text = "Death emerges from his coffin ready to battle." + "\n" + "Power: " + CurrentMonster[1]
+        AdventureLog.text = "Death emerges from his coffin ready to battle." + "\n" + "Power: " + CutLabel(Double(CurrentMonster[1]) ?? 420)
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Battle", for: .normal)
@@ -2136,7 +2145,9 @@ class ViewController: UIViewController {
         let Damage: Double = HandleBattle()
         CurrentHP -= Damage
         SetLabels()
-        if (CurrentHP <= 0){
+        if (CurrentHP < 1){
+            CurrentHP = 0
+            SetLabels()
             HellDead()
         }else{
             DefeatDeath()
@@ -2201,6 +2212,9 @@ class ViewController: UIViewController {
             DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
             defaults.set(true, forKey: "HauntedUnlocked")
         }
+        
+        HellFloor = 0
+        HellFloorTenths = 0
         SetLabels()
         SaveStats()
         Next()
@@ -2224,6 +2238,9 @@ class ViewController: UIViewController {
                     DisplayAlert(title: "Unlocked Character!", message: "You unlocked 'The Haunted' as a playable class!", button: "OK")
                     defaults.set(true, forKey: "HauntedUnlocked")
         }
+        
+        HellFloor = 0
+        HellFloorTenths = 0
         SetLabels()
         SaveStats()
         Next()
@@ -2250,6 +2267,7 @@ class ViewController: UIViewController {
     {
         AdventureLog.text = "A chilling yet burning hot wind hits you. You sense that something is angry..."
         CurrentHP -= (CurrentHP / 20)
+        SetLabels()
         HellNext()
     }
     
@@ -2261,7 +2279,7 @@ class ViewController: UIViewController {
         //CurrentMonster = { Monster[0], EnemyPower.ToString(), Monster[2] }
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
-        AdventureLog.text = "The wall in front of you starts oozing blood. As it falls and hits the ground it takes the form of a demonic " + CurrentMonster[0] + "\n" + "Enemy Power: " + CurrentMonster[1]
+        AdventureLog.text = "The wall in front of you starts oozing blood. As it falls and hits the ground it takes the form of a demonic " + CurrentMonster[0] + "\n" + "Enemy Power: " + DoubleString(Input: Double(CurrentMonster[1]) ?? 420)
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Fight Enemy", for: .normal)
@@ -2295,10 +2313,13 @@ class ViewController: UIViewController {
             HellDead()
         }
         else{
-            let LootedGold: Double = Double(arc4random_uniform(UInt32(Floor * 2000)))
+            var LootedGold: Double = Double(arc4random_uniform(UInt32(Floor * 2000)))
+            if(Class == 4){
+                LootedGold = LootedGold * 3
+            }
             AdventureLog.text = "You slayed the beast! You looted the body and gained " + DoubleString(Input: LootedGold) + "G."
-            Gold += LootedGold
-            MaxHP += (MaxHP * (20/100)).rounded(toPlaces: 0)
+            AdjustGold(LootedGold)
+            AdjustHP(MaxHP * 10/100)
             SetLabels()
             HellNext()
         }
@@ -2306,9 +2327,9 @@ class ViewController: UIViewController {
     
     func HellMerchant(alive: Bool = false)
     {
+        MainImage.image = UIImage(named: "Merchant.png")
         if (alive)
         {
-            MainImage.image = UIImage(named: "Merchant.png")
             CurrentProduct = HellGenProduct()
             
             if (CurrentProduct[0] == "Nothing"){
@@ -2380,12 +2401,14 @@ class ViewController: UIViewController {
     
     func HellFindItem()
     {
+        MainImage.image = UIImage(named: "TreasureChest.png")
         AdventureLog.text = "You find a chest and as soon as you try to open it, it turns into sand right as you reach for it..."
         HellNext()
     }
     
     func HellDoNothing()
     {
+        MainImage.image = UIImage(named: "QuestionMark_.png")
         AdventureLog.text = "Nothing is here but the screams of forgotten souls..."
         HellNext()
     }
@@ -2408,7 +2431,7 @@ class ViewController: UIViewController {
         
         
         Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Bottom_Button.setTitle("Fight Back!", for: .normal)
+        Bottom_Button.setTitle("That's my soul I need that!", for: .normal)
         Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         Bottom_Button.addTarget(self, action: #selector(HellRevive), for: .touchUpInside)
     }
@@ -2569,6 +2592,9 @@ class ViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Treasure Chest", style: UIAlertAction.Style.default, handler: { action in
             self.FindTreasure()
         }))
+        alert.addAction(UIAlertAction(title: "Random Item", style: UIAlertAction.Style.default, handler: { action in
+            self.FindItem()
+        }))
         alert.addAction(UIAlertAction(title: "Mimic", style: UIAlertAction.Style.default, handler: { action in
             self.MimicBattle(MimicName: "Treasure Mimic")
         }))
@@ -2583,6 +2609,7 @@ class ViewController: UIViewController {
             self.MaxHP = self.MaxValue
             self.Gold = self.MaxValue
             self.SetLabels()
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Halve All Stats", style: UIAlertAction.Style.default, handler: { action in
             self.Power = self.Power / 2
@@ -2590,6 +2617,7 @@ class ViewController: UIViewController {
             self.MaxHP = self.MaxHP / 2
             self.CurrentHP = self.MaxHP
             self.SetLabels()
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Set all to 1", style: UIAlertAction.Style.default, handler: { action in
             self.Power = 1
@@ -2597,23 +2625,29 @@ class ViewController: UIViewController {
             self.MaxHP = 1
             self.Gold = 1
             self.SetLabels()
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Set Floor To 250", style: UIAlertAction.Style.default, handler: { action in
             self.Floor = 250
             self.FloorTenths = 0
             self.SetLabels()
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Change ESP Status", style: UIAlertAction.Style.default, handler: { action in
             self.hasESP = !self.hasESP
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Change Bleeding Status", style: UIAlertAction.Style.default, handler: { action in
             self.isBleeding = !self.isBleeding
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Change Confusion Status", style: UIAlertAction.Style.default, handler: { action in
             self.isConfused = !self.isConfused
+            self.SaveStats()
         }))
         alert.addAction(UIAlertAction(title: "Kill Yourself", style: UIAlertAction.Style.default, handler: { action in
-            self.Dead()
+            self.CurrentHP = 0
+            self.SetLabels()
         }))
         self.present(alert, animated: true, completion: nil)
     }

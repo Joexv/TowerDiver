@@ -38,13 +38,15 @@ class TitleScreen: UIViewController {
     }
     @IBAction func InfoButton(_ sender: Any) {
         //DisplayAlert(title: "Info", message: "v0.0.2 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney", button: "OK")
-        let alert = UIAlertController(title: "Info", message: "v0.0.6 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Info", message: "v" + Version + " - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         alert.addAction(UIAlertAction(title: "How To Play", style: .default, handler: { action in
             self.GotoWiki()
         }))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     
     func GotoWiki(){
         let url = URL(string: "https://github.com/Joexv/SwipeRPG/wiki")
