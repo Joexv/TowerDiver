@@ -1231,12 +1231,120 @@ class ViewController: UIViewController {
     
     @IBAction func GenCastleEvent(){
         MainImage.image = UIImage(named: "Questionmark_.png")
-        
+        CastleEvent()
     }
     
     @IBAction func GenMarketEvent(){
         MainImage.image = UIImage(named: "Questionmark_.png")
+        MarketEvent()
+    }
+    
+    func MarketEvent(){
+        MainImage.image = nil
+        AdventureLog.text = "You enter the next room and are blinded by a bright light. Once the light clears, you look around and see that you are in the old market place outside of the castle..."
         
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Look Around", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(MarketEvent2), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Look Around", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(MarketEvent2), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent2(){
+        MainImage.image = UIImage(named: "Merchant.png")
+        AdventureLog.text = "While you're browsing the market, a merchant calls you over..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Walk Over", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(MarketEvent3_a), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Ignore Him", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(MarketEvent3_b), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent3_b(){
+        AdventureLog.text = "As soon as you turn away from the merchant he starts screaming 'That person stole one of my toasters! He's a thief!!'"
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Run For Your Life!", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(MarketEvent4_c), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Do The Job You Came Here For...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(MarketEvent4_a), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent4_c(){
+        AdventureLog.text = "You start to run as the guards stationed at the1q, but as soon as you get past the castle gates, your vision goes out and everything goes black..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent3_a(){
+        AdventureLog.text = "As soon as you walk over the merchant tries to sell you some of his goods. 'I've got quality weapons on sale today for 2000g today only! I've also got free toasters!'"
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Kill The Merchant And Steal A Toaster", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(MarketEvent4_a), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Purchase The Weapon And Toaster", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(MarketEvent4_b), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent4_a(){
+        AdventureLog.text = "You reach over the counter and grab the merchant. You whisper in his ear 'The King sends his regards..' and with that you kill him... You start to run from the scene of the crime, but as soon as you get past the castle gates, your vision goes out and everything goes black..."
+        
+        defaults.set(true, forKey: "Market_Dream")
+        Adjustpower(Power * 1/5)
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    @IBAction func MarketEvent4_b(){
+        AdventureLog.text = "You purchase the weapon and go about searching around the market as before. Then out of nowhere your vision goes out and everything goes black..."
+        
+        if(Gold >= 2000){
+            Gold -= 2000
+            Power += 200
+        }
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
     }
     
     @IBAction func DoCampRest(){
@@ -2947,7 +3055,7 @@ class ViewController: UIViewController {
     
     func HellResetFloor()
     {
-        AdventureLog.text = "A strong force makes you fly back to the beginning of the floor!"
+        AdventureLog.text = "A strong pulls you back to the beginning of the floor!"
         HellFloorTenths = 0
         HellNext()
     }
@@ -2955,7 +3063,7 @@ class ViewController: UIViewController {
     func HellDead()
     {
         MainImage.image = UIImage(named: "Dead.png")
-        AdventureLog.text = "You died!" + "\n" + "You can feel your soul tugging away..."
+        AdventureLog.text = "You died!" + "\n" + "You can feel your soul being tugged away..."
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Well Shucks...", for: .normal)
         Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
