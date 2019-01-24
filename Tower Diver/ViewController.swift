@@ -863,13 +863,380 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DoCamp(){
-        AdventureLog.text = "You setup a camp and feel refreshed and well rested!"
         CurrentHP = MaxHP
         Potions -= 3
         isBleeding = false
         BleedingCounter = 0
         SetLabels()
+        let Gen: UInt32 = arc4random_uniform(100)
+        if(Gen >= 20 && Gen < 25){
+            if(!defaults.bool(forKey: "Home_Dream") || !defaults.bool(forKey: "Castle_Dream") || !defaults.bool(forKey: "Market_Dream")){
+            AdventureLog.text = "You awaken and feel odd..."
+
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Continue", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(DreamWorld), for: .touchUpInside)
+            
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Continue", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(DreamWorld), for: .touchUpInside)
+            }else{
+                AdventureLog.text = "You setup a camp and feel refreshed and well rested!"
+                Next()
+            }
+        }else{
+            AdventureLog.text = "You setup a camp and feel refreshed and well rested!"
+            Next()
+        }
+    }
+    
+    @IBAction func DreamWorld(){
+        MainImage.image = nil
+        if(!defaults.bool(forKey: "Home_Dream") && defaults.bool(forKey: "HasKilledDeath")){
+            HomeEvent()
+        }else if (!defaults.bool(forKey: "Castle_Dream") && KingUnlocked && Floor >= 100){
+            GenCastleEvent()
+        }else if(!defaults.bool(forKey: "Market_Dream") && defaults.bool(forKey: "ReturnTrip")){
+            GenMarketEvent()
+        }else{
+            Next()
+        }
+    }
+    
+   @IBAction func CastleEvent(){
+        AdventureLog.text = "You enter the next room and are blinded by a bright light. Once the light clears, you look around and see that you are in the old castle dungeon.."
+        MainImage.image =  UIImage(named: "QuestionMark_.png")
+        sleep(1)
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Attempt To Escape", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(CastleEvent2), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Wait", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(CastleEvent2_b), for: .touchUpInside)
+    }
+    
+   @IBAction func CastleEvent2(){
+        AdventureLog.text = "You search your cell for a way out. You remember about a whole you were digging. You move what appears to have once been a bed to reveal a large tunnel."
+        MainImage.image =  UIImage(named: "Hole.png")
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Go Into Hole", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(CastleEvent3), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Stay", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(CastleEvent2_b), for: .touchUpInside)
+    }
+    
+    @IBAction func CastleEvent3(){
+        AdventureLog.text = "You climb into the hole, and crawl. After a while of crawling through the tunnel you reach the end of the tunnel. You turn back and return to your cell. As you exit the hole there is a guard waiting fo you with a crossbow. The last thing you see was the guard pulling the trigger...."
+        MainImage.image =  UIImage(named: "Hole.png")
+        
+        CurrentHP = 1
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+   @IBAction func CastleEvent2_b(){
+        AdventureLog.text = "You sit and wait for a guard to come by. The guard opens your cell and motions you to get up and follow him."
+        MainImage.image =  UIImage(named: "Knight.png")
+            
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Follow Guard", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(CastleEvent3_b), for: .touchUpInside)
+            
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Attempt To Escape", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(CastleEvent3_c), for: .touchUpInside)
+    }
+    
+    @IBAction func CastleEvent3_b(){
+        AdventureLog.text = "The guard leads you down many hallways and up quite a few flights of stairs. You eventually get to the Royal Hall. The guard leads you to the foot of the throne and forces you to kneel. You look up and see the King sitting in front of you stuffing his face full of chicken..."
+        MainImage.image =  nil
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Ask Why You Are Here", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(CastleEvent4_a), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Wait", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(CastleEvent4_b), for: .touchUpInside)
+    }
+    
+    @IBAction func CastleEvent4_a(){
+        AdventureLog.text = "You ask the King why you were locked up and brought here. The King just laughs and says 'You know exactly why you're here! You killed your wife and child! You are a monster! But I have a proposition for you. And I think you're the guy for the job.'"
+        CastleEvent_5()
+    }
+    
+    func CastleEvent_5(){
+        MainImage.image =  nil
+        defaults.set(true, forKey: "Castle_Dream")
+        AdjustGold(Gold * 1/10)
+        Adjustpower(Power * 1/20)
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    @IBAction func CastleEvent4_b(){
+        AdventureLog.text = "The King laughs and says, 'Not gonna take huh? Well that's what I like about murderers like you, always sulking. Now... I need someone taken care of. And I think you're the guy for the job.'"
+        CastleEvent_5()
+    }
+    
+    @IBAction func CastleEvent3_c(){
+        AdventureLog.text = "You turn and run as soon as the guard starts walking. You forgot that your legs are shakeled and fall to the floor! The guard hears you, and walks back to you. He grabs a spear off of a near by weapon rack and makes an adventurer kebab..."
+        MainImage.image =  UIImage(named: "Hole.png")
+        
+        CurrentHP = 1
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    var NiceSquirrel: Bool = false
+    
+    func HomeEvent(){
+        //MainImage.image = UIImage(named: "Questionmark_.png")
+        AdventureLog.text = "You enter the next room and are blinded by a bright light. Once the light clears, you look around and see that you are back home! You're pet squirrel runs up your leg and onto your shoulder and nibbles a small nut."
+        MainImage.image =  UIImage(named: "SmolSquirrel.png")
+        sleep(1)
+
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Pet him", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(PetSquirrel), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Put him down on the floor", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(SetSquirrelDown), for: .touchUpInside)
+    }
+    
+    @IBAction func PetSquirrel(){
+        AdventureLog.text = "He seems happy! He runs off into the back room..."
+        NiceSquirrel = true
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Continue", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent2), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Continue", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent2), for: .touchUpInside)
+    }
+    
+    @IBAction func SetSquirrelDown(){
+        AdventureLog.text = "He seems upset that you put him down and runs off..."
+        NiceSquirrel = false
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Continue", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent2), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Continue", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent2), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent2(){
+        AdventureLog.text = "From the other room you hear a familiar voice..." + "\n" + "'Honey is that you?'" + "\n" + "Your wife comes out of the back room, holding your new born child." + "'I thought you were on your way to see the King. If you want to get to the castle before sundown you should probably leave now!'"
+        MainImage.image = UIImage(named: "Wife.png")
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Leave For Castle", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent3), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Stay A Bit Longer", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent3_b), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent3(){
+        MainImage.image = nil
+        AdventureLog.text = "You turn around to walk out the door. You look back at your family one last time before you leave, but they are no where to be found..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent4), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent4), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent3_b(){
+        MainImage.image = nil
+        AdventureLog.text = "As you walk up to your wife and child you feel your gut wrentch in pain. Then everything just goes black. All you can think about is how you may never see them again..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent4), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent4), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent4(){
+        MainImage.image = nil
+        AdventureLog.text = "The next thing you know, you are walking through the forest neighboring your house... It's pitch black out with only your lantern lighting your path."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent5), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent5), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent5(){
+        AdventureLog.text = "A ways down the trail you see a bright light... Then you start to smell smoke... You start running down the trail as fast as you can with nothing but fear fueling you..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent6), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent6), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent6(){
+        AdventureLog.text = "You get out of the forest to a clearing, and all you can see is fire... Your house, your crops, you family... None of it.. Only burning..." + "\n" + "Off in the distance you notice a small group of bandits laughing and fighting over what looks to be a bag of gold."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("Confront The Bandits", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(HomeEvent7_a), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("Run Away", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(HomeEvent7_b), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent7_a(){
+        AdventureLog.text = "You charge in and ready for a fight, but as soon as you get close enough to the bandits to do anything, everything goes black... "
+        
+        Adjustpower(Power * 1/5)
+        defaults.set(NiceSquirrel, forKey: "NiceSquirrel")
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    @IBAction func HomeEvent7_b(){
+        defaults.set(true, forKey: "Home_Dream")
+        AdventureLog.text = "Terrified you turn back into the forest and run...."
+        
+        defaults.set(NiceSquirrel, forKey: "NiceSquirrel")
+        Adjustpower(Power * 1/5, Add: false)
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ReturnToTower), for: .touchUpInside)
+    }
+    
+    @IBAction func ReturnToTower(){
+        AdventureLog.text = "You awaken back in the Tower..."
+        
+        SetLabels()
+        SaveStats()
         Next()
+    }
+    
+    @IBAction func GenHomeEvent(){
+        MainImage.image = UIImage(named: "Questionmark_.png")
+        HomeEvent()
+    }
+    
+    @IBAction func GenCastleEvent(){
+        MainImage.image = UIImage(named: "Questionmark_.png")
+        
+    }
+    
+    @IBAction func GenMarketEvent(){
+        MainImage.image = UIImage(named: "Questionmark_.png")
+        
     }
     
     @IBAction func DoCampRest(){
@@ -1485,7 +1852,11 @@ class ViewController: UIViewController {
     var isSquirrelFight: Bool = false
     
     func SquirrelBattle(){
-        CurrentMonster = ["Squirrel", String(500 * Floor * AfterDeath * 4 * DecensionAdjustment), "3"]
+        var TempAdjust: Int = 1
+        if(defaults.bool(forKey: "SquirrelNice")){
+            TempAdjust = 10
+        }
+        CurrentMonster = ["Squirrel", String((500 * Floor * AfterDeath * 4 * DecensionAdjustment) / TempAdjust), "3"]
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         if(isEasyMode){
             EnemyPower = EnemyPower / 2
@@ -2599,22 +2970,26 @@ class ViewController: UIViewController {
     
     @IBAction func ReturnHome()
     {
-        AdventureLog.text = "You feel your soul letting go. Everything goes black. When you awake you are back in the dungeon. Was it all a dream?"
+        AdventureLog.text = "You feel your soul letting go. Everything goes black. When you awake you are back in the Tower.. Whas it just a dream?"
         let image = UIImage(named: "Bricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)
         
         MainView.backgroundColor = UIColor(patternImage: scaled)
         MainImage.image = UIImage(named: "QuestionMark_.png")
         CurrentHP = MaxHP / 4
+        SetLabels()
+        SaveStats()
         Next()
     }
     
     @IBAction func HellRevive()
     {
-        AdventureLog.text = "You try to muster up the power to get back up, but fail. You collapse and everything goes black. When you wake, you are back where you first came into this strange land..."
+        AdventureLog.text = "You try to muster up the power to get back up, but fail. You collapse and everything goes black. When you wake, you are back in the Tower..."
         HellFloorTenths = 0
         HellFloor = 0
         CurrentHP = 1
+        SetLabels()
+        SaveStats()
         HellNext()
     }
     
@@ -2709,6 +3084,23 @@ class ViewController: UIViewController {
         }))
         alert.addAction(UIAlertAction(title: "Find Trap", style: UIAlertAction.Style.default, handler: { action in
             self.FindTrap()
+        }))
+        alert.addAction(UIAlertAction(title: "Dream", style: UIAlertAction.Style.default, handler: { action in
+            self.DreamDebug()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func DreamDebug(){
+        let alert = UIAlertController(title: "Dream Menu", message: "Please select an option", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Home", style: UIAlertAction.Style.default, handler: { action in
+            self.GenHomeEvent()
+        }))
+        alert.addAction(UIAlertAction(title: "Castle", style: UIAlertAction.Style.default, handler: { action in
+            self.GenCastleEvent()
+        }))
+        alert.addAction(UIAlertAction(title: "Boss", style: UIAlertAction.Style.default, handler: { action in
+            self.GenMarketEvent()
         }))
         self.present(alert, animated: true, completion: nil)
     }

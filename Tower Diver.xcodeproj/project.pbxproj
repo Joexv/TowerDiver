@@ -22,6 +22,7 @@
 		307F283B21F9206100B8A646 /* FinalRoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283721F9206100B8A646 /* FinalRoom.png */; };
 		307F283C21F9206100B8A646 /* DoubleDoors.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283821F9206100B8A646 /* DoubleDoors.png */; };
 		307F283E21F9240F00B8A646 /* Outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283D21F9240F00B8A646 /* Outside.png */; };
+		307F284021F96CB000B8A646 /* Wife.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283F21F96CB000B8A646 /* Wife.png */; };
 		30802DB521DFE8B70061F213 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */; };
 		30802DB721DFE8BC0061F213 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB621DFE8BC0061F213 /* SideMenu.framework */; };
 		30802DB921DFE8EA0061F213 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB821DFE8EA0061F213 /* StoreKit.framework */; };
@@ -202,6 +203,7 @@
 		307F283721F9206100B8A646 /* FinalRoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FinalRoom.png; path = ../../../Images/FinalRoom.png; sourceTree = "<group>"; };
 		307F283821F9206100B8A646 /* DoubleDoors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoubleDoors.png; path = ../../../Images/DoubleDoors.png; sourceTree = "<group>"; };
 		307F283D21F9240F00B8A646 /* Outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Outside.png; path = ../../../Images/Outside.png; sourceTree = "<group>"; };
+		307F283F21F96CB000B8A646 /* Wife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wife.png; path = ../../../Images/Wife.png; sourceTree = "<group>"; };
 		30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30802DB621DFE8BC0061F213 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30802DB821DFE8EA0061F213 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -565,6 +567,7 @@
 		30802ECC21F2AB4A0061F213 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				307F283F21F96CB000B8A646 /* Wife.png */,
 				307F283D21F9240F00B8A646 /* Outside.png */,
 				307F283521F9206100B8A646 /* DeadSquirrel.png */,
 				307F283821F9206100B8A646 /* DoubleDoors.png */,
@@ -846,6 +849,7 @@
 				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
 				30802F2F21F2AB6C0061F213 /* Pixel_Spider.png in Resources */,
 				30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */,
+				307F284021F96CB000B8A646 /* Wife.png in Resources */,
 				30802DED21F170530061F213 /* Bat.png in Resources */,
 				30802DE721F170530061F213 /* Giant.png in Resources */,
 				30802E6421F1708B0061F213 /* Stick_Chimera.png in Resources */,
