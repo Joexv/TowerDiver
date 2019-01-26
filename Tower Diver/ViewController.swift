@@ -402,8 +402,8 @@ class ViewController: UIViewController {
         MerchantChance = 13
         ElevatorChance = 2
         FallChance = 2
-        MiscEventChance = 14
-        CampChance = 6
+        MiscEventChance = 10
+        CampChance = 5
         
         EnhancedChance = 15
         BossChance = 5
@@ -591,22 +591,36 @@ class ViewController: UIViewController {
     }
     
     @IBAction func Escape_3(){
-        MainImage.image = UIImage(named: "DeadSquirrel.png")
+        MainImage.image = nil
         AdventureLog.text = "As you take your first step outside, you feel something is off... You brush it off as probably dehydration... But who cares, you're finally free." + "\n" + "Once you get to your house, you find something truely horrifying... you forgot to feed your squirrel! You see his body laying in his little squirrel bed... Cold... Lifeless.... What was the point of escaping that nightmare to just go into another?"
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Top_Button.setTitle("The End?", for: .normal)
+        Top_Button.setTitle("...", for: .normal)
         Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         Top_Button.addTarget(self, action: #selector(Escape_4), for: .touchUpInside)
         
         Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
-        Bottom_Button.setTitle("The End?", for: .normal)
+        Bottom_Button.setTitle("...", for: .normal)
         Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
         Bottom_Button.addTarget(self, action: #selector(Escape_4), for: .touchUpInside)
     }
     
     @IBAction func Escape_4(){
-        AdventureLog.text = "As you moarn for your fallen friend, you vow to take revenge against that dreadful Tower, and everything that it stands for."
+        AdventureLog.text = "You wander until you return back to your home.. But it is as you left it.. Burnt to the ground..The bodies of bandits lie fallen across the ground.. Inside all that's left are the charred remains of what was once your family..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(Escape_5), for: .touchUpInside)
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(Escape_5), for: .touchUpInside)
+    }
+    
+    @IBAction func Escape_5(){
+        AdventureLog.text = "What was the point of escaping that nightmare to just go into another?"
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("The End?", for: .normal)
@@ -677,7 +691,7 @@ class ViewController: UIViewController {
         MainImage.image = nil
         
         let Total: UInt32 = LoadChances() + 1
-        let Result: Int = Int(arc4random_uniform(Total))
+        let Result: Int = Int(arc4random_uniform(Total)) + 5
         NSLog("Total: " + String(Total))
         NSLog("Generated Number: " + String(Result))
         if(Result >= 0 && Result <= CurseChance ){
@@ -2211,20 +2225,106 @@ class ViewController: UIViewController {
             FindBadMerchant()
         }else if(Gen >= 25 && Gen < 50){
             FindTrap()
-        }else if(Gen >= 50 && Gen < 60){
+        }else if(Gen >= 50 && Gen < 65){
+            SmallDreamEvent()
+        }else if(Gen >= 65 && Gen < 70){
             FindSquirrel()
-        }else if(Gen >= 60 && Gen < 70 && Floor > 15){
+        }else if(Gen >= 70 && Gen < 75 && Floor > 15){
             FindHell()
-        }else if(Gen >= 70 && Gen < 80){
+        }else if(Gen >= 75 && Gen < 80){
             FindHotSpring()
-        }else if(Gen >= 80 && Gen < 95){
+        }else if(Gen >= 80 && Gen < 90){
             FindOldHag()
-        }else if(Gen >= 95 && Gen < 105 && !isConfused){
+        }else if(Gen >= 90 && Gen < 105 && !isConfused){
             ConfusionCurse()
         }else if(Gen >= 105 && Gen < 110){
             EncounterGilgamesh()
         }else{
             FindDeadBody()
+        }
+    }
+    
+    func SmallDreamEvent(){
+        let Gen: Int = Int(arc4random_uniform(100))
+        if(Gen >= 0 && Gen < 25 && defaults.bool(forKey: "Dream_1")){
+            //Fighting Bandits
+            var Adjustment: Int = (Floor / 25)
+            if(Adjustment < 1){
+                Adjustment = 1
+            }
+            CurrentMonster = ["Bandit Hoard", String(100 * Double(Floor * 4 * AfterDeath * Adjustment * DecensionAdjustment)), "1"]
+            MainImage.image = UIImage(named: Theme + "Bandit.png")
+            AdventureLog.text = "You enter another room and inside waiting for you is a big group of bandits.." + "\n" + "10 Bandits with " + CurrentMonster[1] + " Power each." + "\n\n" + "When you start this fight you can't stop part way in!"
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Battle!", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(FightBandits), for: .touchUpInside)
+            
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Run Away!", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(RunAway_FullLoss), for: .touchUpInside)
+        }else if(Gen >= 25 && Gen < 50 && defaults.bool(forKey: "Dream_2")){
+            //Denying The King
+            AdventureLog.text = "As you enter the next room, you find yourself in the throne room of the old King."
+            Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Top_Button.setTitle("Approach King", for: .normal)
+            Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Top_Button.addTarget(self, action: #selector(ApproachKing), for: .touchUpInside)
+            
+            
+            Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+            Bottom_Button.setTitle("Leave", for: .normal)
+            Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+            Bottom_Button.addTarget(self, action: #selector(GenerateEventButton), for: .touchUpInside)
+        }else{
+            MainImage.image = nil
+            AdventureLog.text = "There's nothing here, but you feel weirdly depressed..."
+            Next()
+        }
+    }
+    
+    @IBAction func ApproachKing(){
+    AdventureLog.text = "The King belows 'You've had time to consider my offer. What say you?'. You politely decline the King's offer of freeing you in exchange for an assassination. 'You dare deny me?!! You will live to regret this! You will rot away in hell!'. The King's guards escort you out, but not to the dungeons this time..."
+        
+        Top_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Top_Button.setTitle("...", for: .normal)
+        Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Top_Button.addTarget(self, action: #selector(ApproachKing2), for: .touchUpInside)
+        
+        
+        Bottom_Button.removeTarget(nil, action: nil, for: .allEvents)
+        Bottom_Button.setTitle("...", for: .normal)
+        Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
+        Bottom_Button.addTarget(self, action: #selector(ApproachKing2), for: .touchUpInside)
+    }
+    
+    @IBAction func ApproachKing2(){
+        AdventureLog.text = "As soon as you leave the throne room the guards put a sack over your head and knock you out... When you awake, you are in front of what looks like a giant tower. The giards open the giant double doors and push you in..." + "\n" + "As soon as you enter the Tower, you are back in the last room before you met the King.."
+        defaults.set(true, forKey: "Dream_2")
+        Next()
+    }
+    
+    @IBAction func FightBandits(){
+        let TempHP: Double = CurrentHP
+        var Count: Int = 0
+        for _ in 0..<11{
+            let Damage: Double = HandleBattle()
+            CurrentHP -= Damage
+            if(CurrentHP < 1){
+                CurrentHP = 0
+                SetLabels()
+                Dead()
+            }else{
+                Count += 1
+            }
+        }
+        if(Count >= 10){
+            AdventureLog.text = "After a long fight all of the bandits have fallen. You prepare to start looting the bodies when out of no where they all just disapear..."
+            CurrentHP = TempHP
+            defaults.set(true, forKey: "Dream_1")
+            Next()
         }
     }
     
@@ -2234,10 +2334,8 @@ class ViewController: UIViewController {
             Adjustment = 1
         }
         CurrentMonster = ["Gilgamesh", String(1000 * Double(Floor * 4 * AfterDeath * Adjustment * DecensionAdjustment)), "0"]
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
-        if(isEasyMode){
-            EnemyPower = EnemyPower / 2
-        }
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
+ 
         AdventureLog.text = "The Great Gilgamesh appears before you, and challenges you to a duel." + "\n" + "Power: " + CutLabel( EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
