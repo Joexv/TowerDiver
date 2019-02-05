@@ -188,7 +188,7 @@ class SideMenu: UITableViewController {
     }
     
     @IBAction func Wiki_Button(_ sender: Any) {
-        let url = URL(string: "https://slimwiki.com/alt-apps-unlimited")
+        let url = URL(string: "http://towerdiver.wikidot.com/")
         let svc = SFSafariViewController(url: url!)
         present(svc, animated: true, completion: nil)
         
@@ -201,10 +201,6 @@ class SideMenu: UITableViewController {
     
     @IBAction func About_Button(_ sender: Any) {
         DisplayAlert(title: "Info", message: "v" + Version + " - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", button: "OK")
-        
-        //Until Production the About button will be a Debug Menu.
-        //defaults.set(true, forKey: "DebugMenu")
-        //dismiss(animated: true, completion: nil)
     }
     
 
@@ -263,9 +259,12 @@ class SideMenu: UITableViewController {
         alert.addAction(UIAlertAction(title: "Hand Drawn", style: .default, handler: { action in
             self.defaults.set("", forKey: "MonsterTheme")
         }))
+        //Disabled Until fully completed. I would rather not use other people's pixel art for this as it styles are vastly different.
+        /*
         alert.addAction(UIAlertAction(title: "Pixel Art", style: .default, handler: { action in
            self.defaults.set("Pixel_", forKey: "MonsterTheme")
         }))
+         */
         alert.addAction(UIAlertAction(title: "Stick Figures", style: .default, handler: { action in
             self.defaults.set("Stick_", forKey: "MonsterTheme")
         }))

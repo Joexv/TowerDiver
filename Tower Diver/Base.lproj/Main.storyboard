@@ -281,6 +281,7 @@
                         <outlet property="TypeImage" destination="ZsU-IS-ClN" id="Q7H-az-bdr"/>
                         <outlet property="UsePotion_Button" destination="BcB-a1-bSe" id="x3I-BN-SRn"/>
                         <segue destination="FgF-B5-s2s" kind="modal" identifier="CharacterCreationSegue" id="m2R-Ai-czz"/>
+                        <segue destination="8v4-7S-AZo" kind="modal" identifier="TitleScreenSegue" id="0SY-fa-KBm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -932,5 +933,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="m2R-Ai-czz"/>
         <segue reference="q4H-jp-eBF"/>
+        <segue reference="0SY-fa-KBm"/>
     </inferredMetricsTieBreakers>
 </document>

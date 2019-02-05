@@ -74,7 +74,7 @@ class CharacterCreation: UIViewController {
         else{
         DispatchQueue.main.async(execute: {
             self.performSegue(withIdentifier: "StatsPageSegue", sender: nil)
-        })
+            })
         }
     }
     

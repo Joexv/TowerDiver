@@ -103,9 +103,12 @@ class ViewController: UIViewController {
             Gold_Label.isUserInteractionEnabled = true
             Gold_Label.addGestureRecognizer(tap3)
             
-            let tap4 = UITapGestureRecognizer(target: self, action: #selector(Debug))
-            Name_Label.isUserInteractionEnabled = true
-            Name_Label.addGestureRecognizer(tap4)
+            let isRunningTestFlightBeta = Bundle.main.appStoreReceiptURL?.lastPathComponent=="sandboxReceipt"
+            if(isRunningTestFlightBeta){
+                let tap4 = UITapGestureRecognizer(target: self, action: #selector(Debug))
+                Name_Label.isUserInteractionEnabled = true
+                Name_Label.addGestureRecognizer(tap4)
+            }
             
             if(defaults.string(forKey: "MonsterTheme") == nil){
                 defaults.set("", forKey: "MonsterTheme")
@@ -1716,8 +1719,10 @@ class ViewController: UIViewController {
         }
         if(defaults.bool(forKey: "ReturnToTitle")){
             SaveStats()
-            dismiss(animated: true, completion: nil)
             defaults.set(false, forKey: "ReturnToTitle")
+            DispatchQueue.main.async(execute: {
+                self.performSegue(withIdentifier: "TitleScreenSegue", sender: nil)
+            })
         }
         if(defaults.bool(forKey: "RestartCharacter")){
             defaults.set(false, forKey: "RestartCharacter")
@@ -1808,7 +1813,11 @@ class ViewController: UIViewController {
         if(Adjustment < 1){
             Adjustment = 1
         }
-        let TempPower: String = String(Double(TempArray[1])! * Double(Type * AfterDeath * Floor * 2 * Adjustment * DecensionAdjustment))
+        var EasyMode: Double = 1
+        if(isEasyMode){
+            EasyMode = 2
+        }
+        let TempPower: String = String((Double(TempArray[1])! * Double(Type * AfterDeath * Floor * 2 * Adjustment * DecensionAdjustment)) / EasyMode)
         let FinalResult: [String] = [TempArray[0], TempPower , TempArray[2]]
         return FinalResult
     }
@@ -1818,9 +1827,6 @@ class ViewController: UIViewController {
     func NormalEnemy(){
         CurrentMonster = GetMonster(Type: 1)
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
-        if(isEasyMode){
-            EnemyPower = EnemyPower / 2
-        }
         AdventureLog.text = "A " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel(EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1918,9 +1924,6 @@ class ViewController: UIViewController {
     func EnhancedEnemy(){
         CurrentMonster = GetMonster(Type: 2)
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
-        if(isEasyMode){
-            EnemyPower = EnemyPower / 2
-        }
         AdventureLog.text = "A giant " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel( EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1946,9 +1949,6 @@ class ViewController: UIViewController {
     func Boss(){
         CurrentMonster = GetMonster(Type: 4)
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
-        if(isEasyMode){
-            EnemyPower = EnemyPower / 2
-        }
         AdventureLog.text = "A boss ranked " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel( EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1980,9 +1980,6 @@ class ViewController: UIViewController {
         }
         CurrentMonster = ["Squirrel", String((500 * Floor * AfterDeath * 4 * DecensionAdjustment) / TempAdjust), "3"]
         var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
-        if(isEasyMode){
-            EnemyPower = EnemyPower / 2
-        }
         isSquirrelFight = true
         AdventureLog.text = "The Squirrel has found you!" + "\n" + "Power: " + CutLabel(EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
