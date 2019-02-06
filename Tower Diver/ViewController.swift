@@ -1752,7 +1752,7 @@ class ViewController: UIViewController {
         let a: Int = Int(arc4random_uniform(110))
         if (a >= 0 && a <= 25)
         {
-            AdventureLog.text = "The treasure chest contains a weapon, take it?"
+            AdventureLog.text = "The treasure chest contained a " + GenWeaponType()
             GenWeapon(SkipText: false, UseContainer: false, Total: 1, UseNext: false, CanBeCursed: true)
             Next()
         }else if (a > 25 && a <= 40){
