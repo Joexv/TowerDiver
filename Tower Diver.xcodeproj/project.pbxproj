@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300072BA220B864800766122 /* Stick_Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AB220B864600766122 /* Stick_Potion.png */; };
+		300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AC220B864600766122 /* Stick_Gilgamesh.png */; };
+		300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AD220B864700766122 /* Stick_Treasure Mimic.png */; };
+		300072BD220B864800766122 /* Stick_Trap.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AE220B864700766122 /* Stick_Trap.png */; };
+		300072BE220B864800766122 /* Stick_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AF220B864700766122 /* Stick_Sack Mimic.png */; };
+		300072BF220B864800766122 /* Stick_BadMerchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B0220B864700766122 /* Stick_BadMerchant.png */; };
+		300072C0220B864800766122 /* Stick_Elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B1220B864700766122 /* Stick_Elevator.png */; };
+		300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B2220B864700766122 /* Stick_TreasureChest.png */; };
+		300072C2220B864800766122 /* Stick_Curse.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B3220B864700766122 /* Stick_Curse.png */; };
+		300072C3220B864800766122 /* Stick_Hag.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B4220B864700766122 /* Stick_Hag.png */; };
+		300072C4220B864800766122 /* Stick_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B5220B864700766122 /* Stick_Gold.png */; };
+		300072C5220B864800766122 /* Stick_Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B6220B864700766122 /* Stick_Hole.png */; };
+		300072C6220B864800766122 /* Stick_Merchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B7220B864700766122 /* Stick_Merchant.png */; };
+		300072C7220B864800766122 /* Stick_Tent.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B8220B864700766122 /* Stick_Tent.png */; };
+		300072C8220B864800766122 /* Stick_Hotspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B9220B864800766122 /* Stick_Hotspring.png */; };
 		3001FA7821CD5DB500FB14C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */; };
 		3001FA7A21CD5DB500FB14C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA7921CD5DB500FB14C9 /* ViewController.swift */; };
 		3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3001FA7B21CD5DB500FB14C9 /* Main.storyboard */; };
@@ -71,7 +86,7 @@
 		30802E6921F1708B0061F213 /* Stick_Giant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4821F1708A0061F213 /* Stick_Giant.png */; };
 		30802E6A21F1708B0061F213 /* Stick_Rat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4921F1708A0061F213 /* Stick_Rat.png */; };
 		30802E6B21F1708B0061F213 /* Stick_Scorpian.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4A21F1708A0061F213 /* Stick_Scorpian.png */; };
-		30802E6C21F1708B0061F213 /* Stick_Thief.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4B21F1708A0061F213 /* Stick_Thief.png */; };
+		30802E6C21F1708B0061F213 /* Stick_Bandit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4B21F1708A0061F213 /* Stick_Bandit.png */; };
 		30802E6D21F1708B0061F213 /* Stick_Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4C21F1708A0061F213 /* Stick_Demon.png */; };
 		30802E6E21F1708B0061F213 /* Stick_Orc.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4D21F1708A0061F213 /* Stick_Orc.png */; };
 		30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4E21F1708A0061F213 /* Stick_Slime.png */; };
@@ -151,6 +166,21 @@
 
 /* Begin PBXFileReference section */
 		12412F85B98BF50A30695684 /* Pods-Tower Diver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower Diver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver.release.xcconfig"; sourceTree = "<group>"; };
+		300072AB220B864600766122 /* Stick_Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Potion.png; path = ../../../Stick/Stick_Potion.png; sourceTree = "<group>"; };
+		300072AC220B864600766122 /* Stick_Gilgamesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Gilgamesh.png; path = ../../../Stick/Stick_Gilgamesh.png; sourceTree = "<group>"; };
+		300072AD220B864700766122 /* Stick_Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Treasure Mimic.png"; path = "../../../Stick/Stick_Treasure Mimic.png"; sourceTree = "<group>"; };
+		300072AE220B864700766122 /* Stick_Trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Trap.png; path = ../../../Stick/Stick_Trap.png; sourceTree = "<group>"; };
+		300072AF220B864700766122 /* Stick_Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Sack Mimic.png"; path = "../../../Stick/Stick_Sack Mimic.png"; sourceTree = "<group>"; };
+		300072B0220B864700766122 /* Stick_BadMerchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_BadMerchant.png; path = ../../../Stick/Stick_BadMerchant.png; sourceTree = "<group>"; };
+		300072B1220B864700766122 /* Stick_Elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Elevator.png; path = ../../../Stick/Stick_Elevator.png; sourceTree = "<group>"; };
+		300072B2220B864700766122 /* Stick_TreasureChest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_TreasureChest.png; path = ../../../Stick/Stick_TreasureChest.png; sourceTree = "<group>"; };
+		300072B3220B864700766122 /* Stick_Curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Curse.png; path = ../../../Stick/Stick_Curse.png; sourceTree = "<group>"; };
+		300072B4220B864700766122 /* Stick_Hag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hag.png; path = ../../../Stick/Stick_Hag.png; sourceTree = "<group>"; };
+		300072B5220B864700766122 /* Stick_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Gold.png; path = ../../../Stick/Stick_Gold.png; sourceTree = "<group>"; };
+		300072B6220B864700766122 /* Stick_Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hole.png; path = ../../../Stick/Stick_Hole.png; sourceTree = "<group>"; };
+		300072B7220B864700766122 /* Stick_Merchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Merchant.png; path = ../../../Stick/Stick_Merchant.png; sourceTree = "<group>"; };
+		300072B8220B864700766122 /* Stick_Tent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Tent.png; path = ../../../Stick/Stick_Tent.png; sourceTree = "<group>"; };
+		300072B9220B864800766122 /* Stick_Hotspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hotspring.png; path = ../../../Stick/Stick_Hotspring.png; sourceTree = "<group>"; };
 		3001FA7421CD5DB500FB14C9 /* Tower Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3001FA7921CD5DB500FB14C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -221,7 +251,7 @@
 		30802E4821F1708A0061F213 /* Stick_Giant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Giant.png; path = ../../../Stick/Stick_Giant.png; sourceTree = "<group>"; };
 		30802E4921F1708A0061F213 /* Stick_Rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Rat.png; path = ../../../Stick/Stick_Rat.png; sourceTree = "<group>"; };
 		30802E4A21F1708A0061F213 /* Stick_Scorpian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Scorpian.png; path = ../../../Stick/Stick_Scorpian.png; sourceTree = "<group>"; };
-		30802E4B21F1708A0061F213 /* Stick_Thief.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Thief.png; path = ../../../Stick/Stick_Thief.png; sourceTree = "<group>"; };
+		30802E4B21F1708A0061F213 /* Stick_Bandit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Bandit.png; path = ../../../Stick/Stick_Bandit.png; sourceTree = "<group>"; };
 		30802E4C21F1708A0061F213 /* Stick_Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Demon.png; path = ../../../Stick/Stick_Demon.png; sourceTree = "<group>"; };
 		30802E4D21F1708A0061F213 /* Stick_Orc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Orc.png; path = ../../../Stick/Stick_Orc.png; sourceTree = "<group>"; };
 		30802E4E21F1708A0061F213 /* Stick_Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Slime.png; path = ../../../Stick/Stick_Slime.png; sourceTree = "<group>"; };
@@ -424,6 +454,21 @@
 		30802DC121F1703A0061F213 /* Stick */ = {
 			isa = PBXGroup;
 			children = (
+				300072B0220B864700766122 /* Stick_BadMerchant.png */,
+				300072B3220B864700766122 /* Stick_Curse.png */,
+				300072B1220B864700766122 /* Stick_Elevator.png */,
+				300072AC220B864600766122 /* Stick_Gilgamesh.png */,
+				300072B5220B864700766122 /* Stick_Gold.png */,
+				300072B4220B864700766122 /* Stick_Hag.png */,
+				300072B6220B864700766122 /* Stick_Hole.png */,
+				300072B9220B864800766122 /* Stick_Hotspring.png */,
+				300072B7220B864700766122 /* Stick_Merchant.png */,
+				300072AB220B864600766122 /* Stick_Potion.png */,
+				300072AF220B864700766122 /* Stick_Sack Mimic.png */,
+				300072B8220B864700766122 /* Stick_Tent.png */,
+				300072AE220B864700766122 /* Stick_Trap.png */,
+				300072B2220B864700766122 /* Stick_TreasureChest.png */,
+				300072AD220B864700766122 /* Stick_Treasure Mimic.png */,
 				30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */,
 				30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */,
 				30802E5521F1708B0061F213 /* Stick_Bat.png */,
@@ -455,7 +500,7 @@
 				30802E5B21F1708B0061F213 /* Stick_Spider.png */,
 				30802E4421F1708A0061F213 /* Stick_Squirrel.png */,
 				30802E5221F1708A0061F213 /* Stick_Succubus.png */,
-				30802E4B21F1708A0061F213 /* Stick_Thief.png */,
+				30802E4B21F1708A0061F213 /* Stick_Bandit.png */,
 				30802E5621F1708B0061F213 /* Stick_Treasure Mimic.png */,
 				30802E6021F1708B0061F213 /* Stick_Wizard.png */,
 				30802E5C21F1708B0061F213 /* Stick_Zombie.png */,
@@ -653,6 +698,7 @@
 				30802DE921F170530061F213 /* Imp.png in Resources */,
 				30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */,
 				30802EF721F2AB5E0061F213 /* Hole.png in Resources */,
+				300072BE220B864800766122 /* Stick_Sack Mimic.png in Resources */,
 				30802F0121F2AB5E0061F213 /* Arrow.png in Resources */,
 				3001FA8221CD5DB600FB14C9 /* LaunchScreen.storyboard in Resources */,
 				30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */,
@@ -661,6 +707,8 @@
 				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
 				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
 				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
+				300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */,
+				300072BA220B864800766122 /* Stick_Potion.png in Resources */,
 				307F283E21F9240F00B8A646 /* Outside.png in Resources */,
 				30802DF621F170530061F213 /* Chimera.png in Resources */,
 				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
@@ -675,25 +723,33 @@
 				3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */,
 				30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */,
 				30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */,
-				30802E6C21F1708B0061F213 /* Stick_Thief.png in Resources */,
+				30802E6C21F1708B0061F213 /* Stick_Bandit.png in Resources */,
 				30802EF221F2AB5E0061F213 /* Gold.png in Resources */,
 				3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */,
 				30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */,
 				30802EFF21F2AB5E0061F213 /* Potion.png in Resources */,
 				30802DFF21F170530061F213 /* Gilgamesh.png in Resources */,
+				300072C3220B864800766122 /* Stick_Hag.png in Resources */,
 				30802E7621F1708B0061F213 /* Stick_Bat.png in Resources */,
 				30802E7021F1708B0061F213 /* Stick_Knight.png in Resources */,
 				30802DFB21F170530061F213 /* SmolSquirrel.png in Resources */,
 				30802F0021F2AB5E0061F213 /* Coffee.png in Resources */,
 				30802E0321F170530061F213 /* Cockatrice.png in Resources */,
+				300072C5220B864800766122 /* Stick_Hole.png in Resources */,
 				30802DEF21F170530061F213 /* Minotaur.png in Resources */,
+				300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */,
+				300072C2220B864800766122 /* Stick_Curse.png in Resources */,
 				30802DEB21F170530061F213 /* Dragon.png in Resources */,
 				30802EEF21F2AB5E0061F213 /* Staff.png in Resources */,
 				30802E6921F1708B0061F213 /* Stick_Giant.png in Resources */,
 				30802E7921F1708B0061F213 /* Stick_Ice Sorceress.png in Resources */,
 				30802F0421F2AB5E0061F213 /* Mark.png in Resources */,
+				300072BD220B864800766122 /* Stick_Trap.png in Resources */,
 				30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */,
+				300072BF220B864800766122 /* Stick_BadMerchant.png in Resources */,
 				30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */,
+				300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */,
+				300072C6220B864800766122 /* Stick_Merchant.png in Resources */,
 				30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */,
 				30802DE621F170530061F213 /* Spider.png in Resources */,
 				30802E0521F170530061F213 /* Knight.png in Resources */,
@@ -704,10 +760,13 @@
 				30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */,
 				30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */,
 				30802DEA21F170530061F213 /* Bandit.png in Resources */,
+				300072C8220B864800766122 /* Stick_Hotspring.png in Resources */,
+				300072C7220B864800766122 /* Stick_Tent.png in Resources */,
 				30802E7421F1708B0061F213 /* Stick_Fire Spirit.png in Resources */,
 				30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */,
 				30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */,
 				30802E6721F1708B0061F213 /* Stick_Dragon.png in Resources */,
+				300072C0220B864800766122 /* Stick_Elevator.png in Resources */,
 				30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */,
 				30802E0221F170530061F213 /* Fire Sorceress.png in Resources */,
 				30802DFE21F170530061F213 /* Goblin.png in Resources */,
@@ -744,6 +803,7 @@
 				30802DFD21F170530061F213 /* Lamia.png in Resources */,
 				30802EF021F2AB5E0061F213 /* Crown.png in Resources */,
 				30802EF521F2AB5E0061F213 /* Dead.png in Resources */,
+				300072C4220B864800766122 /* Stick_Gold.png in Resources */,
 				30802E8021F1708B0061F213 /* Stick_Imp.png in Resources */,
 				30802EFE21F2AB5E0061F213 /* Curse.png in Resources */,
 				30802E7521F1708B0061F213 /* Stick_Death.png in Resources */,

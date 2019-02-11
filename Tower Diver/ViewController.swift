@@ -435,7 +435,7 @@ class ViewController: UIViewController {
         MiscEventChance += FallChance
         CampChance += MiscEventChance
         
-        LoadItemChances()
+        let _ = LoadItemChances()
         
         return UInt32(CampChance)
     }
@@ -859,7 +859,7 @@ class ViewController: UIViewController {
     }
     
     func FindCamp(){
-        MainImage.image = UIImage(named: "Tent.png")
+        MainImage.image = UIImage(named: Theme + "Tent.png")
         AdventureLog.text = "You find an empty room big enough for a camp..."
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Setup Camp", for: .normal)
@@ -942,7 +942,7 @@ class ViewController: UIViewController {
     
    @IBAction func CastleEvent2(){
         AdventureLog.text = "You search your cell for a way out. You remember about a whole you were digging. You move what appears to have once been a bed to reveal a large tunnel."
-        MainImage.image =  UIImage(named: "Hole.png")
+        MainImage.image =  UIImage(named: Theme + "Hole.png")
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Go Into Hole", for: .normal)
@@ -958,7 +958,7 @@ class ViewController: UIViewController {
     
     @IBAction func CastleEvent3(){
         AdventureLog.text = "You climb into the hole, and crawl. After a while of crawling through the tunnel you reach the end of the tunnel. You turn back and return to your cell. As you exit the hole there is a guard waiting fo you with a crossbow. The last thing you see was the guard pulling the trigger...."
-        MainImage.image =  UIImage(named: "Hole.png")
+        MainImage.image =  UIImage(named: Theme + "Hole.png")
         
         CurrentHP = 1
         
@@ -976,7 +976,7 @@ class ViewController: UIViewController {
     
    @IBAction func CastleEvent2_b(){
         AdventureLog.text = "You sit and wait for a guard to come by. The guard opens your cell and motions you to get up and follow him."
-        MainImage.image =  UIImage(named: "Knight.png")
+        MainImage.image =  UIImage(named: Theme + "Knight.png")
             
             Top_Button.removeTarget(nil, action: nil, for: .allEvents)
             Top_Button.setTitle("Follow Guard", for: .normal)
@@ -1036,7 +1036,7 @@ class ViewController: UIViewController {
     
     @IBAction func CastleEvent3_c(){
         AdventureLog.text = "You turn and run as soon as the guard starts walking. You forgot that your legs are shakeled and fall to the floor! The guard hears you, and walks back to you. He grabs a spear off of a near by weapon rack and makes an adventurer kebab..."
-        MainImage.image =  UIImage(named: "Hole.png")
+        MainImage.image =  UIImage(named: Theme + "Hole.png")
         
         CurrentHP = 1
         
@@ -1272,7 +1272,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func MarketEvent2(){
-        MainImage.image = UIImage(named: "Merchant.png")
+        MainImage.image = UIImage(named: Theme + "Merchant.png")
         AdventureLog.text = "While you're browsing the market, a merchant calls you over..."
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -1383,7 +1383,7 @@ class ViewController: UIViewController {
     
     func Fall(){
         let Drop: Int = Int(arc4random_uniform(4)) + 1
-        MainImage.image = UIImage(named: "Hole.png")
+        MainImage.image = UIImage(named: Theme + "Hole.png")
         if(!defaults.bool(forKey: "ReturnTrip")){
             AdventureLog.text = "The ground around you starts to collapse! You don't jump out of the way in time and fall " + String(Drop) + " floor(s)!"
             Floor -= Drop
@@ -1447,7 +1447,7 @@ class ViewController: UIViewController {
     func FindElevator(){
         if(!defaults.bool(forKey: "ReturnTrip")){
             AdventureLog.text = "An elevator in a dungeon? How odd..."
-            MainImage.image = UIImage(named: "Elevator.png")
+            MainImage.image = UIImage(named: Theme + "Elevator.png")
             Top_Button.removeTarget(nil, action: nil, for: .allEvents)
             Top_Button.setTitle("Ride Elevator", for: .normal)
             Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
@@ -1462,7 +1462,7 @@ class ViewController: UIViewController {
             MainImage.image = UIImage(named: "QuestionMark_.png")
             let Raise: Int = Int(arc4random_uniform(5)) + 1
             AdventureLog.text = "You hear something above you, as you look up a giant hand grabs you and pulls you up " + String(Raise) + " floor(s)!"
-            MainImage.image = UIImage(named: "Elevator.png")
+            MainImage.image = UIImage(named: Theme + "Elevator.png")
             
             SetLabels()
             Next()
@@ -1506,7 +1506,7 @@ class ViewController: UIViewController {
     
     func FindMerchant(){
         CurrentProduct = GenProduct()
-        MainImage.image = UIImage(named: "Merchant.png")
+        MainImage.image = UIImage(named: Theme + "Merchant.png")
         if(CurrentProduct[0] == "Mystery Sack"){
             AdventureLog.text = "You come across a merchant selling a very mysterious sack! His offer is " + CurrentProduct[2] + "G."
         }else{
@@ -1649,7 +1649,7 @@ class ViewController: UIViewController {
     }
     
     func GiveGold(SkipText: Bool = false, UseContainer: Bool = true){
-        MainImage.image = UIImage(named: "Gold.png")
+        MainImage.image = UIImage(named: Theme + "Gold.png")
         var Gen: Double = Double(arc4random_uniform(UInt32(100 * Floor * DecensionAdjustment))) + 10
         if(Class == 4){
             Gen = Gen * 3
@@ -1665,7 +1665,7 @@ class ViewController: UIViewController {
     }
     
     func GenWeapon(SkipText: Bool = false, UseContainer: Bool = false, Total: Int = 1, UseNext: Bool = false, CanBeCursed: Bool = true){
-        MainImage.image = UIImage(named: "weapons.png")
+        MainImage.image = UIImage(named: "Weapons.png")
         if(CanBeCursed && arc4random_uniform(50) < CursedWeaponChance){
             GiveWeapon(SkipText: SkipText, UseContainer: UseContainer, Total: Total, UseNext: UseNext, isCursed: true)
         }
@@ -1687,12 +1687,12 @@ class ViewController: UIViewController {
             Next()
         }
         else if(Gen > GoldChance && Gen <= PotionChance){
-            MainImage.image = UIImage(named: "Potion.png")
+            MainImage.image = UIImage(named: Theme + "Potion.png")
             GivePotion(SkipText: false, UseContainer: true, Total: Double(arc4random_uniform(19)) + 1)
             Next()
         }else{
             AdventureLog.text = "You found a treasure chest!"
-            MainImage.image = UIImage(named: "TreasureChest.png")
+            MainImage.image = UIImage(named: Theme + "TreasureChest.png")
             Top_Button.removeTarget(nil, action: nil, for: .allEvents)
             Top_Button.setTitle("Open", for: .normal)
             Top_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
@@ -1826,7 +1826,7 @@ class ViewController: UIViewController {
     
     func NormalEnemy(){
         CurrentMonster = GetMonster(Type: 1)
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         AdventureLog.text = "A " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel(EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1923,7 +1923,7 @@ class ViewController: UIViewController {
     
     func EnhancedEnemy(){
         CurrentMonster = GetMonster(Type: 2)
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         AdventureLog.text = "A giant " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel( EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1948,7 +1948,7 @@ class ViewController: UIViewController {
     
     func Boss(){
         CurrentMonster = GetMonster(Type: 4)
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 420
         AdventureLog.text = "A boss ranked " + CurrentMonster[0] + " emerges from the shadows in front of you." + "\n" + "Power: " + CutLabel( EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
@@ -1979,7 +1979,7 @@ class ViewController: UIViewController {
             TempAdjust = 10
         }
         CurrentMonster = ["Squirrel", String((500 * Floor * AfterDeath * 4 * DecensionAdjustment) / TempAdjust), "3"]
-        var EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
+        let EnemyPower: Double = Double(CurrentMonster[1]) ?? 0
         isSquirrelFight = true
         AdventureLog.text = "The Squirrel has found you!" + "\n" + "Power: " + CutLabel(EnemyPower)
         MainImage.image = UIImage(named: Theme + CurrentMonster[0] + ".png")
@@ -2132,11 +2132,11 @@ class ViewController: UIViewController {
         
         if(!ConfusionCurse){
             defaults.set(String(Int(FullCurse[1])! + CurseModifier), forKey: FullCurse[0])
-            LoadChances()
+            let _ = LoadChances()
         }
         
         if(isEvent){
-            MainImage.image = UIImage(named: "Curse.png")
+            MainImage.image = UIImage(named: Theme + "Curse.png")
             let Gen: UInt32 = arc4random_uniform(5)
             switch Gen{
                 case 0:
@@ -2411,7 +2411,7 @@ class ViewController: UIViewController {
     }
     
     func FindOldHag(){
-        MainImage.image = UIImage(named: "Hag.png")
+        MainImage.image = UIImage(named: Theme + "Hag.png")
         AdventureLog.text = "An old hag walks up to you and demands all of your Gold."
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
         Top_Button.setTitle("Fight Her", for: .normal)
@@ -2439,7 +2439,7 @@ class ViewController: UIViewController {
             Adjustment = 1
         }
         
-        let Gen: Int = Int(arc4random_uniform(UInt32(HagChanges.count)))
+        let Gen: Int = Int(arc4random_uniform(3))
         let TempArray: [String] = HagChanges[Gen].components(separatedBy: ",")
         
         CurrentMonster = TempArray
@@ -2582,7 +2582,7 @@ class ViewController: UIViewController {
     
     func FindBadMerchant(){
         CurrentProduct = GenProduct()
-        MainImage.image = UIImage(named: "BadMerchant.png")
+        MainImage.image = UIImage(named: Theme + "BadMerchant.png")
         if(CurrentProduct[0] == "Mystery Sack"){
             AdventureLog.text = "You come across a merchant selling a very mysterious sack! His offer is " + CurrentProduct[2] + "G."
         }else{
@@ -2629,7 +2629,7 @@ class ViewController: UIViewController {
     }
     
     func FindHotSpring(){
-        MainImage.image = UIImage(named: "Hotspring.png")
+        MainImage.image = UIImage(named: Theme + "Hotspring.png")
         AdventureLog.text = "You find a hot spring and take a quick dip." + "\n" + "You feel refreshed!";
         CurrentHP += CurrentHP / 5
         if (CurrentHP > MaxHP){
@@ -2641,7 +2641,7 @@ class ViewController: UIViewController {
     
     func FindTrap()
     {
-        MainImage.image = UIImage(named: "Trap.png")
+        MainImage.image = UIImage(named: Theme + "Trap.png")
         let a: Int = Int(arc4random_uniform(101))
         if (a >= 0 && a < 25){
             FindPitFallTrap()
@@ -2892,7 +2892,7 @@ class ViewController: UIViewController {
     @IBAction func DefeatDeath()
     {
         defaults.set(true, forKey: "hasKilledDeath")
-        MainImage.image = UIImage(named: "TreasureChest.png")
+        MainImage.image = UIImage(named: Theme + "TreasureChest.png")
         AdventureLog.text = "You stand over Death victorious. You pick up Death's Sythe and with one great swing you slay Death with his own weapon. As you do so you once again feel your body and soul being ripped apart. But unlike last time it quickly fades. You look around and see a chest."
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -3062,7 +3062,7 @@ class ViewController: UIViewController {
     
     func HellMerchant(alive: Bool = false)
     {
-        MainImage.image = UIImage(named: "Merchant.png")
+        MainImage.image = UIImage(named: Theme + "Merchant.png")
         if (alive)
         {
             CurrentProduct = HellGenProduct()
@@ -3136,7 +3136,7 @@ class ViewController: UIViewController {
     
     func HellFindItem()
     {
-        MainImage.image = UIImage(named: "TreasureChest.png")
+        MainImage.image = UIImage(named: Theme + "TreasureChest.png")
         AdventureLog.text = "You find a chest and as soon as you try to open it, it turns into sand right as you reach for it..."
         HellNext()
     }

@@ -421,7 +421,7 @@ class SideMenu: UITableViewController {
         MiscEventChance += FallChance
         CampChance += MiscEventChance
         //DisplayAlert(title: "test", message: String(MiscEventChance), button: "OK")
-        LoadItemChances()
+        let _ = LoadItemChances()
         
         return UInt32(CampChance)
     }
