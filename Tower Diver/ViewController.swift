@@ -1395,6 +1395,9 @@ class ViewController: UIViewController {
             if(Gen > 50){
                 CurrentHP -= MaxHP * (1/20)
             }
+            SetLabels()
+            SaveStats()
+            Next()
         }else{
             AdventureLog.text = "The ground in front of you collapses!"
             Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -1408,10 +1411,6 @@ class ViewController: UIViewController {
             Bottom_Button.setTitleColor(UIColor.black, for: UIControl.State.normal)
             Bottom_Button.addTarget(self, action: #selector(GenerateEventButton), for: .touchUpInside)
         }
-        
-        SetLabels()
-        SaveStats()
-        Next()
     }
     
     @IBAction func SafeFall(){
@@ -1463,7 +1462,8 @@ class ViewController: UIViewController {
             let Raise: Int = Int(arc4random_uniform(5)) + 1
             AdventureLog.text = "You hear something above you, as you look up a giant hand grabs you and pulls you up " + String(Raise) + " floor(s)!"
             MainImage.image = UIImage(named: Theme + "Elevator.png")
-            
+            Floor += Raise
+            FloorTenths = 0
             SetLabels()
             Next()
         }
@@ -1832,8 +1832,7 @@ class ViewController: UIViewController {
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+            AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         //TypeImage.image = UIImage(named: "Star.png")
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -1930,8 +1929,7 @@ class ViewController: UIViewController {
         TypeImage.image = UIImage(named: "Star.png")
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+           AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -1955,8 +1953,7 @@ class ViewController: UIViewController {
         TypeImage.image = UIImage(named: "Crown.png")
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+            AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -1986,8 +1983,7 @@ class ViewController: UIViewController {
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+            AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -2010,8 +2006,7 @@ class ViewController: UIViewController {
         ClassImage.image = GenClassImage(Class: CurrentMonster[2])
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+            AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -2325,6 +2320,17 @@ class ViewController: UIViewController {
         }
     }
     
+    func PredictBattle() -> String{
+        let Damage: Double = HandleBattle()
+        if(Damage > CurrentHP){
+            return "Prediction: Guarenteed Loss"
+        }else if(Damage < CurrentHP && Damage > (CurrentHP / 2)){
+            return "Prediction: Win, but at great risk."
+        }else{
+            return "Prediction: Win, minimal risk."
+        }
+    }
+    
     func EncounterGilgamesh(){
         var Adjustment: Int = (Floor / 25)
         if(Adjustment < 1){
@@ -2339,8 +2345,7 @@ class ViewController: UIViewController {
         TypeImage.image = UIImage(named: "Crown.png")
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+            AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
@@ -2458,8 +2463,7 @@ class ViewController: UIViewController {
         CurrentMonster = [TempArray[0], String(EnemyPower), TempArray[2]] 
         
         if(hasESP && BattlePredict){
-            let Damage: Double = HandleBattle()
-            DisplayAlert(title: "Battle Prediction", message: "Possible damage: " + DoubleString(Input: Damage - (Damage / 25)) + " to " + DoubleString(Input: Damage + (Damage / 25)), button: "OK")
+           AdventureLog.text = AdventureLog.text + "\n" + PredictBattle()
         }
         //TypeImage.image = UIImage(named: "Star.png")
         Top_Button.removeTarget(nil, action: nil, for: .allEvents)
