@@ -35,7 +35,60 @@ class CharacterCreation: UIViewController {
                 defaults.set(true, forKey: "FirstToast")
             }
         }
+        SetBackground()
     }
+    
+    func GenClassImage(Class: String = "0") -> String{
+        switch Class {
+        case "0":
+            return "Smol_Sword.png"
+        case "1":
+            return "Smol_Arrow.png"
+        case "2":
+            return "Smol_Staff.png"
+        case "3":
+            return "Smol_Scythe.png"
+        case "4":
+            return "Smol_Crown.png"
+        case "5":
+            return "Smol_Toaster.png"
+        default:
+            return "Smol_Dagger.png"
+        }
+    }
+    
+    func SetBackground(){
+        if let viewWithTag = self.view.viewWithTag(100) {
+            viewWithTag.removeFromSuperview()
+        }
+        
+        if let beginImage = CIImage(image: UIImage(named: GenClassImage(Class: String(Int(ClassStepper.value))))!){
+            if let filter = CIFilter(name: "CIColorInvert"){
+                filter.setValue(beginImage, forKey: kCIInputImageKey)
+                var invertedImage = UIImage(ciImage: filter.outputImage!).alpha(0.3)
+                invertedImage = resizeImage(image: invertedImage, newWidth: 200)
+                let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+                backgroundImage.image = invertedImage
+                backgroundImage.contentMode = UIView.ContentMode.scaleAspectFit
+                backgroundImage.tag = 100
+                self.view.insertSubview(backgroundImage, at: 0)
+            }
+        }
+    }
+    
+    func resizeImage(image: UIImage, newWidth: CGFloat) -> UIImage {
+        
+        let scale = newWidth / image.size.width
+        let newHeight = image.size.height * scale
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        //image.drawInRect(CGRect(0, 0, newWidth, newHeight))
+        image.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
     
     var KingUnlocked: Bool = false
     var HauntedUnlocked: Bool = false
@@ -60,6 +113,8 @@ class CharacterCreation: UIViewController {
          if(ClassStepper.value == 5){
             ClassLabel.text = "Toaster"
             ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."}
+        
+        SetBackground()
     }
     @IBAction func NextPage_Button(_ sender: Any) {
         //defaults.set(Name_Box.text, forKey: "Name")
@@ -100,4 +155,16 @@ class CharacterCreation: UIViewController {
     @IBOutlet weak var ClassStepper: UIStepper!
     @IBOutlet weak var ClassDescriptionLabel: UILabel!
     @IBOutlet weak var EasyMode_Switch: UISwitch!
+}
+
+
+extension UIImage {
+    
+    func alpha(_ value:CGFloat) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        draw(at: CGPoint.zero, blendMode: .normal, alpha: value)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return newImage!
+    }
 }

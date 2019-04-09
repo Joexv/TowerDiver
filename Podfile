@@ -21,5 +21,8 @@ target 'Tower Diver' do
 
 pod 'SideMenu'
 pod 'SwiftyStoreKit'
-
+pod 'PopupDialog'
+pod 'XLActionController'
+pod 'XLActionController/Periscope'
+pod 'XLActionController/Twitter'
 end

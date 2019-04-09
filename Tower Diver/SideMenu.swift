@@ -292,6 +292,20 @@ class SideMenu: UITableViewController {
                 case .cloudServicePermissionDenied: self.Alert("Access to cloud service information is not allowed")
                 case .cloudServiceNetworkConnectionFailed: self.Alert("Could not connect to the network")
                 case .cloudServiceRevoked: self.Alert("User has revoked permission to use this cloud service")
+                case .privacyAcknowledgementRequired:
+                    self.Alert("Unknown error. Please contact support")
+                case .unauthorizedRequestData:
+                    self.Alert("Unknown error. Please contact support")
+                case .invalidOfferIdentifier:
+                    self.Alert("Unknown error. Please contact support")
+                case .invalidSignature:
+                    self.Alert("Unknown error. Please contact support")
+                case .missingOfferParams:
+                    self.Alert("Unknown error. Please contact support")
+                case .invalidOfferPrice:
+                    self.Alert("Unknown error. Please contact support")
+                @unknown default:
+                    self.Alert("Unknown error. Please contact support")
                 }
             }
         }

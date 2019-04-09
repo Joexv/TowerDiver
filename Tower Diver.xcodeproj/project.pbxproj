@@ -92,12 +92,10 @@
 		30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4E21F1708A0061F213 /* Stick_Slime.png */; };
 		30802E7021F1708B0061F213 /* Stick_Knight.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4F21F1708A0061F213 /* Stick_Knight.png */; };
 		30802E7121F1708B0061F213 /* Stick_Minotaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5021F1708A0061F213 /* Stick_Minotaur.png */; };
-		30802E7221F1708B0061F213 /* Stick_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5121F1708A0061F213 /* Stick_Sack Mimic.png */; };
 		30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5221F1708A0061F213 /* Stick_Succubus.png */; };
 		30802E7421F1708B0061F213 /* Stick_Fire Spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5321F1708A0061F213 /* Stick_Fire Spirit.png */; };
 		30802E7521F1708B0061F213 /* Stick_Death.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5421F1708A0061F213 /* Stick_Death.png */; };
 		30802E7621F1708B0061F213 /* Stick_Bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5521F1708B0061F213 /* Stick_Bat.png */; };
-		30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5621F1708B0061F213 /* Stick_Treasure Mimic.png */; };
 		30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5721F1708B0061F213 /* Stick_Behemoth.png */; };
 		30802E7921F1708B0061F213 /* Stick_Ice Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5821F1708B0061F213 /* Stick_Ice Sorceress.png */; };
 		30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5921F1708B0061F213 /* Stick_Ghost.png */; };
@@ -140,6 +138,23 @@
 		30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE921F2AB5E0061F213 /* TitleScreen.png */; };
 		30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F4B21F2CE4B0061F213 /* Tower_Icon.png */; };
 		308903D621D420D700C784CB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308903D521D420D700C784CB /* SideMenu.swift */; };
+		30AABB9A221BCBE600DA9F3D /* Potion_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABB99221BCBE600DA9F3D /* Potion_Icon.png */; };
+		30AABB9C221C8A7300DA9F3D /* Toaster_Class.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABB9B221C8A7200DA9F3D /* Toaster_Class.png */; };
+		30AABB9E221C92EE00DA9F3D /* Gold_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABB9D221C92EE00DA9F3D /* Gold_Icon.png */; };
+		30AABBA6221C963000DA9F3D /* Smol_Staff.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA0221C963000DA9F3D /* Smol_Staff.png */; };
+		30AABBA7221C963000DA9F3D /* Smol_Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA1221C963000DA9F3D /* Smol_Sword.png */; };
+		30AABBA8221C963000DA9F3D /* Smol_Toaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA2221C963000DA9F3D /* Smol_Toaster.png */; };
+		30AABBA9221C963000DA9F3D /* Smol_Scythe.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA3221C963000DA9F3D /* Smol_Scythe.png */; };
+		30AABBAA221C963000DA9F3D /* Smol_Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA4221C963000DA9F3D /* Smol_Arrow.png */; };
+		30AABBAB221C963000DA9F3D /* Smol_Crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBA5221C963000DA9F3D /* Smol_Crown.png */; };
+		30AABBAD221C9A0100DA9F3D /* Test_Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBAC221C9A0100DA9F3D /* Test_Background.png */; };
+		30AABBAF221CB05900DA9F3D /* Gray_typeE_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBAE221CB05900DA9F3D /* Gray_typeE_normal.png */; };
+		30AABBB1221CB28D00DA9F3D /* Gray_bt_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBB0221CB28D00DA9F3D /* Gray_bt_menu.png */; };
+		30AABBB3221CB56A00DA9F3D /* Gray_typeE_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBB2221CB56A00DA9F3D /* Gray_typeE_none.png */; };
+		30AABBB6221CB97900DA9F3D /* Gray_typeA_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBB4221CB97800DA9F3D /* Gray_typeA_none.png */; };
+		30AABBB7221CB97900DA9F3D /* Gray_typeC_none.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBB5221CB97900DA9F3D /* Gray_typeC_none.png */; };
+		30AABBBB221CC0DC00DA9F3D /* Common_select.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBBA221CC0DC00DA9F3D /* Common_select.png */; };
+		30AABBBD221CCE9D00DA9F3D /* Button_Test.png in Resources */ = {isa = PBXBuildFile; fileRef = 30AABBBC221CCD8100DA9F3D /* Button_Test.png */; };
 		30DBAA2E220A8CD600818E40 /* Stick_Green Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */; };
 		30DBAA30220A8EEB00818E40 /* Stick_Cleric.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */; };
 		5E730F259448BB6EAB31DDF4 /* Pods_Tower_Diver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE64298F2D4C9C9FA4D8D46A /* Pods_Tower_Diver.framework */; };
@@ -306,6 +321,23 @@
 		30802F4B21F2CE4B0061F213 /* Tower_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tower_Icon.png; path = ../../../Tower_Icon.png; sourceTree = "<group>"; };
 		30802F4D21F2D8850061F213 /* Enchanted Land.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Enchanted Land.otf"; path = "../../../../Downloads/enchanted_land/Enchanted Land.otf"; sourceTree = "<group>"; };
 		308903D521D420D700C784CB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		30AABB99221BCBE600DA9F3D /* Potion_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Potion_Icon.png; path = ../../../Images/Potion_Icon.png; sourceTree = "<group>"; };
+		30AABB9B221C8A7200DA9F3D /* Toaster_Class.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Toaster_Class.png; path = ../../../Images/Toaster_Class.png; sourceTree = "<group>"; };
+		30AABB9D221C92EE00DA9F3D /* Gold_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gold_Icon.png; path = ../../../Images/Gold_Icon.png; sourceTree = "<group>"; };
+		30AABBA0221C963000DA9F3D /* Smol_Staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Staff.png; path = "../../../Character Creation Icons/Smol_Staff.png"; sourceTree = "<group>"; };
+		30AABBA1221C963000DA9F3D /* Smol_Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Sword.png; path = "../../../Character Creation Icons/Smol_Sword.png"; sourceTree = "<group>"; };
+		30AABBA2221C963000DA9F3D /* Smol_Toaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Toaster.png; path = "../../../Character Creation Icons/Smol_Toaster.png"; sourceTree = "<group>"; };
+		30AABBA3221C963000DA9F3D /* Smol_Scythe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Scythe.png; path = "../../../Character Creation Icons/Smol_Scythe.png"; sourceTree = "<group>"; };
+		30AABBA4221C963000DA9F3D /* Smol_Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Arrow.png; path = "../../../Character Creation Icons/Smol_Arrow.png"; sourceTree = "<group>"; };
+		30AABBA5221C963000DA9F3D /* Smol_Crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Smol_Crown.png; path = "../../../Character Creation Icons/Smol_Crown.png"; sourceTree = "<group>"; };
+		30AABBAC221C9A0100DA9F3D /* Test_Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Test_Background.png; path = "../../../Character Creation Icons/Test_Background.png"; sourceTree = "<group>"; };
+		30AABBAE221CB05900DA9F3D /* Gray_typeE_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gray_typeE_normal.png; path = "../../../Character Creation Icons/Gray_typeE_normal.png"; sourceTree = "<group>"; };
+		30AABBB0221CB28D00DA9F3D /* Gray_bt_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gray_bt_menu.png; path = "../../../Character Creation Icons/Gray_bt_menu.png"; sourceTree = "<group>"; };
+		30AABBB2221CB56A00DA9F3D /* Gray_typeE_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gray_typeE_none.png; path = "../../../Character Creation Icons/Gray_typeE_none.png"; sourceTree = "<group>"; };
+		30AABBB4221CB97800DA9F3D /* Gray_typeA_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gray_typeA_none.png; path = "../../../Character Creation Icons/Gray_typeA_none.png"; sourceTree = "<group>"; };
+		30AABBB5221CB97900DA9F3D /* Gray_typeC_none.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gray_typeC_none.png; path = "../../../Character Creation Icons/Gray_typeC_none.png"; sourceTree = "<group>"; };
+		30AABBBA221CC0DC00DA9F3D /* Common_select.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Common_select.png; path = "../../../Character Creation Icons/Common_select.png"; sourceTree = "<group>"; };
+		30AABBBC221CCD8100DA9F3D /* Button_Test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button_Test.png; path = "../../../Character Creation Icons/Button_Test.png"; sourceTree = "<group>"; };
 		30D3A388F3402CDDB358C87D /* Pods_Tower_DiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower_DiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Green Slime.png"; path = "../../../Stick/Stick_Green Slime.png"; sourceTree = "<group>"; };
 		30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Cleric.png; path = ../../../Stick/Stick_Cleric.png; sourceTree = "<group>"; };
@@ -374,6 +406,7 @@
 		3001FA7621CD5DB500FB14C9 /* Tower Diver */ = {
 			isa = PBXGroup;
 			children = (
+				30AABB9F221C951100DA9F3D /* Character Creation Icons */,
 				30802ECC21F2AB4A0061F213 /* Images */,
 				30802DC121F1703A0061F213 /* Stick */,
 				30802DBE21F1701C0061F213 /* Hand Drawn */,
@@ -511,6 +544,7 @@
 		30802ECC21F2AB4A0061F213 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				30AABB9D221C92EE00DA9F3D /* Gold_Icon.png */,
 				307F283F21F96CB000B8A646 /* Wife.png */,
 				307F283D21F9240F00B8A646 /* Outside.png */,
 				307F283521F9206100B8A646 /* DeadSquirrel.png */,
@@ -518,6 +552,7 @@
 				307F283721F9206100B8A646 /* FinalRoom.png */,
 				307F283621F9206100B8A646 /* Toaster.png */,
 				30802F4D21F2D8850061F213 /* Enchanted Land.otf */,
+				30AABB9B221C8A7200DA9F3D /* Toaster_Class.png */,
 				30802F4B21F2CE4B0061F213 /* Tower_Icon.png */,
 				30802EE421F2AB5E0061F213 /* Arrow.png */,
 				30802EDC21F2AB5D0061F213 /* BadMerchant.png */,
@@ -548,8 +583,30 @@
 				30802EE021F2AB5D0061F213 /* Trap.png */,
 				30802EDB21F2AB5D0061F213 /* TreasureChest.png */,
 				30802ECE21F2AB5C0061F213 /* Weapons.png */,
+				30AABB99221BCBE600DA9F3D /* Potion_Icon.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		30AABB9F221C951100DA9F3D /* Character Creation Icons */ = {
+			isa = PBXGroup;
+			children = (
+				30AABBB2221CB56A00DA9F3D /* Gray_typeE_none.png */,
+				30AABBAE221CB05900DA9F3D /* Gray_typeE_normal.png */,
+				30AABBA4221C963000DA9F3D /* Smol_Arrow.png */,
+				30AABBA5221C963000DA9F3D /* Smol_Crown.png */,
+				30AABBA3221C963000DA9F3D /* Smol_Scythe.png */,
+				30AABBA0221C963000DA9F3D /* Smol_Staff.png */,
+				30AABBA1221C963000DA9F3D /* Smol_Sword.png */,
+				30AABBA2221C963000DA9F3D /* Smol_Toaster.png */,
+				30AABBAC221C9A0100DA9F3D /* Test_Background.png */,
+				30AABBB0221CB28D00DA9F3D /* Gray_bt_menu.png */,
+				30AABBB4221CB97800DA9F3D /* Gray_typeA_none.png */,
+				30AABBB5221CB97900DA9F3D /* Gray_typeC_none.png */,
+				30AABBBA221CC0DC00DA9F3D /* Common_select.png */,
+				30AABBBC221CCD8100DA9F3D /* Button_Test.png */,
+			);
+			path = "Character Creation Icons";
 			sourceTree = "<group>";
 		};
 		C7BF95758880A49DD6B32243 /* Pods */ = {
@@ -645,11 +702,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Alternative Apps Unlimited";
 				TargetAttributes = {
 					3001FA7321CD5DB500FB14C9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 1;
@@ -658,10 +716,12 @@
 					};
 					3001FA8721CD5DB600FB14C9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 3001FA7321CD5DB500FB14C9;
 					};
 					3001FA9221CD5DB600FB14C9 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 						TestTargetID = 3001FA7321CD5DB500FB14C9;
 					};
 				};
@@ -697,19 +757,23 @@
 				30802E6D21F1708B0061F213 /* Stick_Demon.png in Resources */,
 				30802DE921F170530061F213 /* Imp.png in Resources */,
 				30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */,
+				30AABBA7221C963000DA9F3D /* Smol_Sword.png in Resources */,
 				30802EF721F2AB5E0061F213 /* Hole.png in Resources */,
 				300072BE220B864800766122 /* Stick_Sack Mimic.png in Resources */,
 				30802F0121F2AB5E0061F213 /* Arrow.png in Resources */,
 				3001FA8221CD5DB600FB14C9 /* LaunchScreen.storyboard in Resources */,
+				30AABBAD221C9A0100DA9F3D /* Test_Background.png in Resources */,
 				30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */,
 				30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */,
 				30802E7E21F1708B0061F213 /* Stick_Fire Sorceress.png in Resources */,
 				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
 				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
+				30AABB9E221C92EE00DA9F3D /* Gold_Icon.png in Resources */,
 				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
 				300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */,
 				300072BA220B864800766122 /* Stick_Potion.png in Resources */,
 				307F283E21F9240F00B8A646 /* Outside.png in Resources */,
+				30AABBBB221CC0DC00DA9F3D /* Common_select.png in Resources */,
 				30802DF621F170530061F213 /* Chimera.png in Resources */,
 				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
 				30802EEC21F2AB5E0061F213 /* Hag.png in Resources */,
@@ -723,10 +787,12 @@
 				3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */,
 				30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */,
 				30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */,
+				30AABBBD221CCE9D00DA9F3D /* Button_Test.png in Resources */,
 				30802E6C21F1708B0061F213 /* Stick_Bandit.png in Resources */,
 				30802EF221F2AB5E0061F213 /* Gold.png in Resources */,
 				3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */,
 				30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */,
+				30AABBB1221CB28D00DA9F3D /* Gray_bt_menu.png in Resources */,
 				30802EFF21F2AB5E0061F213 /* Potion.png in Resources */,
 				30802DFF21F170530061F213 /* Gilgamesh.png in Resources */,
 				300072C3220B864800766122 /* Stick_Hag.png in Resources */,
@@ -735,6 +801,7 @@
 				30802DFB21F170530061F213 /* SmolSquirrel.png in Resources */,
 				30802F0021F2AB5E0061F213 /* Coffee.png in Resources */,
 				30802E0321F170530061F213 /* Cockatrice.png in Resources */,
+				30AABB9A221BCBE600DA9F3D /* Potion_Icon.png in Resources */,
 				300072C5220B864800766122 /* Stick_Hole.png in Resources */,
 				30802DEF21F170530061F213 /* Minotaur.png in Resources */,
 				300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */,
@@ -747,18 +814,22 @@
 				300072BD220B864800766122 /* Stick_Trap.png in Resources */,
 				30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */,
 				300072BF220B864800766122 /* Stick_BadMerchant.png in Resources */,
+				30AABBB3221CB56A00DA9F3D /* Gray_typeE_none.png in Resources */,
 				30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */,
 				300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */,
 				300072C6220B864800766122 /* Stick_Merchant.png in Resources */,
+				30AABBAA221C963000DA9F3D /* Smol_Arrow.png in Resources */,
 				30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */,
 				30802DE621F170530061F213 /* Spider.png in Resources */,
 				30802E0521F170530061F213 /* Knight.png in Resources */,
 				30802EFD21F2AB5E0061F213 /* Trap.png in Resources */,
 				30802E6E21F1708B0061F213 /* Stick_Orc.png in Resources */,
+				30AABBA8221C963000DA9F3D /* Smol_Toaster.png in Resources */,
 				30802DF721F170530061F213 /* Behemoth.png in Resources */,
 				307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */,
-				30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */,
+				30AABBB7221CB97900DA9F3D /* Gray_typeC_none.png in Resources */,
 				30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */,
+				30AABBB6221CB97900DA9F3D /* Gray_typeA_none.png in Resources */,
 				30802DEA21F170530061F213 /* Bandit.png in Resources */,
 				300072C8220B864800766122 /* Stick_Hotspring.png in Resources */,
 				300072C7220B864800766122 /* Stick_Tent.png in Resources */,
@@ -777,13 +848,16 @@
 				30802E6A21F1708B0061F213 /* Stick_Rat.png in Resources */,
 				30802F0321F2AB5E0061F213 /* Tent.png in Resources */,
 				30802E6121F1708B0061F213 /* Stick_Paladin.png in Resources */,
+				30AABB9C221C8A7300DA9F3D /* Toaster_Class.png in Resources */,
 				30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */,
 				30802EF321F2AB5E0061F213 /* Merchant.png in Resources */,
 				30802EF421F2AB5E0061F213 /* Title.png in Resources */,
 				30802DE821F170530061F213 /* Ghost.png in Resources */,
+				30AABBA9221C963000DA9F3D /* Smol_Scythe.png in Resources */,
 				30802DF021F170530061F213 /* Skeleton.png in Resources */,
 				30DBAA30220A8EEB00818E40 /* Stick_Cleric.png in Resources */,
 				307F283A21F9206100B8A646 /* Toaster.png in Resources */,
+				30AABBAF221CB05900DA9F3D /* Gray_typeE_normal.png in Resources */,
 				30802DE521F170530061F213 /* Treasure Mimic.png in Resources */,
 				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
 				30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */,
@@ -799,6 +873,7 @@
 				30802DF221F170530061F213 /* Rat.png in Resources */,
 				30802E0021F170530061F213 /* Paladin.png in Resources */,
 				30802DEC21F170530061F213 /* Slime.png in Resources */,
+				30AABBA6221C963000DA9F3D /* Smol_Staff.png in Resources */,
 				30802E6321F1708B0061F213 /* Stick_Snake.png in Resources */,
 				30802DFD21F170530061F213 /* Lamia.png in Resources */,
 				30802EF021F2AB5E0061F213 /* Crown.png in Resources */,
@@ -808,7 +883,7 @@
 				30802EFE21F2AB5E0061F213 /* Curse.png in Resources */,
 				30802E7521F1708B0061F213 /* Stick_Death.png in Resources */,
 				30802E7C21F1708B0061F213 /* Stick_Spider.png in Resources */,
-				30802E7221F1708B0061F213 /* Stick_Sack Mimic.png in Resources */,
+				30AABBAB221C963000DA9F3D /* Smol_Crown.png in Resources */,
 				30802DF521F170530061F213 /* Green Slime.png in Resources */,
 				30802DEE21F170530061F213 /* Ice Sorceress.png in Resources */,
 				30802DF421F170530061F213 /* Squirrel.png in Resources */,
@@ -896,13 +971,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1107,7 +1188,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AltApps.TowerDiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1127,7 +1208,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AltApps.TowerDiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -1148,7 +1229,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Diver.app/Tower Diver";
 			};
@@ -1170,7 +1251,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Diver.app/Tower Diver";
 			};
@@ -1191,7 +1272,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tower Diver";
 			};
@@ -1212,7 +1293,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "Tower Diver";
 			};

@@ -15,26 +15,34 @@ class TitleScreen: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
-        Top_Button.layer.borderWidth = 2
-        Top_Button.layer.borderColor = UIColor.gray.cgColor
+        //self.view.backgroundColor = UIColor.white
+        //Top_Button.layer.borderWidth = 2
+        //Top_Button.layer.borderColor = UIColor.gray.cgColor
         SetBackground()
     }
     
     func SetBackground(){
         let image = UIImage(named: "Bricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)
-        
         view.backgroundColor = UIColor(patternImage: scaled)
     }
     @IBAction func Button(_ sender: Any) {
     }
-    
+    let defaults = UserDefaults.standard
     @IBOutlet weak var Top_Button: UIButton!
     @IBAction func Start_Button(_ sender: Any) {
-        DispatchQueue.main.async(execute: {
-            self.performSegue(withIdentifier: "EnterDungeonSegue", sender: nil)
-        })
+        let hasCharacter: Bool = defaults.bool(forKey: "hasCharacter")
+        //DisplayAlert(title: "Hmm", message: String(hasCharacter), button: "OK")
+        if(hasCharacter){
+            DispatchQueue.main.async(execute: {
+                self.performSegue(withIdentifier: "EnterDungeon", sender: nil)
+            })
+        }else{
+            DispatchQueue.main.async(execute: {
+                self.performSegue(withIdentifier: "FirstTime", sender: nil)
+            })
+        }
+
     }
     @IBAction func InfoButton(_ sender: Any) {
         //DisplayAlert(title: "Info", message: "v0.0.2 - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "Testing and Art by Joseph Mooney", button: "OK")
