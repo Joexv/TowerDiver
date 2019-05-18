@@ -3,7 +3,7 @@ https://itunes.apple.com/us/app/tower-diver/id1448525040?ls=1&mt=8
 
 # WE NEED AN ARTIST, IF YOU ARE WILLING TO HELP OUT PLEASE CONTACT ME I AM NOT AN ARTIST AND MY DRAWINGS ARE THAT OF A 5 YEAR OLD. WE CAN DISCUSS COMPENSATION <3
 
-Description
+#Description
 In a world filled with corrupt kings, door to door toaster salesmen, and lots of squirrels, there lies one thing that everyone loves. Torture. And what better way to torture adventurers who don't do your bidding? Throw them into a giant Tower and make them fight through hordes of goblins and demons to earn their freedom back.
 
 You play as a retired adventurer who was just settling down to have a family, when your king decides to throw you in the Tower, for not obeying his orders. Now you must fight your way to the top of the Tower to earn back your freedom to see your family again!
@@ -17,7 +17,7 @@ Tower Diver is our first ever mobile game. Our goal was to make something, simpl
 By doing this, we do not have a pay to win structure, we do not shove ads down our user's throats, and we don't track or sell anything about our users.
 Based on classic text based RPG's that we all knew and loved, Tower Diver brings back that gameplay into the modern gaming world, with game altering choices, hand drawn monster portraits, and squirrels!
 
-Latest Changes
+#Latest Changes
 In game achievements have been added! No longer will you be wandering in a giant Tower for no reason. Now you have a few reasons!
 Fixed some minor bugs
 Fixed Revival Counter popup not appearing sometimes
