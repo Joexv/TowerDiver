@@ -1,0 +1,1263 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		300072BA220B864800766122 /* Stick_Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AB220B864600766122 /* Stick_Potion.png */; };
+		300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AC220B864600766122 /* Stick_Gilgamesh.png */; };
+		300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AD220B864700766122 /* Stick_Treasure Mimic.png */; };
+		300072BD220B864800766122 /* Stick_Trap.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AE220B864700766122 /* Stick_Trap.png */; };
+		300072BE220B864800766122 /* Stick_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072AF220B864700766122 /* Stick_Sack Mimic.png */; };
+		300072BF220B864800766122 /* Stick_BadMerchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B0220B864700766122 /* Stick_BadMerchant.png */; };
+		300072C0220B864800766122 /* Stick_Elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B1220B864700766122 /* Stick_Elevator.png */; };
+		300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B2220B864700766122 /* Stick_TreasureChest.png */; };
+		300072C2220B864800766122 /* Stick_Curse.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B3220B864700766122 /* Stick_Curse.png */; };
+		300072C3220B864800766122 /* Stick_Hag.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B4220B864700766122 /* Stick_Hag.png */; };
+		300072C4220B864800766122 /* Stick_Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B5220B864700766122 /* Stick_Gold.png */; };
+		300072C5220B864800766122 /* Stick_Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B6220B864700766122 /* Stick_Hole.png */; };
+		300072C6220B864800766122 /* Stick_Merchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B7220B864700766122 /* Stick_Merchant.png */; };
+		300072C7220B864800766122 /* Stick_Tent.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B8220B864700766122 /* Stick_Tent.png */; };
+		300072C8220B864800766122 /* Stick_Hotspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 300072B9220B864800766122 /* Stick_Hotspring.png */; };
+		3001FA7821CD5DB500FB14C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */; };
+		3001FA7A21CD5DB500FB14C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA7921CD5DB500FB14C9 /* ViewController.swift */; };
+		3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3001FA7B21CD5DB500FB14C9 /* Main.storyboard */; };
+		3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3001FA7E21CD5DB600FB14C9 /* Assets.xcassets */; };
+		3001FA8221CD5DB600FB14C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3001FA8021CD5DB600FB14C9 /* LaunchScreen.storyboard */; };
+		3001FA8D21CD5DB600FB14C9 /* Tower_DiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA8C21CD5DB600FB14C9 /* Tower_DiverTests.swift */; };
+		3001FA9821CD5DB600FB14C9 /* Tower_DiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA9721CD5DB600FB14C9 /* Tower_DiverUITests.swift */; };
+		3001FABE21CD793400FB14C9 /* CharacterCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABD21CD793400FB14C9 /* CharacterCreation.swift */; };
+		3001FAC021CD7BD600FB14C9 /* CharacterCreation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */; };
+		306F15D421D40C8000E91EF6 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F15D321D40C8000E91EF6 /* TitleScreen.swift */; };
+		307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283521F9206100B8A646 /* DeadSquirrel.png */; };
+		307F283A21F9206100B8A646 /* Toaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283621F9206100B8A646 /* Toaster.png */; };
+		307F283B21F9206100B8A646 /* FinalRoom.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283721F9206100B8A646 /* FinalRoom.png */; };
+		307F283C21F9206100B8A646 /* DoubleDoors.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283821F9206100B8A646 /* DoubleDoors.png */; };
+		307F283E21F9240F00B8A646 /* Outside.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283D21F9240F00B8A646 /* Outside.png */; };
+		307F284021F96CB000B8A646 /* Wife.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283F21F96CB000B8A646 /* Wife.png */; };
+		30802DB521DFE8B70061F213 /* SwiftyStoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */; };
+		30802DB721DFE8BC0061F213 /* SideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB621DFE8BC0061F213 /* SideMenu.framework */; };
+		30802DB921DFE8EA0061F213 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30802DB821DFE8EA0061F213 /* StoreKit.framework */; };
+		30802DE521F170530061F213 /* Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC221F170510061F213 /* Treasure Mimic.png */; };
+		30802DE621F170530061F213 /* Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC321F170510061F213 /* Spider.png */; };
+		30802DE721F170530061F213 /* Giant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC421F170510061F213 /* Giant.png */; };
+		30802DE821F170530061F213 /* Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC521F170510061F213 /* Ghost.png */; };
+		30802DE921F170530061F213 /* Imp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC621F170510061F213 /* Imp.png */; };
+		30802DEA21F170530061F213 /* Bandit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC721F170510061F213 /* Bandit.png */; };
+		30802DEB21F170530061F213 /* Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC821F170510061F213 /* Dragon.png */; };
+		30802DEC21F170530061F213 /* Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DC921F170510061F213 /* Slime.png */; };
+		30802DED21F170530061F213 /* Bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCA21F170510061F213 /* Bat.png */; };
+		30802DEE21F170530061F213 /* Ice Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCB21F170510061F213 /* Ice Sorceress.png */; };
+		30802DEF21F170530061F213 /* Minotaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCC21F170510061F213 /* Minotaur.png */; };
+		30802DF021F170530061F213 /* Skeleton.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCD21F170510061F213 /* Skeleton.png */; };
+		30802DF121F170530061F213 /* Ice Sorceress_Alt.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCE21F170510061F213 /* Ice Sorceress_Alt.png */; };
+		30802DF221F170530061F213 /* Rat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DCF21F170510061F213 /* Rat.png */; };
+		30802DF321F170530061F213 /* Death.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD021F170510061F213 /* Death.png */; };
+		30802DF421F170530061F213 /* Squirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD121F170510061F213 /* Squirrel.png */; };
+		30802DF521F170530061F213 /* Green Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD221F170510061F213 /* Green Slime.png */; };
+		30802DF621F170530061F213 /* Chimera.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD321F170510061F213 /* Chimera.png */; };
+		30802DF721F170530061F213 /* Behemoth.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD421F170510061F213 /* Behemoth.png */; };
+		30802DF821F170530061F213 /* Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD521F170510061F213 /* Snake.png */; };
+		30802DF921F170530061F213 /* Fire Spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD621F170510061F213 /* Fire Spirit.png */; };
+		30802DFB21F170530061F213 /* SmolSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD821F170520061F213 /* SmolSquirrel.png */; };
+		30802DFC21F170530061F213 /* Zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DD921F170520061F213 /* Zombie.png */; };
+		30802DFD21F170530061F213 /* Lamia.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDA21F170520061F213 /* Lamia.png */; };
+		30802DFE21F170530061F213 /* Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDB21F170520061F213 /* Goblin.png */; };
+		30802DFF21F170530061F213 /* Gilgamesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDC21F170520061F213 /* Gilgamesh.png */; };
+		30802E0021F170530061F213 /* Paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDD21F170520061F213 /* Paladin.png */; };
+		30802E0121F170530061F213 /* Cleric.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDE21F170520061F213 /* Cleric.png */; };
+		30802E0221F170530061F213 /* Fire Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DDF21F170520061F213 /* Fire Sorceress.png */; };
+		30802E0321F170530061F213 /* Cockatrice.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE021F170520061F213 /* Cockatrice.png */; };
+		30802E0421F170530061F213 /* Succubus.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE121F170520061F213 /* Succubus.png */; };
+		30802E0521F170530061F213 /* Knight.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE221F170520061F213 /* Knight.png */; };
+		30802E0621F170530061F213 /* Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE321F170520061F213 /* Sack Mimic.png */; };
+		30802E0721F170530061F213 /* Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802DE421F170530061F213 /* Wizard.png */; };
+		30802E6121F1708B0061F213 /* Stick_Paladin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4021F170890061F213 /* Stick_Paladin.png */; };
+		30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4121F170890061F213 /* Stick_Lamia.png */; };
+		30802E6321F1708B0061F213 /* Stick_Snake.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4221F170890061F213 /* Stick_Snake.png */; };
+		30802E6421F1708B0061F213 /* Stick_Chimera.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4321F170890061F213 /* Stick_Chimera.png */; };
+		30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4421F1708A0061F213 /* Stick_Squirrel.png */; };
+		30802E6621F1708B0061F213 /* Stick_Goblin.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4521F1708A0061F213 /* Stick_Goblin.png */; };
+		30802E6721F1708B0061F213 /* Stick_Dragon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4621F1708A0061F213 /* Stick_Dragon.png */; };
+		30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4721F1708A0061F213 /* Stick_Cockatrice.png */; };
+		30802E6921F1708B0061F213 /* Stick_Giant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4821F1708A0061F213 /* Stick_Giant.png */; };
+		30802E6A21F1708B0061F213 /* Stick_Rat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4921F1708A0061F213 /* Stick_Rat.png */; };
+		30802E6B21F1708B0061F213 /* Stick_Scorpian.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4A21F1708A0061F213 /* Stick_Scorpian.png */; };
+		30802E6C21F1708B0061F213 /* Stick_Bandit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4B21F1708A0061F213 /* Stick_Bandit.png */; };
+		30802E6D21F1708B0061F213 /* Stick_Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4C21F1708A0061F213 /* Stick_Demon.png */; };
+		30802E6E21F1708B0061F213 /* Stick_Orc.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4D21F1708A0061F213 /* Stick_Orc.png */; };
+		30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4E21F1708A0061F213 /* Stick_Slime.png */; };
+		30802E7021F1708B0061F213 /* Stick_Knight.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E4F21F1708A0061F213 /* Stick_Knight.png */; };
+		30802E7121F1708B0061F213 /* Stick_Minotaur.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5021F1708A0061F213 /* Stick_Minotaur.png */; };
+		30802E7221F1708B0061F213 /* Stick_Sack Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5121F1708A0061F213 /* Stick_Sack Mimic.png */; };
+		30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5221F1708A0061F213 /* Stick_Succubus.png */; };
+		30802E7421F1708B0061F213 /* Stick_Fire Spirit.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5321F1708A0061F213 /* Stick_Fire Spirit.png */; };
+		30802E7521F1708B0061F213 /* Stick_Death.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5421F1708A0061F213 /* Stick_Death.png */; };
+		30802E7621F1708B0061F213 /* Stick_Bat.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5521F1708B0061F213 /* Stick_Bat.png */; };
+		30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5621F1708B0061F213 /* Stick_Treasure Mimic.png */; };
+		30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5721F1708B0061F213 /* Stick_Behemoth.png */; };
+		30802E7921F1708B0061F213 /* Stick_Ice Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5821F1708B0061F213 /* Stick_Ice Sorceress.png */; };
+		30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5921F1708B0061F213 /* Stick_Ghost.png */; };
+		30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5A21F1708B0061F213 /* Stick_Skeleton.png */; };
+		30802E7C21F1708B0061F213 /* Stick_Spider.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5B21F1708B0061F213 /* Stick_Spider.png */; };
+		30802E7D21F1708B0061F213 /* Stick_Zombie.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5C21F1708B0061F213 /* Stick_Zombie.png */; };
+		30802E7E21F1708B0061F213 /* Stick_Fire Sorceress.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5D21F1708B0061F213 /* Stick_Fire Sorceress.png */; };
+		30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5E21F1708B0061F213 /* Stick_Kerberos.png */; };
+		30802E8021F1708B0061F213 /* Stick_Imp.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E5F21F1708B0061F213 /* Stick_Imp.png */; };
+		30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E6021F1708B0061F213 /* Stick_Wizard.png */; };
+		30802E8521F2768C0061F213 /* Demon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802E8421F2768C0061F213 /* Demon.png */; };
+		30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECD21F2AB5C0061F213 /* Bricks.png */; };
+		30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECE21F2AB5C0061F213 /* Weapons.png */; };
+		30802EEC21F2AB5E0061F213 /* Hag.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ECF21F2AB5C0061F213 /* Hag.png */; };
+		30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED021F2AB5C0061F213 /* QuestionMark_.png */; };
+		30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED121F2AB5C0061F213 /* HellBricks.png */; };
+		30802EEF21F2AB5E0061F213 /* Staff.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED221F2AB5C0061F213 /* Staff.png */; };
+		30802EF021F2AB5E0061F213 /* Crown.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED321F2AB5C0061F213 /* Crown.png */; };
+		30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED421F2AB5C0061F213 /* BlackBricks.png */; };
+		30802EF221F2AB5E0061F213 /* Gold.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED521F2AB5C0061F213 /* Gold.png */; };
+		30802EF321F2AB5E0061F213 /* Merchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED621F2AB5C0061F213 /* Merchant.png */; };
+		30802EF421F2AB5E0061F213 /* Title.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED721F2AB5C0061F213 /* Title.png */; };
+		30802EF521F2AB5E0061F213 /* Dead.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED821F2AB5D0061F213 /* Dead.png */; };
+		30802EF621F2AB5E0061F213 /* Hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802ED921F2AB5D0061F213 /* Hamburger.png */; };
+		30802EF721F2AB5E0061F213 /* Hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDA21F2AB5D0061F213 /* Hole.png */; };
+		30802EF821F2AB5E0061F213 /* TreasureChest.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDB21F2AB5D0061F213 /* TreasureChest.png */; };
+		30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDC21F2AB5D0061F213 /* BadMerchant.png */; };
+		30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDD21F2AB5D0061F213 /* Scythe.png */; };
+		30802EFB21F2AB5E0061F213 /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDE21F2AB5D0061F213 /* Star.png */; };
+		30802EFC21F2AB5E0061F213 /* Elevator.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EDF21F2AB5D0061F213 /* Elevator.png */; };
+		30802EFD21F2AB5E0061F213 /* Trap.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE021F2AB5D0061F213 /* Trap.png */; };
+		30802EFE21F2AB5E0061F213 /* Curse.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE121F2AB5D0061F213 /* Curse.png */; };
+		30802EFF21F2AB5E0061F213 /* Potion.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE221F2AB5D0061F213 /* Potion.png */; };
+		30802F0021F2AB5E0061F213 /* Coffee.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE321F2AB5D0061F213 /* Coffee.png */; };
+		30802F0121F2AB5E0061F213 /* Arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE421F2AB5E0061F213 /* Arrow.png */; };
+		30802F0221F2AB5E0061F213 /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE521F2AB5E0061F213 /* Sword.png */; };
+		30802F0321F2AB5E0061F213 /* Tent.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE621F2AB5E0061F213 /* Tent.png */; };
+		30802F0421F2AB5E0061F213 /* Mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE721F2AB5E0061F213 /* Mark.png */; };
+		30802F0521F2AB5E0061F213 /* Hotspring.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE821F2AB5E0061F213 /* Hotspring.png */; };
+		30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802EE921F2AB5E0061F213 /* TitleScreen.png */; };
+		30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 30802F4B21F2CE4B0061F213 /* Tower_Icon.png */; };
+		308903D621D420D700C784CB /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308903D521D420D700C784CB /* SideMenu.swift */; };
+		30DBAA2E220A8CD600818E40 /* Stick_Green Slime.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */; };
+		30DBAA30220A8EEB00818E40 /* Stick_Cleric.png in Resources */ = {isa = PBXBuildFile; fileRef = 30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */; };
+		5E730F259448BB6EAB31DDF4 /* Pods_Tower_Diver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE64298F2D4C9C9FA4D8D46A /* Pods_Tower_Diver.framework */; };
+		730F0605A303294DCC9597EF /* Pods_Tower_DiverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED10F227344ABE919D7E5474 /* Pods_Tower_DiverUITests.framework */; };
+		9173B58CB3010EFB7C9CDC39 /* Pods_Tower_DiverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30D3A388F3402CDDB358C87D /* Pods_Tower_DiverTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3001FA8921CD5DB600FB14C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3001FA6C21CD5DB500FB14C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3001FA7321CD5DB500FB14C9;
+			remoteInfo = "Tower Diver";
+		};
+		3001FA9421CD5DB600FB14C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3001FA6C21CD5DB500FB14C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3001FA7321CD5DB500FB14C9;
+			remoteInfo = "Tower Diver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		12412F85B98BF50A30695684 /* Pods-Tower Diver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower Diver.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver.release.xcconfig"; sourceTree = "<group>"; };
+		300072AB220B864600766122 /* Stick_Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Potion.png; path = ../../../Stick/Stick_Potion.png; sourceTree = "<group>"; };
+		300072AC220B864600766122 /* Stick_Gilgamesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Gilgamesh.png; path = ../../../Stick/Stick_Gilgamesh.png; sourceTree = "<group>"; };
+		300072AD220B864700766122 /* Stick_Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Treasure Mimic.png"; path = "../../../Stick/Stick_Treasure Mimic.png"; sourceTree = "<group>"; };
+		300072AE220B864700766122 /* Stick_Trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Trap.png; path = ../../../Stick/Stick_Trap.png; sourceTree = "<group>"; };
+		300072AF220B864700766122 /* Stick_Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Sack Mimic.png"; path = "../../../Stick/Stick_Sack Mimic.png"; sourceTree = "<group>"; };
+		300072B0220B864700766122 /* Stick_BadMerchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_BadMerchant.png; path = ../../../Stick/Stick_BadMerchant.png; sourceTree = "<group>"; };
+		300072B1220B864700766122 /* Stick_Elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Elevator.png; path = ../../../Stick/Stick_Elevator.png; sourceTree = "<group>"; };
+		300072B2220B864700766122 /* Stick_TreasureChest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_TreasureChest.png; path = ../../../Stick/Stick_TreasureChest.png; sourceTree = "<group>"; };
+		300072B3220B864700766122 /* Stick_Curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Curse.png; path = ../../../Stick/Stick_Curse.png; sourceTree = "<group>"; };
+		300072B4220B864700766122 /* Stick_Hag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hag.png; path = ../../../Stick/Stick_Hag.png; sourceTree = "<group>"; };
+		300072B5220B864700766122 /* Stick_Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Gold.png; path = ../../../Stick/Stick_Gold.png; sourceTree = "<group>"; };
+		300072B6220B864700766122 /* Stick_Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hole.png; path = ../../../Stick/Stick_Hole.png; sourceTree = "<group>"; };
+		300072B7220B864700766122 /* Stick_Merchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Merchant.png; path = ../../../Stick/Stick_Merchant.png; sourceTree = "<group>"; };
+		300072B8220B864700766122 /* Stick_Tent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Tent.png; path = ../../../Stick/Stick_Tent.png; sourceTree = "<group>"; };
+		300072B9220B864800766122 /* Stick_Hotspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Hotspring.png; path = ../../../Stick/Stick_Hotspring.png; sourceTree = "<group>"; };
+		3001FA7421CD5DB500FB14C9 /* Tower Diver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tower Diver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3001FA7921CD5DB500FB14C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3001FA7C21CD5DB500FB14C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3001FA7E21CD5DB600FB14C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3001FA8121CD5DB600FB14C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3001FA8321CD5DB600FB14C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3001FA8821CD5DB600FB14C9 /* Tower DiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower DiverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3001FA8C21CD5DB600FB14C9 /* Tower_DiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_DiverTests.swift; sourceTree = "<group>"; };
+		3001FA8E21CD5DB600FB14C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3001FA9321CD5DB600FB14C9 /* Tower DiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tower DiverUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3001FA9721CD5DB600FB14C9 /* Tower_DiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tower_DiverUITests.swift; sourceTree = "<group>"; };
+		3001FA9921CD5DB600FB14C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3001FABD21CD793400FB14C9 /* CharacterCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation.swift; sourceTree = "<group>"; };
+		3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation2.swift; sourceTree = "<group>"; };
+		306F15D321D40C8000E91EF6 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
+		307F283521F9206100B8A646 /* DeadSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DeadSquirrel.png; path = ../../../Images/DeadSquirrel.png; sourceTree = "<group>"; };
+		307F283621F9206100B8A646 /* Toaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Toaster.png; path = ../../../Images/Toaster.png; sourceTree = "<group>"; };
+		307F283721F9206100B8A646 /* FinalRoom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FinalRoom.png; path = ../../../Images/FinalRoom.png; sourceTree = "<group>"; };
+		307F283821F9206100B8A646 /* DoubleDoors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DoubleDoors.png; path = ../../../Images/DoubleDoors.png; sourceTree = "<group>"; };
+		307F283D21F9240F00B8A646 /* Outside.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Outside.png; path = ../../../Images/Outside.png; sourceTree = "<group>"; };
+		307F283F21F96CB000B8A646 /* Wife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wife.png; path = ../../../Images/Wife.png; sourceTree = "<group>"; };
+		30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyStoreKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30802DB621DFE8BC0061F213 /* SideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30802DB821DFE8EA0061F213 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		30802DC221F170510061F213 /* Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Treasure Mimic.png"; path = "../../../Hand Drawn/Treasure Mimic.png"; sourceTree = "<group>"; };
+		30802DC321F170510061F213 /* Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spider.png; path = "../../../Hand Drawn/Spider.png"; sourceTree = "<group>"; };
+		30802DC421F170510061F213 /* Giant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Giant.png; path = "../../../Hand Drawn/Giant.png"; sourceTree = "<group>"; };
+		30802DC521F170510061F213 /* Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ghost.png; path = "../../../Hand Drawn/Ghost.png"; sourceTree = "<group>"; };
+		30802DC621F170510061F213 /* Imp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Imp.png; path = "../../../Hand Drawn/Imp.png"; sourceTree = "<group>"; };
+		30802DC721F170510061F213 /* Bandit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bandit.png; path = "../../../Hand Drawn/Bandit.png"; sourceTree = "<group>"; };
+		30802DC821F170510061F213 /* Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dragon.png; path = "../../../Hand Drawn/Dragon.png"; sourceTree = "<group>"; };
+		30802DC921F170510061F213 /* Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Slime.png; path = "../../../Hand Drawn/Slime.png"; sourceTree = "<group>"; };
+		30802DCA21F170510061F213 /* Bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bat.png; path = "../../../Hand Drawn/Bat.png"; sourceTree = "<group>"; };
+		30802DCB21F170510061F213 /* Ice Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ice Sorceress.png"; path = "../../../Hand Drawn/Ice Sorceress.png"; sourceTree = "<group>"; };
+		30802DCC21F170510061F213 /* Minotaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Minotaur.png; path = "../../../Hand Drawn/Minotaur.png"; sourceTree = "<group>"; };
+		30802DCD21F170510061F213 /* Skeleton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skeleton.png; path = "../../../Hand Drawn/Skeleton.png"; sourceTree = "<group>"; };
+		30802DCE21F170510061F213 /* Ice Sorceress_Alt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ice Sorceress_Alt.png"; path = "../../../Hand Drawn/Ice Sorceress_Alt.png"; sourceTree = "<group>"; };
+		30802DCF21F170510061F213 /* Rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Rat.png; path = "../../../Hand Drawn/Rat.png"; sourceTree = "<group>"; };
+		30802DD021F170510061F213 /* Death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Death.png; path = "../../../Hand Drawn/Death.png"; sourceTree = "<group>"; };
+		30802DD121F170510061F213 /* Squirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Squirrel.png; path = "../../../Hand Drawn/Squirrel.png"; sourceTree = "<group>"; };
+		30802DD221F170510061F213 /* Green Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Green Slime.png"; path = "../../../Hand Drawn/Green Slime.png"; sourceTree = "<group>"; };
+		30802DD321F170510061F213 /* Chimera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chimera.png; path = "../../../Hand Drawn/Chimera.png"; sourceTree = "<group>"; };
+		30802DD421F170510061F213 /* Behemoth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Behemoth.png; path = "../../../Hand Drawn/Behemoth.png"; sourceTree = "<group>"; };
+		30802DD521F170510061F213 /* Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Snake.png; path = "../../../Hand Drawn/Snake.png"; sourceTree = "<group>"; };
+		30802DD621F170510061F213 /* Fire Spirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fire Spirit.png"; path = "../../../Hand Drawn/Fire Spirit.png"; sourceTree = "<group>"; };
+		30802DD821F170520061F213 /* SmolSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SmolSquirrel.png; path = "../../../Hand Drawn/SmolSquirrel.png"; sourceTree = "<group>"; };
+		30802DD921F170520061F213 /* Zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Zombie.png; path = "../../../Hand Drawn/Zombie.png"; sourceTree = "<group>"; };
+		30802DDA21F170520061F213 /* Lamia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Lamia.png; path = "../../../Hand Drawn/Lamia.png"; sourceTree = "<group>"; };
+		30802DDB21F170520061F213 /* Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Goblin.png; path = "../../../Hand Drawn/Goblin.png"; sourceTree = "<group>"; };
+		30802DDC21F170520061F213 /* Gilgamesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gilgamesh.png; path = "../../../Hand Drawn/Gilgamesh.png"; sourceTree = "<group>"; };
+		30802DDD21F170520061F213 /* Paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Paladin.png; path = "../../../Hand Drawn/Paladin.png"; sourceTree = "<group>"; };
+		30802DDE21F170520061F213 /* Cleric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cleric.png; path = "../../../Hand Drawn/Cleric.png"; sourceTree = "<group>"; };
+		30802DDF21F170520061F213 /* Fire Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Fire Sorceress.png"; path = "../../../Hand Drawn/Fire Sorceress.png"; sourceTree = "<group>"; };
+		30802DE021F170520061F213 /* Cockatrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Cockatrice.png; path = "../../../Hand Drawn/Cockatrice.png"; sourceTree = "<group>"; };
+		30802DE121F170520061F213 /* Succubus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Succubus.png; path = "../../../Hand Drawn/Succubus.png"; sourceTree = "<group>"; };
+		30802DE221F170520061F213 /* Knight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Knight.png; path = "../../../Hand Drawn/Knight.png"; sourceTree = "<group>"; };
+		30802DE321F170520061F213 /* Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sack Mimic.png"; path = "../../../Hand Drawn/Sack Mimic.png"; sourceTree = "<group>"; };
+		30802DE421F170530061F213 /* Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Wizard.png; path = "../../../Hand Drawn/Wizard.png"; sourceTree = "<group>"; };
+		30802E4021F170890061F213 /* Stick_Paladin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Paladin.png; path = ../../../Stick/Stick_Paladin.png; sourceTree = "<group>"; };
+		30802E4121F170890061F213 /* Stick_Lamia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Lamia.png; path = ../../../Stick/Stick_Lamia.png; sourceTree = "<group>"; };
+		30802E4221F170890061F213 /* Stick_Snake.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Snake.png; path = ../../../Stick/Stick_Snake.png; sourceTree = "<group>"; };
+		30802E4321F170890061F213 /* Stick_Chimera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Chimera.png; path = ../../../Stick/Stick_Chimera.png; sourceTree = "<group>"; };
+		30802E4421F1708A0061F213 /* Stick_Squirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Squirrel.png; path = ../../../Stick/Stick_Squirrel.png; sourceTree = "<group>"; };
+		30802E4521F1708A0061F213 /* Stick_Goblin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Goblin.png; path = ../../../Stick/Stick_Goblin.png; sourceTree = "<group>"; };
+		30802E4621F1708A0061F213 /* Stick_Dragon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Dragon.png; path = ../../../Stick/Stick_Dragon.png; sourceTree = "<group>"; };
+		30802E4721F1708A0061F213 /* Stick_Cockatrice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Cockatrice.png; path = ../../../Stick/Stick_Cockatrice.png; sourceTree = "<group>"; };
+		30802E4821F1708A0061F213 /* Stick_Giant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Giant.png; path = ../../../Stick/Stick_Giant.png; sourceTree = "<group>"; };
+		30802E4921F1708A0061F213 /* Stick_Rat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Rat.png; path = ../../../Stick/Stick_Rat.png; sourceTree = "<group>"; };
+		30802E4A21F1708A0061F213 /* Stick_Scorpian.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Scorpian.png; path = ../../../Stick/Stick_Scorpian.png; sourceTree = "<group>"; };
+		30802E4B21F1708A0061F213 /* Stick_Bandit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Bandit.png; path = ../../../Stick/Stick_Bandit.png; sourceTree = "<group>"; };
+		30802E4C21F1708A0061F213 /* Stick_Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Demon.png; path = ../../../Stick/Stick_Demon.png; sourceTree = "<group>"; };
+		30802E4D21F1708A0061F213 /* Stick_Orc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Orc.png; path = ../../../Stick/Stick_Orc.png; sourceTree = "<group>"; };
+		30802E4E21F1708A0061F213 /* Stick_Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Slime.png; path = ../../../Stick/Stick_Slime.png; sourceTree = "<group>"; };
+		30802E4F21F1708A0061F213 /* Stick_Knight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Knight.png; path = ../../../Stick/Stick_Knight.png; sourceTree = "<group>"; };
+		30802E5021F1708A0061F213 /* Stick_Minotaur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Minotaur.png; path = ../../../Stick/Stick_Minotaur.png; sourceTree = "<group>"; };
+		30802E5121F1708A0061F213 /* Stick_Sack Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Sack Mimic.png"; path = "../../../Stick/Stick_Sack Mimic.png"; sourceTree = "<group>"; };
+		30802E5221F1708A0061F213 /* Stick_Succubus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Succubus.png; path = ../../../Stick/Stick_Succubus.png; sourceTree = "<group>"; };
+		30802E5321F1708A0061F213 /* Stick_Fire Spirit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Fire Spirit.png"; path = "../../../Stick/Stick_Fire Spirit.png"; sourceTree = "<group>"; };
+		30802E5421F1708A0061F213 /* Stick_Death.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Death.png; path = ../../../Stick/Stick_Death.png; sourceTree = "<group>"; };
+		30802E5521F1708B0061F213 /* Stick_Bat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Bat.png; path = ../../../Stick/Stick_Bat.png; sourceTree = "<group>"; };
+		30802E5621F1708B0061F213 /* Stick_Treasure Mimic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Treasure Mimic.png"; path = "../../../Stick/Stick_Treasure Mimic.png"; sourceTree = "<group>"; };
+		30802E5721F1708B0061F213 /* Stick_Behemoth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Behemoth.png; path = ../../../Stick/Stick_Behemoth.png; sourceTree = "<group>"; };
+		30802E5821F1708B0061F213 /* Stick_Ice Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Ice Sorceress.png"; path = "../../../Stick/Stick_Ice Sorceress.png"; sourceTree = "<group>"; };
+		30802E5921F1708B0061F213 /* Stick_Ghost.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Ghost.png; path = ../../../Stick/Stick_Ghost.png; sourceTree = "<group>"; };
+		30802E5A21F1708B0061F213 /* Stick_Skeleton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Skeleton.png; path = ../../../Stick/Stick_Skeleton.png; sourceTree = "<group>"; };
+		30802E5B21F1708B0061F213 /* Stick_Spider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Spider.png; path = ../../../Stick/Stick_Spider.png; sourceTree = "<group>"; };
+		30802E5C21F1708B0061F213 /* Stick_Zombie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Zombie.png; path = ../../../Stick/Stick_Zombie.png; sourceTree = "<group>"; };
+		30802E5D21F1708B0061F213 /* Stick_Fire Sorceress.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Fire Sorceress.png"; path = "../../../Stick/Stick_Fire Sorceress.png"; sourceTree = "<group>"; };
+		30802E5E21F1708B0061F213 /* Stick_Kerberos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Kerberos.png; path = ../../../Stick/Stick_Kerberos.png; sourceTree = "<group>"; };
+		30802E5F21F1708B0061F213 /* Stick_Imp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Imp.png; path = ../../../Stick/Stick_Imp.png; sourceTree = "<group>"; };
+		30802E6021F1708B0061F213 /* Stick_Wizard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Wizard.png; path = ../../../Stick/Stick_Wizard.png; sourceTree = "<group>"; };
+		30802E8421F2768C0061F213 /* Demon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Demon.png; path = "../../../Hand Drawn/Demon.png"; sourceTree = "<group>"; };
+		30802ECD21F2AB5C0061F213 /* Bricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bricks.png; path = ../../../Images/Bricks.png; sourceTree = "<group>"; };
+		30802ECE21F2AB5C0061F213 /* Weapons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Weapons.png; path = ../../../Images/Weapons.png; sourceTree = "<group>"; };
+		30802ECF21F2AB5C0061F213 /* Hag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hag.png; path = ../../../Images/Hag.png; sourceTree = "<group>"; };
+		30802ED021F2AB5C0061F213 /* QuestionMark_.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = QuestionMark_.png; path = ../../../Images/QuestionMark_.png; sourceTree = "<group>"; };
+		30802ED121F2AB5C0061F213 /* HellBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HellBricks.png; path = ../../../Images/HellBricks.png; sourceTree = "<group>"; };
+		30802ED221F2AB5C0061F213 /* Staff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Staff.png; path = ../../../Images/Staff.png; sourceTree = "<group>"; };
+		30802ED321F2AB5C0061F213 /* Crown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Crown.png; path = ../../../Images/Crown.png; sourceTree = "<group>"; };
+		30802ED421F2AB5C0061F213 /* BlackBricks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BlackBricks.png; path = ../../../Images/BlackBricks.png; sourceTree = "<group>"; };
+		30802ED521F2AB5C0061F213 /* Gold.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gold.png; path = ../../../Images/Gold.png; sourceTree = "<group>"; };
+		30802ED621F2AB5C0061F213 /* Merchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Merchant.png; path = ../../../Images/Merchant.png; sourceTree = "<group>"; };
+		30802ED721F2AB5C0061F213 /* Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Title.png; path = ../../../Images/Title.png; sourceTree = "<group>"; };
+		30802ED821F2AB5D0061F213 /* Dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Dead.png; path = ../../../Images/Dead.png; sourceTree = "<group>"; };
+		30802ED921F2AB5D0061F213 /* Hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hamburger.png; path = ../../../Images/Hamburger.png; sourceTree = "<group>"; };
+		30802EDA21F2AB5D0061F213 /* Hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hole.png; path = ../../../Images/Hole.png; sourceTree = "<group>"; };
+		30802EDB21F2AB5D0061F213 /* TreasureChest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TreasureChest.png; path = ../../../Images/TreasureChest.png; sourceTree = "<group>"; };
+		30802EDC21F2AB5D0061F213 /* BadMerchant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BadMerchant.png; path = ../../../Images/BadMerchant.png; sourceTree = "<group>"; };
+		30802EDD21F2AB5D0061F213 /* Scythe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scythe.png; path = ../../../Images/Scythe.png; sourceTree = "<group>"; };
+		30802EDE21F2AB5D0061F213 /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Star.png; path = ../../../Images/Star.png; sourceTree = "<group>"; };
+		30802EDF21F2AB5D0061F213 /* Elevator.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Elevator.png; path = ../../../Images/Elevator.png; sourceTree = "<group>"; };
+		30802EE021F2AB5D0061F213 /* Trap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Trap.png; path = ../../../Images/Trap.png; sourceTree = "<group>"; };
+		30802EE121F2AB5D0061F213 /* Curse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Curse.png; path = ../../../Images/Curse.png; sourceTree = "<group>"; };
+		30802EE221F2AB5D0061F213 /* Potion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Potion.png; path = ../../../Images/Potion.png; sourceTree = "<group>"; };
+		30802EE321F2AB5D0061F213 /* Coffee.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Coffee.png; path = ../../../Images/Coffee.png; sourceTree = "<group>"; };
+		30802EE421F2AB5E0061F213 /* Arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Arrow.png; path = ../../../Images/Arrow.png; sourceTree = "<group>"; };
+		30802EE521F2AB5E0061F213 /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Sword.png; path = ../../../Images/Sword.png; sourceTree = "<group>"; };
+		30802EE621F2AB5E0061F213 /* Tent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tent.png; path = ../../../Images/Tent.png; sourceTree = "<group>"; };
+		30802EE721F2AB5E0061F213 /* Mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mark.png; path = ../../../Images/Mark.png; sourceTree = "<group>"; };
+		30802EE821F2AB5E0061F213 /* Hotspring.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Hotspring.png; path = ../../../Images/Hotspring.png; sourceTree = "<group>"; };
+		30802EE921F2AB5E0061F213 /* TitleScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TitleScreen.png; path = ../../../Images/TitleScreen.png; sourceTree = "<group>"; };
+		30802F4B21F2CE4B0061F213 /* Tower_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tower_Icon.png; path = ../../../Tower_Icon.png; sourceTree = "<group>"; };
+		30802F4D21F2D8850061F213 /* Enchanted Land.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Enchanted Land.otf"; path = "../../../../Downloads/enchanted_land/Enchanted Land.otf"; sourceTree = "<group>"; };
+		308903D521D420D700C784CB /* SideMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		30D3A388F3402CDDB358C87D /* Pods_Tower_DiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower_DiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Stick_Green Slime.png"; path = "../../../Stick/Stick_Green Slime.png"; sourceTree = "<group>"; };
+		30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Stick_Cleric.png; path = ../../../Stick/Stick_Cleric.png; sourceTree = "<group>"; };
+		B1B2EC255C122B8967F6D252 /* Pods-Tower Diver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower Diver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver.debug.xcconfig"; sourceTree = "<group>"; };
+		C04273C0373226BBE0952677 /* Pods-Tower DiverUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower DiverUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tower DiverUITests/Pods-Tower DiverUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D637251E6C1EABFB24892B6C /* Pods-Tower DiverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower DiverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tower DiverTests/Pods-Tower DiverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D7E7189C324DB19FDFF9203D /* Pods-Tower DiverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower DiverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tower DiverTests/Pods-Tower DiverTests.release.xcconfig"; sourceTree = "<group>"; };
+		ED10F227344ABE919D7E5474 /* Pods_Tower_DiverUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower_DiverUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F59E9DDA93F0427CBE41B8 /* Pods-Tower DiverUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tower DiverUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tower DiverUITests/Pods-Tower DiverUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FE64298F2D4C9C9FA4D8D46A /* Pods_Tower_Diver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tower_Diver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3001FA7121CD5DB500FB14C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30802DB921DFE8EA0061F213 /* StoreKit.framework in Frameworks */,
+				30802DB721DFE8BC0061F213 /* SideMenu.framework in Frameworks */,
+				30802DB521DFE8B70061F213 /* SwiftyStoreKit.framework in Frameworks */,
+				5E730F259448BB6EAB31DDF4 /* Pods_Tower_Diver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA8521CD5DB600FB14C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9173B58CB3010EFB7C9CDC39 /* Pods_Tower_DiverTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA9021CD5DB600FB14C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730F0605A303294DCC9597EF /* Pods_Tower_DiverUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3001FA6B21CD5DB500FB14C9 = {
+			isa = PBXGroup;
+			children = (
+				3001FA7621CD5DB500FB14C9 /* Tower Diver */,
+				3001FA8B21CD5DB600FB14C9 /* Tower DiverTests */,
+				3001FA9621CD5DB600FB14C9 /* Tower DiverUITests */,
+				3001FA7521CD5DB500FB14C9 /* Products */,
+				C7BF95758880A49DD6B32243 /* Pods */,
+				D67704E346AF3D814DCAE0AE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3001FA7521CD5DB500FB14C9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3001FA7421CD5DB500FB14C9 /* Tower Diver.app */,
+				3001FA8821CD5DB600FB14C9 /* Tower DiverTests.xctest */,
+				3001FA9321CD5DB600FB14C9 /* Tower DiverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3001FA7621CD5DB500FB14C9 /* Tower Diver */ = {
+			isa = PBXGroup;
+			children = (
+				30802ECC21F2AB4A0061F213 /* Images */,
+				30802DC121F1703A0061F213 /* Stick */,
+				30802DBE21F1701C0061F213 /* Hand Drawn */,
+				3001FA7721CD5DB500FB14C9 /* AppDelegate.swift */,
+				3001FA7921CD5DB500FB14C9 /* ViewController.swift */,
+				3001FA7B21CD5DB500FB14C9 /* Main.storyboard */,
+				3001FA7E21CD5DB600FB14C9 /* Assets.xcassets */,
+				3001FA8021CD5DB600FB14C9 /* LaunchScreen.storyboard */,
+				3001FA8321CD5DB600FB14C9 /* Info.plist */,
+				3001FABD21CD793400FB14C9 /* CharacterCreation.swift */,
+				3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */,
+				306F15D321D40C8000E91EF6 /* TitleScreen.swift */,
+				308903D521D420D700C784CB /* SideMenu.swift */,
+			);
+			path = "Tower Diver";
+			sourceTree = "<group>";
+		};
+		3001FA8B21CD5DB600FB14C9 /* Tower DiverTests */ = {
+			isa = PBXGroup;
+			children = (
+				3001FA8C21CD5DB600FB14C9 /* Tower_DiverTests.swift */,
+				3001FA8E21CD5DB600FB14C9 /* Info.plist */,
+			);
+			path = "Tower DiverTests";
+			sourceTree = "<group>";
+		};
+		3001FA9621CD5DB600FB14C9 /* Tower DiverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3001FA9721CD5DB600FB14C9 /* Tower_DiverUITests.swift */,
+				3001FA9921CD5DB600FB14C9 /* Info.plist */,
+			);
+			path = "Tower DiverUITests";
+			sourceTree = "<group>";
+		};
+		30802DBE21F1701C0061F213 /* Hand Drawn */ = {
+			isa = PBXGroup;
+			children = (
+				30802E8421F2768C0061F213 /* Demon.png */,
+				30802DC721F170510061F213 /* Bandit.png */,
+				30802DCA21F170510061F213 /* Bat.png */,
+				30802DD421F170510061F213 /* Behemoth.png */,
+				30802DD321F170510061F213 /* Chimera.png */,
+				30802DDE21F170520061F213 /* Cleric.png */,
+				30802DE021F170520061F213 /* Cockatrice.png */,
+				30802DD021F170510061F213 /* Death.png */,
+				30802DC821F170510061F213 /* Dragon.png */,
+				30802DDF21F170520061F213 /* Fire Sorceress.png */,
+				30802DD621F170510061F213 /* Fire Spirit.png */,
+				30802DC521F170510061F213 /* Ghost.png */,
+				30802DC421F170510061F213 /* Giant.png */,
+				30802DDC21F170520061F213 /* Gilgamesh.png */,
+				30802DDB21F170520061F213 /* Goblin.png */,
+				30802DD221F170510061F213 /* Green Slime.png */,
+				30802DCE21F170510061F213 /* Ice Sorceress_Alt.png */,
+				30802DCB21F170510061F213 /* Ice Sorceress.png */,
+				30802DC621F170510061F213 /* Imp.png */,
+				30802DE221F170520061F213 /* Knight.png */,
+				30802DDA21F170520061F213 /* Lamia.png */,
+				30802DCC21F170510061F213 /* Minotaur.png */,
+				30802DDD21F170520061F213 /* Paladin.png */,
+				30802DCF21F170510061F213 /* Rat.png */,
+				30802DE321F170520061F213 /* Sack Mimic.png */,
+				30802DCD21F170510061F213 /* Skeleton.png */,
+				30802DC921F170510061F213 /* Slime.png */,
+				30802DD821F170520061F213 /* SmolSquirrel.png */,
+				30802DD521F170510061F213 /* Snake.png */,
+				30802DC321F170510061F213 /* Spider.png */,
+				30802DD121F170510061F213 /* Squirrel.png */,
+				30802DE121F170520061F213 /* Succubus.png */,
+				30802DC221F170510061F213 /* Treasure Mimic.png */,
+				30802DE421F170530061F213 /* Wizard.png */,
+				30802DD921F170520061F213 /* Zombie.png */,
+			);
+			path = "Hand Drawn";
+			sourceTree = "<group>";
+		};
+		30802DC121F1703A0061F213 /* Stick */ = {
+			isa = PBXGroup;
+			children = (
+				300072B0220B864700766122 /* Stick_BadMerchant.png */,
+				300072B3220B864700766122 /* Stick_Curse.png */,
+				300072B1220B864700766122 /* Stick_Elevator.png */,
+				300072AC220B864600766122 /* Stick_Gilgamesh.png */,
+				300072B5220B864700766122 /* Stick_Gold.png */,
+				300072B4220B864700766122 /* Stick_Hag.png */,
+				300072B6220B864700766122 /* Stick_Hole.png */,
+				300072B9220B864800766122 /* Stick_Hotspring.png */,
+				300072B7220B864700766122 /* Stick_Merchant.png */,
+				300072AB220B864600766122 /* Stick_Potion.png */,
+				300072AF220B864700766122 /* Stick_Sack Mimic.png */,
+				300072B8220B864700766122 /* Stick_Tent.png */,
+				300072AE220B864700766122 /* Stick_Trap.png */,
+				300072B2220B864700766122 /* Stick_TreasureChest.png */,
+				300072AD220B864700766122 /* Stick_Treasure Mimic.png */,
+				30DBAA2F220A8EEB00818E40 /* Stick_Cleric.png */,
+				30DBAA2D220A8CD600818E40 /* Stick_Green Slime.png */,
+				30802E5521F1708B0061F213 /* Stick_Bat.png */,
+				30802E5721F1708B0061F213 /* Stick_Behemoth.png */,
+				30802E4321F170890061F213 /* Stick_Chimera.png */,
+				30802E4721F1708A0061F213 /* Stick_Cockatrice.png */,
+				30802E5421F1708A0061F213 /* Stick_Death.png */,
+				30802E4C21F1708A0061F213 /* Stick_Demon.png */,
+				30802E4621F1708A0061F213 /* Stick_Dragon.png */,
+				30802E5D21F1708B0061F213 /* Stick_Fire Sorceress.png */,
+				30802E5321F1708A0061F213 /* Stick_Fire Spirit.png */,
+				30802E5921F1708B0061F213 /* Stick_Ghost.png */,
+				30802E4821F1708A0061F213 /* Stick_Giant.png */,
+				30802E4521F1708A0061F213 /* Stick_Goblin.png */,
+				30802E5821F1708B0061F213 /* Stick_Ice Sorceress.png */,
+				30802E5F21F1708B0061F213 /* Stick_Imp.png */,
+				30802E5E21F1708B0061F213 /* Stick_Kerberos.png */,
+				30802E4121F170890061F213 /* Stick_Lamia.png */,
+				30802E5021F1708A0061F213 /* Stick_Minotaur.png */,
+				30802E4D21F1708A0061F213 /* Stick_Orc.png */,
+				30802E4021F170890061F213 /* Stick_Paladin.png */,
+				30802E4921F1708A0061F213 /* Stick_Rat.png */,
+				30802E5121F1708A0061F213 /* Stick_Sack Mimic.png */,
+				30802E4A21F1708A0061F213 /* Stick_Scorpian.png */,
+				30802E5A21F1708B0061F213 /* Stick_Skeleton.png */,
+				30802E4E21F1708A0061F213 /* Stick_Slime.png */,
+				30802E4221F170890061F213 /* Stick_Snake.png */,
+				30802E4F21F1708A0061F213 /* Stick_Knight.png */,
+				30802E5B21F1708B0061F213 /* Stick_Spider.png */,
+				30802E4421F1708A0061F213 /* Stick_Squirrel.png */,
+				30802E5221F1708A0061F213 /* Stick_Succubus.png */,
+				30802E4B21F1708A0061F213 /* Stick_Bandit.png */,
+				30802E5621F1708B0061F213 /* Stick_Treasure Mimic.png */,
+				30802E6021F1708B0061F213 /* Stick_Wizard.png */,
+				30802E5C21F1708B0061F213 /* Stick_Zombie.png */,
+			);
+			path = Stick;
+			sourceTree = "<group>";
+		};
+		30802ECC21F2AB4A0061F213 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				307F283F21F96CB000B8A646 /* Wife.png */,
+				307F283D21F9240F00B8A646 /* Outside.png */,
+				307F283521F9206100B8A646 /* DeadSquirrel.png */,
+				307F283821F9206100B8A646 /* DoubleDoors.png */,
+				307F283721F9206100B8A646 /* FinalRoom.png */,
+				307F283621F9206100B8A646 /* Toaster.png */,
+				30802F4D21F2D8850061F213 /* Enchanted Land.otf */,
+				30802F4B21F2CE4B0061F213 /* Tower_Icon.png */,
+				30802EE421F2AB5E0061F213 /* Arrow.png */,
+				30802EDC21F2AB5D0061F213 /* BadMerchant.png */,
+				30802ED421F2AB5C0061F213 /* BlackBricks.png */,
+				30802ECD21F2AB5C0061F213 /* Bricks.png */,
+				30802EE321F2AB5D0061F213 /* Coffee.png */,
+				30802ED321F2AB5C0061F213 /* Crown.png */,
+				30802EE121F2AB5D0061F213 /* Curse.png */,
+				30802ED821F2AB5D0061F213 /* Dead.png */,
+				30802EDF21F2AB5D0061F213 /* Elevator.png */,
+				30802ED521F2AB5C0061F213 /* Gold.png */,
+				30802ECF21F2AB5C0061F213 /* Hag.png */,
+				30802ED921F2AB5D0061F213 /* Hamburger.png */,
+				30802ED121F2AB5C0061F213 /* HellBricks.png */,
+				30802EDA21F2AB5D0061F213 /* Hole.png */,
+				30802EE821F2AB5E0061F213 /* Hotspring.png */,
+				30802EE721F2AB5E0061F213 /* Mark.png */,
+				30802ED621F2AB5C0061F213 /* Merchant.png */,
+				30802EE221F2AB5D0061F213 /* Potion.png */,
+				30802ED021F2AB5C0061F213 /* QuestionMark_.png */,
+				30802EDD21F2AB5D0061F213 /* Scythe.png */,
+				30802ED221F2AB5C0061F213 /* Staff.png */,
+				30802EDE21F2AB5D0061F213 /* Star.png */,
+				30802EE521F2AB5E0061F213 /* Sword.png */,
+				30802EE621F2AB5E0061F213 /* Tent.png */,
+				30802ED721F2AB5C0061F213 /* Title.png */,
+				30802EE921F2AB5E0061F213 /* TitleScreen.png */,
+				30802EE021F2AB5D0061F213 /* Trap.png */,
+				30802EDB21F2AB5D0061F213 /* TreasureChest.png */,
+				30802ECE21F2AB5C0061F213 /* Weapons.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		C7BF95758880A49DD6B32243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B1B2EC255C122B8967F6D252 /* Pods-Tower Diver.debug.xcconfig */,
+				12412F85B98BF50A30695684 /* Pods-Tower Diver.release.xcconfig */,
+				D637251E6C1EABFB24892B6C /* Pods-Tower DiverTests.debug.xcconfig */,
+				D7E7189C324DB19FDFF9203D /* Pods-Tower DiverTests.release.xcconfig */,
+				C04273C0373226BBE0952677 /* Pods-Tower DiverUITests.debug.xcconfig */,
+				F3F59E9DDA93F0427CBE41B8 /* Pods-Tower DiverUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D67704E346AF3D814DCAE0AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30802DB821DFE8EA0061F213 /* StoreKit.framework */,
+				30802DB621DFE8BC0061F213 /* SideMenu.framework */,
+				30802DB421DFE8B70061F213 /* SwiftyStoreKit.framework */,
+				FE64298F2D4C9C9FA4D8D46A /* Pods_Tower_Diver.framework */,
+				30D3A388F3402CDDB358C87D /* Pods_Tower_DiverTests.framework */,
+				ED10F227344ABE919D7E5474 /* Pods_Tower_DiverUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3001FA7321CD5DB500FB14C9 /* Tower Diver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3001FA9C21CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower Diver" */;
+			buildPhases = (
+				421D11E41D2B0C07CE50E544 /* [CP] Check Pods Manifest.lock */,
+				3001FA7021CD5DB500FB14C9 /* Sources */,
+				3001FA7121CD5DB500FB14C9 /* Frameworks */,
+				3001FA7221CD5DB500FB14C9 /* Resources */,
+				7E6C89AFD956011939DE2D4C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Tower Diver";
+			productName = "Tower Diver";
+			productReference = 3001FA7421CD5DB500FB14C9 /* Tower Diver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3001FA8721CD5DB600FB14C9 /* Tower DiverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3001FA9F21CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower DiverTests" */;
+			buildPhases = (
+				198CE544CC78983D403570B4 /* [CP] Check Pods Manifest.lock */,
+				3001FA8421CD5DB600FB14C9 /* Sources */,
+				3001FA8521CD5DB600FB14C9 /* Frameworks */,
+				3001FA8621CD5DB600FB14C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3001FA8A21CD5DB600FB14C9 /* PBXTargetDependency */,
+			);
+			name = "Tower DiverTests";
+			productName = "Tower DiverTests";
+			productReference = 3001FA8821CD5DB600FB14C9 /* Tower DiverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3001FA9221CD5DB600FB14C9 /* Tower DiverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3001FAA221CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower DiverUITests" */;
+			buildPhases = (
+				1B75597D52E868C7AAC0C52E /* [CP] Check Pods Manifest.lock */,
+				3001FA8F21CD5DB600FB14C9 /* Sources */,
+				3001FA9021CD5DB600FB14C9 /* Frameworks */,
+				3001FA9121CD5DB600FB14C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3001FA9521CD5DB600FB14C9 /* PBXTargetDependency */,
+			);
+			name = "Tower DiverUITests";
+			productName = "Tower DiverUITests";
+			productReference = 3001FA9321CD5DB600FB14C9 /* Tower DiverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3001FA6C21CD5DB500FB14C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Alternative Apps Unlimited";
+				TargetAttributes = {
+					3001FA7321CD5DB500FB14C9 = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
+					};
+					3001FA8721CD5DB600FB14C9 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3001FA7321CD5DB500FB14C9;
+					};
+					3001FA9221CD5DB600FB14C9 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 3001FA7321CD5DB500FB14C9;
+					};
+				};
+			};
+			buildConfigurationList = 3001FA6F21CD5DB500FB14C9 /* Build configuration list for PBXProject "Tower Diver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3001FA6B21CD5DB500FB14C9;
+			productRefGroup = 3001FA7521CD5DB500FB14C9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3001FA7321CD5DB500FB14C9 /* Tower Diver */,
+				3001FA8721CD5DB600FB14C9 /* Tower DiverTests */,
+				3001FA9221CD5DB600FB14C9 /* Tower DiverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3001FA7221CD5DB500FB14C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30DBAA2E220A8CD600818E40 /* Stick_Green Slime.png in Resources */,
+				30802EFB21F2AB5E0061F213 /* Star.png in Resources */,
+				30802EFC21F2AB5E0061F213 /* Elevator.png in Resources */,
+				30802E6D21F1708B0061F213 /* Stick_Demon.png in Resources */,
+				30802DE921F170530061F213 /* Imp.png in Resources */,
+				30802F0621F2AB5E0061F213 /* TitleScreen.png in Resources */,
+				30802EF721F2AB5E0061F213 /* Hole.png in Resources */,
+				300072BE220B864800766122 /* Stick_Sack Mimic.png in Resources */,
+				30802F0121F2AB5E0061F213 /* Arrow.png in Resources */,
+				3001FA8221CD5DB600FB14C9 /* LaunchScreen.storyboard in Resources */,
+				30802F4C21F2CE4B0061F213 /* Tower_Icon.png in Resources */,
+				30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */,
+				30802E7E21F1708B0061F213 /* Stick_Fire Sorceress.png in Resources */,
+				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
+				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
+				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
+				300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */,
+				300072BA220B864800766122 /* Stick_Potion.png in Resources */,
+				307F283E21F9240F00B8A646 /* Outside.png in Resources */,
+				30802DF621F170530061F213 /* Chimera.png in Resources */,
+				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
+				30802EEC21F2AB5E0061F213 /* Hag.png in Resources */,
+				30802EF821F2AB5E0061F213 /* TreasureChest.png in Resources */,
+				30802F0521F2AB5E0061F213 /* Hotspring.png in Resources */,
+				30802EF621F2AB5E0061F213 /* Hamburger.png in Resources */,
+				30802E0421F170530061F213 /* Succubus.png in Resources */,
+				30802E7121F1708B0061F213 /* Stick_Minotaur.png in Resources */,
+				30802DF921F170530061F213 /* Fire Spirit.png in Resources */,
+				30802DF121F170530061F213 /* Ice Sorceress_Alt.png in Resources */,
+				3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */,
+				30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */,
+				30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */,
+				30802E6C21F1708B0061F213 /* Stick_Bandit.png in Resources */,
+				30802EF221F2AB5E0061F213 /* Gold.png in Resources */,
+				3001FA7D21CD5DB500FB14C9 /* Main.storyboard in Resources */,
+				30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */,
+				30802EFF21F2AB5E0061F213 /* Potion.png in Resources */,
+				30802DFF21F170530061F213 /* Gilgamesh.png in Resources */,
+				300072C3220B864800766122 /* Stick_Hag.png in Resources */,
+				30802E7621F1708B0061F213 /* Stick_Bat.png in Resources */,
+				30802E7021F1708B0061F213 /* Stick_Knight.png in Resources */,
+				30802DFB21F170530061F213 /* SmolSquirrel.png in Resources */,
+				30802F0021F2AB5E0061F213 /* Coffee.png in Resources */,
+				30802E0321F170530061F213 /* Cockatrice.png in Resources */,
+				300072C5220B864800766122 /* Stick_Hole.png in Resources */,
+				30802DEF21F170530061F213 /* Minotaur.png in Resources */,
+				300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */,
+				300072C2220B864800766122 /* Stick_Curse.png in Resources */,
+				30802DEB21F170530061F213 /* Dragon.png in Resources */,
+				30802EEF21F2AB5E0061F213 /* Staff.png in Resources */,
+				30802E6921F1708B0061F213 /* Stick_Giant.png in Resources */,
+				30802E7921F1708B0061F213 /* Stick_Ice Sorceress.png in Resources */,
+				30802F0421F2AB5E0061F213 /* Mark.png in Resources */,
+				300072BD220B864800766122 /* Stick_Trap.png in Resources */,
+				30802E8121F1708B0061F213 /* Stick_Wizard.png in Resources */,
+				300072BF220B864800766122 /* Stick_BadMerchant.png in Resources */,
+				30802EEE21F2AB5E0061F213 /* HellBricks.png in Resources */,
+				300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */,
+				300072C6220B864800766122 /* Stick_Merchant.png in Resources */,
+				30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */,
+				30802DE621F170530061F213 /* Spider.png in Resources */,
+				30802E0521F170530061F213 /* Knight.png in Resources */,
+				30802EFD21F2AB5E0061F213 /* Trap.png in Resources */,
+				30802E6E21F1708B0061F213 /* Stick_Orc.png in Resources */,
+				30802DF721F170530061F213 /* Behemoth.png in Resources */,
+				307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */,
+				30802E7721F1708B0061F213 /* Stick_Treasure Mimic.png in Resources */,
+				30802E7821F1708B0061F213 /* Stick_Behemoth.png in Resources */,
+				30802DEA21F170530061F213 /* Bandit.png in Resources */,
+				300072C8220B864800766122 /* Stick_Hotspring.png in Resources */,
+				300072C7220B864800766122 /* Stick_Tent.png in Resources */,
+				30802E7421F1708B0061F213 /* Stick_Fire Spirit.png in Resources */,
+				30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */,
+				30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */,
+				30802E6721F1708B0061F213 /* Stick_Dragon.png in Resources */,
+				300072C0220B864800766122 /* Stick_Elevator.png in Resources */,
+				30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */,
+				30802E0221F170530061F213 /* Fire Sorceress.png in Resources */,
+				30802DFE21F170530061F213 /* Goblin.png in Resources */,
+				30802E6B21F1708B0061F213 /* Stick_Scorpian.png in Resources */,
+				30802E0121F170530061F213 /* Cleric.png in Resources */,
+				30802E7D21F1708B0061F213 /* Stick_Zombie.png in Resources */,
+				30802E6621F1708B0061F213 /* Stick_Goblin.png in Resources */,
+				30802E6A21F1708B0061F213 /* Stick_Rat.png in Resources */,
+				30802F0321F2AB5E0061F213 /* Tent.png in Resources */,
+				30802E6121F1708B0061F213 /* Stick_Paladin.png in Resources */,
+				30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */,
+				30802EF321F2AB5E0061F213 /* Merchant.png in Resources */,
+				30802EF421F2AB5E0061F213 /* Title.png in Resources */,
+				30802DE821F170530061F213 /* Ghost.png in Resources */,
+				30802DF021F170530061F213 /* Skeleton.png in Resources */,
+				30DBAA30220A8EEB00818E40 /* Stick_Cleric.png in Resources */,
+				307F283A21F9206100B8A646 /* Toaster.png in Resources */,
+				30802DE521F170530061F213 /* Treasure Mimic.png in Resources */,
+				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
+				30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */,
+				307F284021F96CB000B8A646 /* Wife.png in Resources */,
+				30802DED21F170530061F213 /* Bat.png in Resources */,
+				30802DE721F170530061F213 /* Giant.png in Resources */,
+				30802E6421F1708B0061F213 /* Stick_Chimera.png in Resources */,
+				307F283C21F9206100B8A646 /* DoubleDoors.png in Resources */,
+				30802DFC21F170530061F213 /* Zombie.png in Resources */,
+				30802DF321F170530061F213 /* Death.png in Resources */,
+				307F283B21F9206100B8A646 /* FinalRoom.png in Resources */,
+				30802DF821F170530061F213 /* Snake.png in Resources */,
+				30802DF221F170530061F213 /* Rat.png in Resources */,
+				30802E0021F170530061F213 /* Paladin.png in Resources */,
+				30802DEC21F170530061F213 /* Slime.png in Resources */,
+				30802E6321F1708B0061F213 /* Stick_Snake.png in Resources */,
+				30802DFD21F170530061F213 /* Lamia.png in Resources */,
+				30802EF021F2AB5E0061F213 /* Crown.png in Resources */,
+				30802EF521F2AB5E0061F213 /* Dead.png in Resources */,
+				300072C4220B864800766122 /* Stick_Gold.png in Resources */,
+				30802E8021F1708B0061F213 /* Stick_Imp.png in Resources */,
+				30802EFE21F2AB5E0061F213 /* Curse.png in Resources */,
+				30802E7521F1708B0061F213 /* Stick_Death.png in Resources */,
+				30802E7C21F1708B0061F213 /* Stick_Spider.png in Resources */,
+				30802E7221F1708B0061F213 /* Stick_Sack Mimic.png in Resources */,
+				30802DF521F170530061F213 /* Green Slime.png in Resources */,
+				30802DEE21F170530061F213 /* Ice Sorceress.png in Resources */,
+				30802DF421F170530061F213 /* Squirrel.png in Resources */,
+				30802E0721F170530061F213 /* Wizard.png in Resources */,
+				30802E0621F170530061F213 /* Sack Mimic.png in Resources */,
+				30802E8521F2768C0061F213 /* Demon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA8621CD5DB600FB14C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA9121CD5DB600FB14C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		198CE544CC78983D403570B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tower DiverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1B75597D52E868C7AAC0C52E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tower DiverUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		421D11E41D2B0C07CE50E544 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tower Diver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7E6C89AFD956011939DE2D4C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3001FA7021CD5DB500FB14C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3001FA7A21CD5DB500FB14C9 /* ViewController.swift in Sources */,
+				3001FABE21CD793400FB14C9 /* CharacterCreation.swift in Sources */,
+				306F15D421D40C8000E91EF6 /* TitleScreen.swift in Sources */,
+				308903D621D420D700C784CB /* SideMenu.swift in Sources */,
+				3001FA7821CD5DB500FB14C9 /* AppDelegate.swift in Sources */,
+				3001FAC021CD7BD600FB14C9 /* CharacterCreation2.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA8421CD5DB600FB14C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3001FA8D21CD5DB600FB14C9 /* Tower_DiverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3001FA8F21CD5DB600FB14C9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3001FA9821CD5DB600FB14C9 /* Tower_DiverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3001FA8A21CD5DB600FB14C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3001FA7321CD5DB500FB14C9 /* Tower Diver */;
+			targetProxy = 3001FA8921CD5DB600FB14C9 /* PBXContainerItemProxy */;
+		};
+		3001FA9521CD5DB600FB14C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3001FA7321CD5DB500FB14C9 /* Tower Diver */;
+			targetProxy = 3001FA9421CD5DB600FB14C9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3001FA7B21CD5DB500FB14C9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3001FA7C21CD5DB500FB14C9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3001FA8021CD5DB600FB14C9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3001FA8121CD5DB600FB14C9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3001FA9A21CD5DB600FB14C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3001FA9B21CD5DB600FB14C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3001FA9D21CD5DB600FB14C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1B2EC255C122B8967F6D252 /* Pods-Tower Diver.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower Diver/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AltApps.TowerDiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3001FA9E21CD5DB600FB14C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12412F85B98BF50A30695684 /* Pods-Tower Diver.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower Diver/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.AltApps.TowerDiver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3001FAA021CD5DB600FB14C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D637251E6C1EABFB24892B6C /* Pods-Tower DiverTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower DiverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Diver.app/Tower Diver";
+			};
+			name = Debug;
+		};
+		3001FAA121CD5DB600FB14C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7E7189C324DB19FDFF9203D /* Pods-Tower DiverTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower DiverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tower Diver.app/Tower Diver";
+			};
+			name = Release;
+		};
+		3001FAA321CD5DB600FB14C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C04273C0373226BBE0952677 /* Pods-Tower DiverUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower DiverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tower Diver";
+			};
+			name = Debug;
+		};
+		3001FAA421CD5DB600FB14C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3F59E9DDA93F0427CBE41B8 /* Pods-Tower DiverUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6BB42LR4PM;
+				INFOPLIST_FILE = "Tower DiverUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.AltApps.Tower-DiverUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Tower Diver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3001FA6F21CD5DB500FB14C9 /* Build configuration list for PBXProject "Tower Diver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3001FA9A21CD5DB600FB14C9 /* Debug */,
+				3001FA9B21CD5DB600FB14C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3001FA9C21CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower Diver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3001FA9D21CD5DB600FB14C9 /* Debug */,
+				3001FA9E21CD5DB600FB14C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3001FA9F21CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower DiverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3001FAA021CD5DB600FB14C9 /* Debug */,
+				3001FAA121CD5DB600FB14C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3001FAA221CD5DB600FB14C9 /* Build configuration list for PBXNativeTarget "Tower DiverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3001FAA321CD5DB600FB14C9 /* Debug */,
+				3001FAA421CD5DB600FB14C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3001FA6C21CD5DB500FB14C9 /* Project object */;
+}

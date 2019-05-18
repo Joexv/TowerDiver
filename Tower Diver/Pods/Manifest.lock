@@ -1,0 +1,20 @@
+PODS:
+  - SideMenu (5.0.1)
+  - SwiftyStoreKit (0.13.3)
+
+DEPENDENCIES:
+  - SideMenu
+  - SwiftyStoreKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SideMenu
+    - SwiftyStoreKit
+
+SPEC CHECKSUMS:
+  SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
+  SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
+
+PODFILE CHECKSUM: a938221efb64c4a04a0ddb306e9ac35fe76eee66
+
+COCOAPODS: 1.5.2
