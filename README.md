@@ -1,7 +1,7 @@
 # TowerDiver
 https://itunes.apple.com/us/app/tower-diver/id1448525040?ls=1&mt=8
 
-# WE NEED AN ARTIST, IF YOU ARE WILLING TO HELP OUT PLEASE CONTACT ME I AM NOT AN ARTIST AND MY DRAWINGS ARE THAT OF A 5 YEAR OLD. WE CAN DISCUSS COMPENSATION <3
+# We are looking for an Artist to redraw all of the images that I drew. I'm no artist and would like this to look a bit more professional. And we also are looking for an Android developer, to obviously port this over to Android. Both postions would be compensated. Please feel free to reach out to me @ joeoliveira89@gmail.com
 
 # Description
 In a world filled with corrupt kings, door to door toaster salesmen, and lots of squirrels, there lies one thing that everyone loves. Torture. And what better way to torture adventurers who don't do your bidding? Throw them into a giant Tower and make them fight through hordes of goblins and demons to earn their freedom back.
