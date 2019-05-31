@@ -1,5 +1,6 @@
 PODS:
   - DynamicBlurView (3.0.1)
+  - GTProgressBar (0.3.2)
   - MarqueeLabel/Swift (3.2.0)
   - NotificationBannerSwift (1.7.3):
     - MarqueeLabel/Swift (~> 3.2.0)
@@ -8,6 +9,7 @@ PODS:
     - DynamicBlurView (~> 3.0.1)
   - SideMenu (5.0.1)
   - SnapKit (4.0.1)
+  - SwiftySound (1.0.0)
   - SwiftyStoreKit (0.13.3)
   - XLActionController (4.1.0):
     - XLActionController/Core (= 4.1.0)
@@ -18,9 +20,11 @@ PODS:
     - XLActionController/Core
 
 DEPENDENCIES:
+  - GTProgressBar
   - NotificationBannerSwift
   - PopupDialog
   - SideMenu
+  - SwiftySound
   - SwiftyStoreKit
   - XLActionController
   - XLActionController/Periscope
@@ -29,24 +33,28 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - DynamicBlurView
+    - GTProgressBar
     - MarqueeLabel
     - NotificationBannerSwift
     - PopupDialog
     - SideMenu
     - SnapKit
+    - SwiftySound
     - SwiftyStoreKit
     - XLActionController
 
 SPEC CHECKSUMS:
   DynamicBlurView: b1df5415f9bd31897549e5d7077e5ec120a4d636
+  GTProgressBar: 3aa9731127b3ef193935d450928c3bd0f46bb1c4
   MarqueeLabel: 440a502b91a9179bd98f9fff00ba1150650a1c0e
   NotificationBannerSwift: c9f4bc868d78df975ed59c0b2fccdbbe0e863efe
   PopupDialog: 03985b669c29802661c187513bf827340db1ae4d
   SideMenu: 87efd943737bb83aedf0358884d09fcf5576636d
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
+  SwiftySound: b9c3370956fd4ed65ed79d45563070077a50a2cd
   SwiftyStoreKit: 9ebd15971e28aa2989825fe8bc092eb5f75dd0b2
   XLActionController: e8a8b38d3b226a69921e412e769d8483d1794064
 
-PODFILE CHECKSUM: 74d678983dadd7789beb0174687ab1022b4a285c
+PODFILE CHECKSUM: 6007073e681b422f2d4ea4fbc162bb63c6d7564e
 
 COCOAPODS: 1.5.2

@@ -31,6 +31,25 @@
 		3001FA9821CD5DB600FB14C9 /* Tower_DiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FA9721CD5DB600FB14C9 /* Tower_DiverUITests.swift */; };
 		3001FABE21CD793400FB14C9 /* CharacterCreation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABD21CD793400FB14C9 /* CharacterCreation.swift */; };
 		3001FAC021CD7BD600FB14C9 /* CharacterCreation2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */; };
+		3021F0E7229F83A000BD3255 /* Music in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0E6229F83A000BD3255 /* Music */; };
+		3021F0F0229F85D100BD3255 /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0EB229F85D100BD3255 /* background.mp3 */; };
+		3021F0F1229F85D100BD3255 /* ambient_menu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0EC229F85D100BD3255 /* ambient_menu.mp3 */; };
+		3021F0F2229F85D100BD3255 /* Hell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0ED229F85D100BD3255 /* Hell.mp3 */; };
+		3021F0F3229F85D100BD3255 /* Battle.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0EE229F85D100BD3255 /* Battle.mp3 */; };
+		3021F0F4229F85D100BD3255 /* Kingdom.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0EF229F85D100BD3255 /* Kingdom.mp3 */; };
+		3021F102229F989800BD3255 /* Confirm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0F6229F989700BD3255 /* Confirm.mp3 */; };
+		3021F103229F989800BD3255 /* LoadSave.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0F7229F989700BD3255 /* LoadSave.mp3 */; };
+		3021F104229F989800BD3255 /* Equip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0F8229F989700BD3255 /* Equip.mp3 */; };
+		3021F105229F989800BD3255 /* Error.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0F9229F989700BD3255 /* Error.mp3 */; };
+		3021F106229F989800BD3255 /* Purchase.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FA229F989700BD3255 /* Purchase.mp3 */; };
+		3021F107229F989800BD3255 /* BattleIntro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FB229F989700BD3255 /* BattleIntro.mp3 */; };
+		3021F108229F989800BD3255 /* Close.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FC229F989800BD3255 /* Close.mp3 */; };
+		3021F109229F989800BD3255 /* Click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FD229F989800BD3255 /* Click.mp3 */; };
+		3021F10A229F989800BD3255 /* Potion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FE229F989800BD3255 /* Potion.mp3 */; };
+		3021F10B229F989800BD3255 /* Open.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F0FF229F989800BD3255 /* Open.mp3 */; };
+		3021F10C229F989800BD3255 /* Cursor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F100229F989800BD3255 /* Cursor.mp3 */; };
+		3021F10D229F989800BD3255 /* heal_long.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3021F101229F989800BD3255 /* heal_long.mp3 */; };
+		3055F3F3229EF5990098D1AB /* Test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3055F3F2229EF5990098D1AB /* Test.gif */; };
 		306F15D421D40C8000E91EF6 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 306F15D321D40C8000E91EF6 /* TitleScreen.swift */; };
 		307F283921F9206100B8A646 /* DeadSquirrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283521F9206100B8A646 /* DeadSquirrel.png */; };
 		307F283A21F9206100B8A646 /* Toaster.png in Resources */ = {isa = PBXBuildFile; fileRef = 307F283621F9206100B8A646 /* Toaster.png */; };
@@ -228,6 +247,25 @@
 		3001FA9921CD5DB600FB14C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3001FABD21CD793400FB14C9 /* CharacterCreation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation.swift; sourceTree = "<group>"; };
 		3001FABF21CD7BD600FB14C9 /* CharacterCreation2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCreation2.swift; sourceTree = "<group>"; };
+		3021F0E6229F83A000BD3255 /* Music */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Music; path = ../../../Music; sourceTree = "<group>"; };
+		3021F0EB229F85D100BD3255 /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = background.mp3; path = ../../../Music/background.mp3; sourceTree = "<group>"; };
+		3021F0EC229F85D100BD3255 /* ambient_menu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = ambient_menu.mp3; path = ../../../Music/ambient_menu.mp3; sourceTree = "<group>"; };
+		3021F0ED229F85D100BD3255 /* Hell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Hell.mp3; path = ../../../Music/Hell.mp3; sourceTree = "<group>"; };
+		3021F0EE229F85D100BD3255 /* Battle.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Battle.mp3; path = ../../../Music/Battle.mp3; sourceTree = "<group>"; };
+		3021F0EF229F85D100BD3255 /* Kingdom.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Kingdom.mp3; path = ../../../Music/Kingdom.mp3; sourceTree = "<group>"; };
+		3021F0F6229F989700BD3255 /* Confirm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Confirm.mp3; path = ../../../Music/Confirm.mp3; sourceTree = "<group>"; };
+		3021F0F7229F989700BD3255 /* LoadSave.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = LoadSave.mp3; path = ../../../Music/LoadSave.mp3; sourceTree = "<group>"; };
+		3021F0F8229F989700BD3255 /* Equip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Equip.mp3; path = ../../../Music/Equip.mp3; sourceTree = "<group>"; };
+		3021F0F9229F989700BD3255 /* Error.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Error.mp3; path = ../../../Music/Error.mp3; sourceTree = "<group>"; };
+		3021F0FA229F989700BD3255 /* Purchase.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Purchase.mp3; path = ../../../Music/Purchase.mp3; sourceTree = "<group>"; };
+		3021F0FB229F989700BD3255 /* BattleIntro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = BattleIntro.mp3; path = ../../../Music/BattleIntro.mp3; sourceTree = "<group>"; };
+		3021F0FC229F989800BD3255 /* Close.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Close.mp3; path = ../../../Music/Close.mp3; sourceTree = "<group>"; };
+		3021F0FD229F989800BD3255 /* Click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Click.mp3; path = ../../../Music/Click.mp3; sourceTree = "<group>"; };
+		3021F0FE229F989800BD3255 /* Potion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Potion.mp3; path = ../../../Music/Potion.mp3; sourceTree = "<group>"; };
+		3021F0FF229F989800BD3255 /* Open.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Open.mp3; path = ../../../Music/Open.mp3; sourceTree = "<group>"; };
+		3021F100229F989800BD3255 /* Cursor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Cursor.mp3; path = ../../../Music/Cursor.mp3; sourceTree = "<group>"; };
+		3021F101229F989800BD3255 /* heal_long.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = heal_long.mp3; path = ../../../Music/heal_long.mp3; sourceTree = "<group>"; };
+		3055F3F2229EF5990098D1AB /* Test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = Test.gif; path = ../../../Images/Test.gif; sourceTree = "<group>"; };
 		306F15D321D40C8000E91EF6 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		307F283521F9206100B8A646 /* DeadSquirrel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DeadSquirrel.png; path = ../../../Images/DeadSquirrel.png; sourceTree = "<group>"; };
 		307F283621F9206100B8A646 /* Toaster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Toaster.png; path = ../../../Images/Toaster.png; sourceTree = "<group>"; };
@@ -440,6 +478,7 @@
 		3001FA7621CD5DB500FB14C9 /* Tower Diver */ = {
 			isa = PBXGroup;
 			children = (
+				3021F0EA229F85C200BD3255 /* Music */,
 				30AABB9F221C951100DA9F3D /* Character Creation Icons */,
 				30802ECC21F2AB4A0061F213 /* Images */,
 				30802DC121F1703A0061F213 /* Stick */,
@@ -480,9 +519,34 @@
 			path = "Tower DiverUITests";
 			sourceTree = "<group>";
 		};
+		3021F0EA229F85C200BD3255 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				3021F0EC229F85D100BD3255 /* ambient_menu.mp3 */,
+				3021F0EB229F85D100BD3255 /* background.mp3 */,
+				3021F0EE229F85D100BD3255 /* Battle.mp3 */,
+				3021F0ED229F85D100BD3255 /* Hell.mp3 */,
+				3021F0EF229F85D100BD3255 /* Kingdom.mp3 */,
+				3021F0FB229F989700BD3255 /* BattleIntro.mp3 */,
+				3021F0FD229F989800BD3255 /* Click.mp3 */,
+				3021F0FC229F989800BD3255 /* Close.mp3 */,
+				3021F0F6229F989700BD3255 /* Confirm.mp3 */,
+				3021F100229F989800BD3255 /* Cursor.mp3 */,
+				3021F0F8229F989700BD3255 /* Equip.mp3 */,
+				3021F0F9229F989700BD3255 /* Error.mp3 */,
+				3021F101229F989800BD3255 /* heal_long.mp3 */,
+				3021F0F7229F989700BD3255 /* LoadSave.mp3 */,
+				3021F0FF229F989800BD3255 /* Open.mp3 */,
+				3021F0FE229F989800BD3255 /* Potion.mp3 */,
+				3021F0FA229F989700BD3255 /* Purchase.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		30802DBE21F1701C0061F213 /* Hand Drawn */ = {
 			isa = PBXGroup;
 			children = (
+				3021F0E6229F83A000BD3255 /* Music */,
 				30A2FB30228B355900B7BF89 /* Blacksmith.png */,
 				30802E8421F2768C0061F213 /* Demon.png */,
 				30802DC721F170510061F213 /* Bandit.png */,
@@ -584,6 +648,7 @@
 		30802ECC21F2AB4A0061F213 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3055F3F2229EF5990098D1AB /* Test.gif */,
 				30A2FB9C2291F10C00B7BF89 /* Live.png */,
 				30A2FB9D2291F10C00B7BF89 /* Skull.png */,
 				30A2FB3C228F437300B7BF89 /* Check.png */,
@@ -802,7 +867,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3021F0E7229F83A000BD3255 /* Music in Resources */,
 				30A2FB3F228F437300B7BF89 /* X.png in Resources */,
+				3021F0F1229F85D100BD3255 /* ambient_menu.mp3 in Resources */,
 				30DBAA2E220A8CD600818E40 /* Stick_Green Slime.png in Resources */,
 				30802EFB21F2AB5E0061F213 /* Star.png in Resources */,
 				30802EFC21F2AB5E0061F213 /* Elevator.png in Resources */,
@@ -820,24 +887,32 @@
 				30802EEA21F2AB5E0061F213 /* Bricks.png in Resources */,
 				30802E7E21F1708B0061F213 /* Stick_Fire Sorceress.png in Resources */,
 				30802EF921F2AB5E0061F213 /* BadMerchant.png in Resources */,
+				3021F103229F989800BD3255 /* LoadSave.mp3 in Resources */,
+				3021F104229F989800BD3255 /* Equip.mp3 in Resources */,
 				30802E7B21F1708B0061F213 /* Stick_Skeleton.png in Resources */,
 				30AABB9E221C92EE00DA9F3D /* Gold_Icon.png in Resources */,
 				30802F0221F2AB5E0061F213 /* Sword.png in Resources */,
+				3021F106229F989800BD3255 /* Purchase.mp3 in Resources */,
+				3021F102229F989800BD3255 /* Confirm.mp3 in Resources */,
 				300072BB220B864800766122 /* Stick_Gilgamesh.png in Resources */,
 				30A2FB41228F621200B7BF89 /* Table_Cell.png in Resources */,
 				300072BA220B864800766122 /* Stick_Potion.png in Resources */,
+				3021F0F2229F85D100BD3255 /* Hell.mp3 in Resources */,
 				307F283E21F9240F00B8A646 /* Outside.png in Resources */,
 				30AABBBB221CC0DC00DA9F3D /* Common_select.png in Resources */,
 				30802DF621F170530061F213 /* Chimera.png in Resources */,
 				30802E6221F1708B0061F213 /* Stick_Lamia.png in Resources */,
+				3021F10D229F989800BD3255 /* heal_long.mp3 in Resources */,
 				30802EEC21F2AB5E0061F213 /* Hag.png in Resources */,
 				30802EF821F2AB5E0061F213 /* TreasureChest.png in Resources */,
 				30802F0521F2AB5E0061F213 /* Hotspring.png in Resources */,
 				30802EF621F2AB5E0061F213 /* Hamburger.png in Resources */,
 				30802E0421F170530061F213 /* Succubus.png in Resources */,
+				3021F107229F989800BD3255 /* BattleIntro.mp3 in Resources */,
 				30802E7121F1708B0061F213 /* Stick_Minotaur.png in Resources */,
 				30802DF921F170530061F213 /* Fire Spirit.png in Resources */,
 				30802DF121F170530061F213 /* Ice Sorceress_Alt.png in Resources */,
+				3021F10B229F989800BD3255 /* Open.mp3 in Resources */,
 				3001FA7F21CD5DB600FB14C9 /* Assets.xcassets in Resources */,
 				30802E6521F1708B0061F213 /* Stick_Squirrel.png in Resources */,
 				30802E6821F1708B0061F213 /* Stick_Cockatrice.png in Resources */,
@@ -848,6 +923,7 @@
 				30802EF121F2AB5E0061F213 /* BlackBricks.png in Resources */,
 				30AABBB1221CB28D00DA9F3D /* Gray_bt_menu.png in Resources */,
 				30802EFF21F2AB5E0061F213 /* Potion.png in Resources */,
+				3021F109229F989800BD3255 /* Click.mp3 in Resources */,
 				30A2FB4A228F796500B7BF89 /* Arrow_Right_.png in Resources */,
 				30802DFF21F170530061F213 /* Gilgamesh.png in Resources */,
 				300072C3220B864800766122 /* Stick_Hag.png in Resources */,
@@ -858,6 +934,7 @@
 				30802E0321F170530061F213 /* Cockatrice.png in Resources */,
 				30AABB9A221BCBE600DA9F3D /* Potion_Icon.png in Resources */,
 				300072C5220B864800766122 /* Stick_Hole.png in Resources */,
+				3021F10A229F989800BD3255 /* Potion.mp3 in Resources */,
 				30802DEF21F170530061F213 /* Minotaur.png in Resources */,
 				300072C1220B864800766122 /* Stick_TreasureChest.png in Resources */,
 				300072C2220B864800766122 /* Stick_Curse.png in Resources */,
@@ -875,8 +952,10 @@
 				30A2FB4C228F796500B7BF89 /* Arrow_Left_.png in Resources */,
 				30A2FB9F2291F10C00B7BF89 /* Skull.png in Resources */,
 				300072BC220B864800766122 /* Stick_Treasure Mimic.png in Resources */,
+				3021F108229F989800BD3255 /* Close.mp3 in Resources */,
 				300072C6220B864800766122 /* Stick_Merchant.png in Resources */,
 				30AABBAA221C963000DA9F3D /* Smol_Arrow.png in Resources */,
+				3021F105229F989800BD3255 /* Error.mp3 in Resources */,
 				30802EED21F2AB5E0061F213 /* QuestionMark_.png in Resources */,
 				30802DE621F170530061F213 /* Spider.png in Resources */,
 				30802E0521F170530061F213 /* Knight.png in Resources */,
@@ -897,6 +976,7 @@
 				30802EFA21F2AB5E0061F213 /* Scythe.png in Resources */,
 				30802EEB21F2AB5E0061F213 /* Weapons.png in Resources */,
 				30802E6721F1708B0061F213 /* Stick_Dragon.png in Resources */,
+				3055F3F3229EF5990098D1AB /* Test.gif in Resources */,
 				300072C0220B864800766122 /* Stick_Elevator.png in Resources */,
 				30802E7321F1708B0061F213 /* Stick_Succubus.png in Resources */,
 				30802E0221F170530061F213 /* Fire Sorceress.png in Resources */,
@@ -911,16 +991,20 @@
 				30AABB9C221C8A7300DA9F3D /* Toaster_Class.png in Resources */,
 				30A2FB35228B464C00B7BF89 /* Tutorial1.png in Resources */,
 				30802E7F21F1708B0061F213 /* Stick_Kerberos.png in Resources */,
+				3021F0F0229F85D100BD3255 /* background.mp3 in Resources */,
+				3021F10C229F989800BD3255 /* Cursor.mp3 in Resources */,
 				30802EF321F2AB5E0061F213 /* Merchant.png in Resources */,
 				30802EF421F2AB5E0061F213 /* Title.png in Resources */,
 				30802DE821F170530061F213 /* Ghost.png in Resources */,
 				30AABBA9221C963000DA9F3D /* Smol_Scythe.png in Resources */,
+				3021F0F3229F85D100BD3255 /* Battle.mp3 in Resources */,
 				30802DF021F170530061F213 /* Skeleton.png in Resources */,
 				30DBAA30220A8EEB00818E40 /* Stick_Cleric.png in Resources */,
 				307F283A21F9206100B8A646 /* Toaster.png in Resources */,
 				30AABBAF221CB05900DA9F3D /* Gray_typeE_normal.png in Resources */,
 				30802DE521F170530061F213 /* Treasure Mimic.png in Resources */,
 				30802E6F21F1708B0061F213 /* Stick_Slime.png in Resources */,
+				3021F0F4229F85D100BD3255 /* Kingdom.mp3 in Resources */,
 				30802E7A21F1708B0061F213 /* Stick_Ghost.png in Resources */,
 				307F284021F96CB000B8A646 /* Wife.png in Resources */,
 				30802DED21F170530061F213 /* Bat.png in Resources */,
@@ -1036,22 +1120,26 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Tower Diver/Pods-Tower Diver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/GTProgressBar/GTProgressBar.framework",
 				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
 				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
 				"${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyStoreKit/SwiftyStoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/XLActionController/XLActionController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTProgressBar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SideMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyStoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLActionController.framework",
 			);

@@ -89,6 +89,7 @@ class AchieveTable: UIViewController, UITableViewDataSource, UITableViewDelegate
     @IBOutlet weak var TitleLabel: UILabel!
     @IBOutlet weak var BackButton: UIButton!
     
+    @IBOutlet weak var BackButt: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         tblView.delegate = self
@@ -105,6 +106,13 @@ class AchieveTable: UIViewController, UITableViewDataSource, UITableViewDelegate
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
         tblView.addGestureRecognizer(swipeRight)
+        
+        //BackButt.layer.borderWidth = 1
+        //BackButt.layer.borderColor = UIColor.white.cgColor
+        
+        TitleLabel.backgroundColor = .black
+        TitleLabel.layer.borderWidth = 2
+        TitleLabel.layer.borderColor = UIColor(red:70, green: 61, blue: 48).cgColor
     }
     
     @IBAction func respondToSwipeGesture(){

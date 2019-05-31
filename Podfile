@@ -26,4 +26,6 @@ pod 'XLActionController'
 pod 'XLActionController/Periscope'
 pod 'XLActionController/Twitter'
 pod 'NotificationBannerSwift'
+pod "GTProgressBar"
+pod 'SwiftySound'
 end

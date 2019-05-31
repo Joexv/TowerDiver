@@ -12,6 +12,8 @@ import XLActionController
 import SwiftyStoreKit
 import StoreKit
 import NotificationBannerSwift
+import GTProgressBar
+import PopupDialog
 
 class ViewController: UIViewController {
 
@@ -170,7 +172,7 @@ class ViewController: UIViewController {
         }else if(ReviveCounter == 999){
             HealthString = HealthString + "\nUnlimited Revive Counters"
         }
-        DisplayAlert(title: "Health", message: HealthString, button: "OK")
+        DisplayAlert(title: "Character Info", message: HealthString, button: "OK")
     }
     
     @IBAction func DisplayGold(){
@@ -178,7 +180,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DisplayPower(){
-        var PowerString: String = "Power: " + DoubleString(Input: Power)
+        var PowerString: String = DoubleString(Input: Power)
         
         if(isEasyMode){
             PowerString = PowerString + "\n" + "-Easy Mode-"
@@ -252,16 +254,20 @@ class ViewController: UIViewController {
     func SetLabels(){
         //Name_Label.text = Name
         Name_Label.text = "Floor: " + String(Floor)
-        HP_Label.text = "HP: " + CutLabel(CurrentHP) + "\\" + CutLabel(MaxHP)
+
         Power_Label.text = CutLabel(Power)
         Gold_Label.text = CutLabel(Gold)
         Potion_Label.text = CutLabel(Potions)
         
+        
+        HP_Label.text = "HP: " + CutLabel(CurrentHP) + "\\" + CutLabel(MaxHP)
+        /*
         if(CurrentHP < MaxHP / 2){
             HP_Label.backgroundColor = UIColor.red
         }else{
             HP_Label.backgroundColor = UIColor(rgb: 0x65ca45)
-        }
+        }*/
+        ModifyProgressBar(CGFloat(CurrentHP / MaxHP))
         
         SetIcon(Label: Power_Label, Image: GenClassImage(Class: String(Class)))
         SetIcon(Label: Gold_Label, Image: "Gold_Icon")
@@ -281,6 +287,40 @@ class ViewController: UIViewController {
         }
         
         CheckForAchieves()
+    }
+    
+    func ModifyProgressBar(_ Value: CGFloat){
+        NSLog("\(Value)")
+        progressBar.animateTo(progress: Value)
+        progressBar.progress = Value
+        if(Value <= 0.3){
+            progressBar.barFillColor = .red
+            progressBar.labelTextColor = .white
+        }else{
+            progressBar.barFillColor = .green
+            progressBar.labelTextColor = .white
+        }
+        //progressBar.setText("HP: " + CutLabel(CurrentHP) + "\\" + CutLabel(MaxHP))
+    }
+    
+    var progressBar = GTProgressBar()
+    func CreateProgressBar(){
+        progressBar = GTProgressBar(frame: HP_Label.frame)
+        progressBar.progress = 100
+        progressBar.barBorderColor = .black
+        progressBar.barFillColor = .green
+        progressBar.barBackgroundColor = .black
+        progressBar.barBorderWidth = 2
+        progressBar.barFillInset = 2
+        progressBar.labelTextColor = .white
+        progressBar.progressLabelInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        progressBar.font = UIFont.boldSystemFont(ofSize: 10)
+        progressBar.labelPosition = .bottom
+        //progressBar.barMaxHeight = 25
+        progressBar.direction = GTProgressBarDirection.clockwise
+        progressBar.displayLabel = false
+        view.addSubview(progressBar)
+        //HP_Label.isHidden = true
     }
     
     func CutLabel(_ Input: Double) -> String{
@@ -369,8 +409,9 @@ class ViewController: UIViewController {
     func Next(){
         let image = UIImage(named: "Bricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)
-        
         MainView.backgroundColor = UIColor(patternImage: scaled)
+
+        inHell = false
         
         topEvent("Continue", #selector(GenerateEventButton))
         bottomEvent("Continue", #selector(GenerateEventButton))
@@ -400,29 +441,23 @@ class ViewController: UIViewController {
     @IBAction func Revive(){
         ReviveCounter = defaults.integer(forKey: "ReviveCounter")
         if(ReviveCounter < 1){
-            let alert = UIAlertController(title: "Purchase Revive Counters?",
-                                          message: "Dragon ate you? Or maybe you died by a slime? However it happens dying sucks! But don't let a little death stop you! Buy some Revival Counters today and continue adventuring stronger than before!",
-                                          preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Buy 10 Revival Counters - $1", style: .default, handler: {action in
-                self.DoBuy("Revive_10")
-            }))
-            alert.addAction(UIAlertAction(title: "Buy 30 Revival Counters - $2", style: .default, handler: {action in
-                self.DoBuy("Revive_30")
-            }))
-            alert.addAction(UIAlertAction(title: "Buy Unlimited Revival Counters - $20", style: .default, handler: {action in
-                self.DoBuy("Revive_Unlim")
-            }))
-            alert.addAction(UIAlertAction(title: "No Thanks I like Dying", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let Title: String = "Purchase Revive Counters?"
+            let Message: String = "Dragon ate you? Or maybe you died by a slime? However it happens dying sucks! But don't let a little death stop you! Buy some Revival Counters today and continue adventuring stronger than before!"
+            let popup = PopupDialog(title: Title, message: Message)
+            let buttonOne = DefaultButton(title: "Buy 10 Revival Counters - $1") { self.DoBuy("Revive_10") }
+            let buttonTwo = DefaultButton(title: "Buy 30 Revival Counters - $2") { self.DoBuy("Revive_30") }
+            let buttonThree = DefaultButton(title: "Buy Unlimited Revival Counters - $20") { self.DoBuy("Revive_Unlim") }
+            let buttonFour = DefaultButton(title: "No thank I like dying") {}
+            popup.addButtons([buttonOne, buttonTwo, buttonThree, buttonFour])
+            self.present(popup, animated: true, completion: nil)
         }else{
-            let alert = UIAlertController(title: "Revive?",
-                                          message: "Would you like to use a Revival Counter?\n" + String(ReviveCounter) + " Counters Remaining",
-                                          preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Revive", style: .default, handler: {action in
-                self.DoRevive()
-            }))
-            alert.addAction(UIAlertAction(title: "Do Not Revive", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let Title: String = "Revive?"
+            let Message: String = "Would you like to use a Revival Counter?\n\n \(ReviveCounter) counters remaining"
+            let popup = PopupDialog(title: Title, message: Message)
+            let buttonOne = DefaultButton(title: "Revive") { self.DoRevive() }
+            let buttonTwo = DefaultButton(title: "Do not revivev") {}
+            popup.addButtons([buttonOne, buttonTwo])
+            self.present(popup, animated: true, completion: nil)
         }
     }
     
@@ -545,14 +580,16 @@ class ViewController: UIViewController {
                 }
             }
         }else{
+            MusicPlayer().playSoundEffect(soundEffect: "Error")
             DisplayAlert(title: "Error", message: "Cannot make purchases on this device!", button: "OK")
         }
     }
     
     func Alert(_ message: String){
-        let alert = UIAlertController(title: "", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let popup = PopupDialog(title: "", message: message)
+        let buttonOne = DefaultButton(title: "OK") {  }
+        popup.addButtons([buttonOne])
+        self.present(popup, animated: true, completion: nil)
     }
     
     @IBAction func Restart(_ sender: Any){
@@ -889,6 +926,7 @@ class ViewController: UIViewController {
             NSLog("Floor Tenths: " + String(FloorTenths))
             if(Floor > HighestFloor){
                 NSLog("Setting highest floor")
+                defaults.set(Name, forKey: "HF_Name")
                 defaults.set(Floor, forKey: "HighestFloor")
                 defaults.set(GenClassName(), forKey: "HF_Class")
                 defaults.set(Power, forKey: "HF_Power")
@@ -1036,6 +1074,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DoCamp(){
+        MusicPlayer().playSoundEffect(soundEffect: "heal_long")
         CurrentHP = MaxHP
         Potions -= 3
         isBleeding = false
@@ -1229,6 +1268,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func ReturnToTower(){
+        MusicPlayer().startBackMusic("background")
+        
         AdventureLog.text = "You awaken back in the Tower..."
         
         SetLabels()
@@ -1306,6 +1347,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func DoCampRest(){
+        MusicPlayer().playSoundEffect(soundEffect: "heal_long")
         AdventureLog.text = "You take a quick break and feel reseted!"
         CurrentHP += (CurrentHP / 20).rounded(toPlaces: 0)
         if(CurrentHP > MaxHP)
@@ -1451,6 +1493,7 @@ class ViewController: UIViewController {
             Next()
         }
         else{
+            MusicPlayer().playSoundEffect(soundEffect: "Purchase")
             Gold -= Cost
             switch CurrentProduct[0] {
             case "Potion":
@@ -1496,6 +1539,7 @@ class ViewController: UIViewController {
     }
     
     func GiveArmor(SkipText: Bool = false, BlackSmith: Bool = false, UseNext: Bool = false){
+            MusicPlayer().playSoundEffect(soundEffect: "Confirm")
             let PowerLevel: Double = Double(arc4random_uniform(UInt32(75 * Floor * DecensionAdjustment))) + 1
             if(!SkipText && !BlackSmith){
                 AdventureLog.text = AdventureLog.text + "\nYou purchased a new set of " + GenArmorType() + "!\nHealth increased by: " + DoubleString(Input: PowerLevel)
@@ -1514,6 +1558,7 @@ class ViewController: UIViewController {
     }
     
     func GiveWeapon(SkipText: Bool = false, UseContainer: Bool = false, Total: Int = 1, UseNext: Bool = false, isCursed: Bool = false){
+        MusicPlayer().playSoundEffect(soundEffect: "Confirm")
         for _ in 0..<(Total){
         let PowerLevel: Double = Double(arc4random_uniform(UInt32(50 * Floor * DecensionAdjustment))) + 1
         if(!SkipText && !UseContainer){
@@ -1571,6 +1616,7 @@ class ViewController: UIViewController {
     }
     
     func GivePotion(SkipText: Bool = false, UseContainer: Bool = false, Total: Double = 1){
+        MusicPlayer().playSoundEffect(soundEffect: "Confirm")
             if(!SkipText && !UseContainer){
                 AdventureLog.text = "You obtained " + DoubleString(Input: Total) + " Potion(s)!"
             }
@@ -1581,6 +1627,7 @@ class ViewController: UIViewController {
     }
     
     func GiveMysterySack(){
+        MusicPlayer().playSoundEffect(soundEffect: "Confirm")
         if(arc4random_uniform(50) < MimicChance){
             //DoMimic
             AdventureLog.text = "The sack contained a mimic!"
@@ -1608,6 +1655,7 @@ class ViewController: UIViewController {
     }
     
     func GiveGold(SkipText: Bool = false, UseContainer: Bool = true){
+        MusicPlayer().playSoundEffect(soundEffect: "Confirm")
         MainImage.image = UIImage(named: Theme + "Gold.png")
         var Gen: Double = Double(arc4random_uniform(UInt32(100 * Floor * DecensionAdjustment))) + 10
         if(Class == 4){
@@ -1661,6 +1709,7 @@ class ViewController: UIViewController {
 
         if(!defaults.bool(forKey: "DisplaySetup")){
             DisplaySetup()
+            MusicPlayer().startBackMusic()
         }
         
         if(!defaults.bool(forKey: "DoTutorial")){
@@ -1668,6 +1717,7 @@ class ViewController: UIViewController {
                 ReadStats()
                 if(defaults.bool(forKey: "TempPotionCheck")){
                     if(Potion_Label.isUserInteractionEnabled){
+                        MusicPlayer().playSoundEffect(soundEffect: "heal_long")
                         Potions -= 8
                         CurrentHP = MaxHP
                         SaveStats()
@@ -1696,6 +1746,7 @@ class ViewController: UIViewController {
                 }
                 
                 if(defaults.bool(forKey: "DonationAddition")){
+                    MusicPlayer().playSoundEffect(soundEffect: "Purchase")
                     NSLog("Donation added. Adjusting Stats")
                     Adjustpower(5000)
                     AdjustGold(5000)
@@ -1744,10 +1795,12 @@ class ViewController: UIViewController {
             let AT = AchieveTable();
             let Names: [String] = AT.Names
             if(Names.contains(Achievement)){
+                MusicPlayer().playSoundEffect(soundEffect: "Confirm")
                 let banner = NotificationBanner(title: "Achievement Unlocked", subtitle: Achievement, style: .success)
                 banner.show()
                 defaults.set(true, forKey: "A_" + Achievement)
             }else{
+                MusicPlayer().playSoundEffect(soundEffect: "Error")
                 let banner = NotificationBanner(title: "Error Unknown Achievement", subtitle: Achievement, style: .danger)
                 banner.show()
             }
@@ -1760,24 +1813,16 @@ class ViewController: UIViewController {
         }
         if(self.defaults.integer(forKey: "ReviveCounter") != 999){
             self.defaults.set(self.defaults.integer(forKey: "ReviveCounter") + 1, forKey: "ReviveCounter")
-            self.DisplayAlert(title: "Cheat Code Accepted", message: "1 Revive Counter has been added.", button: "OK")
+            self.DisplayAlert(title: "Thank you!", message: "1 Revive Counter has been added.", button: "OK")
         }else{
             self.DisplayAlert(title: "Uh Oh!", message: "Looks like you already have unlimited Revive Counters! No additional counters were added!", button: "OK")
         }
     }
     
     func CheckForAchieves(){
-        if(Floor > 10 && defaults.bool(forKey: "Review")){
+        if(Floor > 10 && !defaults.bool(forKey: "Review")){
             defaults.set(true, forKey: "Review")
-            let alert = UIAlertController(title: "Hey Listen!", message: "Love Tower Diver? Help us out with a review and get a free Revival Counter!", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Sure!", style: UIAlertAction.Style.default, handler: { action in
-                if #available(iOS 10.3, *) {
-                    SKStoreReviewController.requestReview()
-                }
-            }))
-            alert.addAction(UIAlertAction(title: "No Thanks", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
+            Review()
         }
         if(Floor >= 50){
             GetAchieve("Beginner Adventurer")
@@ -1824,7 +1869,7 @@ class ViewController: UIViewController {
     
     func DisplaySetup(){
         let LabelImage: UIImage = resizeImage(image: UIImage(named: "Gray_typeE_none.png")!, Label: Potion_Label)
-        Potion_Label.backgroundColor = UIColor(patternImage: LabelImage)
+        //Potion_Label.backgroundColor = UIColor(patternImage: LabelImage)
         
         let LabelImage2: UIImage = resizeImage(image: UIImage(named: "Gray_typeC_none.png")!, Label: Power_Label)
         Power_Label.backgroundColor = UIColor(patternImage: LabelImage2)
@@ -1832,9 +1877,17 @@ class ViewController: UIViewController {
         let LabelImage3: UIImage = resizeImage(image: UIImage(named: "Gray_typeC_none.png")!, Label: Gold_Label)
         Gold_Label.backgroundColor = UIColor(patternImage: LabelImage3)
         
-        HP_Label.layer.borderWidth = 2
-        HP_Label.layer.borderColor = UIColor.black.cgColor
         
+        //HP_Label.layer.borderWidth = 2
+        //HP_Label.layer.borderColor = UIColor.black.cgColor
+        
+        HP_Label.backgroundColor = .clear
+        
+        CreateProgressBar()
+        ReadStats()
+        ModifyProgressBar(CGFloat(MaxHP / CurrentHP))
+        
+        self.view.sendSubviewToBack(progressBar)
         
         SubViewUnder(Image: "Gray_typeC_none",
                      x: CGFloat(Name_Label.frame.origin.x),
@@ -1869,6 +1922,8 @@ class ViewController: UIViewController {
         Gold_Label.isUserInteractionEnabled = true
         Gold_Label.addGestureRecognizer(tap3)
         
+        
+        
         let isRunningTestFlightBeta = Bundle.main.appStoreReceiptURL?.lastPathComponent=="sandboxReceipt"
         if(isRunningTestFlightBeta || PullBool(Stat: "CC_Debug") || hackedDebug()){
             let tap4 = UITapGestureRecognizer(target: self, action: #selector(Debug))
@@ -1876,13 +1931,23 @@ class ViewController: UIViewController {
             Name_Label.addGestureRecognizer(tap4)
         }
         
-        let tap5 = UITapGestureRecognizer(target: self, action: #selector(UsePotion))
-        Potion_Label.isUserInteractionEnabled = true
-        Potion_Label.addGestureRecognizer(tap5)
+        //let tap5 = UITapGestureRecognizer(target: self, action: #selector(UsePotion))
+        //Potion_Label.isUserInteractionEnabled = true
+        //Potion_Label.addGestureRecognizer(tap5)
+        
+        //"Gray_typeE_none.png"
+        
+        let PotionButton = UIButton(frame: Potion_Label.frame)
+        PotionButton.setBackgroundImage(UIImage(named: "Gray_typeE_none.png"), for: .normal)
+        PotionButton.setImage(UIImage(named: "Gray_typeE_normal.png"), for: .selected)
+        PotionButton.setImage(UIImage(named: "Gray_typeE_normal.png"), for: .highlighted)
+        PotionButton.contentMode = .scaleToFill
+        PotionButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(UsePotion)))
+        self.view.addSubview(PotionButton)
+        self.view.sendSubviewToBack(PotionButton)
     }
     
     @IBAction func FindTreasure(){
-        
         let a: Int = Int(arc4random_uniform(120))
         if (a >= 0 && a <= 25)
         {
@@ -1918,6 +1983,8 @@ class ViewController: UIViewController {
     }
     
     func Battle(isMimic: Bool = false, MimicName: String = "Mimic"){
+        MusicPlayer().startBackMusic("Battle")
+        
         if (!isMimic && !SquirrelMark)
         {
             let Total: UInt32 = UInt32((EnemyChance * 2) + BossChance + EnhancedChance + 2)
@@ -1983,9 +2050,10 @@ class ViewController: UIViewController {
     }
     
     func DisplayAlert(title: String, message: String, button: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: button, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let popup = PopupDialog(title: title, message: message)
+        let buttonOne = DefaultButton(title: button) {}
+        popup.addButtons([buttonOne])
+        self.present(popup, animated: true, completion: nil)
     }
     
     func AppendLog(_ text: String){
@@ -2033,6 +2101,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func RunAway_FullLoss(){
+        MusicPlayer().startBackMusic("background")
         isSquirrelFight = false
         if(!hasShoes){
             AdventureLog.text = "You ran away losing all of your Gold and Potions!"
@@ -2047,6 +2116,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func RunAway(){
+        MusicPlayer().startBackMusic("background")
         isSquirrelFight = false
         if(!hasShoes){
             AdventureLog.text = "You ran away losing half of your Gold and Potions!"
@@ -2199,6 +2269,11 @@ class ViewController: UIViewController {
         NSLog("Adjustment: " + String(CA))
         NSLog("Damage: " + String(D))
         
+        if(!inHell){
+            MusicPlayer().startBackMusic("background")}
+        else{
+            MusicPlayer().startBackMusic("Hell")
+        }
         return D
     }
     
@@ -2266,6 +2341,7 @@ class ViewController: UIViewController {
     //Effected Stat, Amount
     //Buffs and debuffs are now merged and will simply use enegative numbers for debuffs
     func Curse(useString: Bool = false, isEvent: Bool = false, isBagCurse: Bool = false, ConfusionCurse: Bool = false){
+        MusicPlayer().playSoundEffect(soundEffect: "Error")
         let CurseNum: Int = Int(arc4random_uniform(UInt32(Curses.count)))
         let GenCurse: String = Curses[CurseNum]
         let FullCurse: [String] = GenCurse.components(separatedBy: ",")
@@ -2329,6 +2405,7 @@ class ViewController: UIViewController {
     
     @IBAction func UsePotion(_ sender: Any) {
         if(Potions >= 1 && CurrentHP < MaxHP){
+            MusicPlayer().playSoundEffect(soundEffect: "Potion")
             Potions -= 1
             CurrentHP += (MaxHP / 10).rounded(toPlaces: 0)
             if(CurrentHP > MaxHP){
@@ -2476,6 +2553,7 @@ class ViewController: UIViewController {
     }
     
     func EncounterGilgamesh(){
+        MusicPlayer().startBackMusic("Hell")
         var Adjustment: Int = (Floor / 25)
         if(Adjustment < 1){
             Adjustment = 1
@@ -2507,6 +2585,7 @@ class ViewController: UIViewController {
             AppendLog("Gilgamesh raises his great halbred for one last strike! As he brings it down upon you you can't help but think about all the sins you've commited..")
         }
         else{
+            MusicPlayer().startBackMusic("background")
             let LootedGold: Double = Double(arc4random_uniform(UInt32(Floor * 4000))) + 4000
             AdventureLog.text = "You defeated Gilgamesh! He rewards you with " + DoubleString(Input: LootedGold) + "G and a weapon!"
             GiveWeapon(SkipText: true, UseContainer: false, Total: 1, UseNext: false, isCursed: false)
@@ -2523,6 +2602,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func RunAway_NoLoss(){
+        MusicPlayer().startBackMusic("background")
         AdventureLog.text = "Gilgamesh allows you to escape..."
         SetLabels()
         Next()
@@ -2714,6 +2794,7 @@ class ViewController: UIViewController {
     
     func FindTrap()
     {
+        MusicPlayer().playSoundEffect(soundEffect: "Error")
         MainImage.image = UIImage(named: Theme + "Trap.png")
         let a: Int = Int(arc4random_uniform(101))
         if (a >= 0 && a < 25){
@@ -2828,6 +2909,8 @@ class ViewController: UIViewController {
     
     @IBAction func EnterHell()
     {
+        MusicPlayer().startBackMusic("Hell")
+        
         GetAchieve("The Bowels Of Hell")
         let image = UIImage(named: "HellBricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)
@@ -3243,6 +3326,7 @@ class ViewController: UIViewController {
     
     @IBAction func DefeatDeath()
     {
+        MusicPlayer().stopBackgroundMusic()
         GetAchieve("Not Today")
         if(AfterDeath >= 10 && AfterDeath < 100){
             GetAchieve("Death Killer")
@@ -3288,6 +3372,9 @@ class ViewController: UIViewController {
         HellFloorTenths = 0
         SetLabels()
         SaveStats()
+        
+        MusicPlayer().startBackMusic("background")
+        
         Next()
     }
     
@@ -3314,6 +3401,9 @@ class ViewController: UIViewController {
         HellFloorTenths = 0
         SetLabels()
         SaveStats()
+        
+        MusicPlayer().startBackMusic("background")
+        
         Next()
     }
     
@@ -3457,6 +3547,7 @@ class ViewController: UIViewController {
             HellNext()
         }
         else{
+            MusicPlayer().playSoundEffect(soundEffect: "Purchase")
             Gold -= Cost
             switch CurrentProduct[0] {
             case "Potion":
@@ -3504,6 +3595,10 @@ class ViewController: UIViewController {
     
     @IBAction func ReturnHome()
     {
+        MusicPlayer().startBackMusic("background")
+        inHell = false
+        defaults.set(false, forKey: "inHell")
+        
         enablePotions()
         AdventureLog.text = "You feel your soul letting go. Everything goes black. When you awake you are back in the Tower.. Whas it just a dream?"
         let image = UIImage(named: "Bricks.png")
@@ -3812,7 +3907,7 @@ class ViewController: UIViewController {
             overlayView.center = view.center
             overlayView.backgroundColor = UIColor(rgb: 0x000000, alpha: 1) //727272
             overlayView.clipsToBounds = true
-            overlayView.layer.cornerRadius = 10
+            overlayView.layer.cornerRadius = 0
             
             imageView.frame = CGRect(x: 0, y: 0, width: 200, height: 200)
             imageView.contentMode = .scaleAspectFit

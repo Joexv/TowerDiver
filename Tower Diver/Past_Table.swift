@@ -92,11 +92,29 @@ class Past_Table: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tblView.backgroundColor = .clear //UIColor(patternImage: scaled)
         
+        //BackButt.layer.borderWidth = 1
+        //BackButt.layer.borderColor = UIColor.white.cgColor
         // Do any additional setup after loading the view.
+        
+        TitleLabel.backgroundColor = .black
+        TitleLabel.layer.borderWidth = 2
+        TitleLabel.layer.borderColor = UIColor(red: 70, green: 61, blue: 48).cgColor
     }
+    
+    func SubViewUnder(Image: String, x:CGFloat, y:CGFloat,width:CGFloat,height:CGFloat,Tag:Int){
+        let labelBackground = UIImageView(frame: CGRect(x: x, y: y, width: width, height: height))
+        labelBackground.image = UIImage(named: Image)!
+        labelBackground.tag = Tag
+        self.view.insertSubview(labelBackground, at: 0)
+    }
+    
+    @IBOutlet weak var TitleLabel: UILabel!
+    
+
     
     @IBOutlet weak var tblView: UITableView!
     
+    @IBOutlet weak var BackButt: UIButton!
     @IBAction func Return(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

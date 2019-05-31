@@ -10,6 +10,7 @@ import UIKit
 import SafariServices
 import SwiftyStoreKit
 import StoreKit
+import PopupDialog
 
 class SideMenu: UITableViewController {
     
@@ -20,20 +21,28 @@ class SideMenu: UITableViewController {
     var hasESP: Bool = false
     var BattlePredict: Bool = false
     let defaults = UserDefaults.standard
+    var Name: String = "Unknown Adventurer"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        MusicPlayer().playSoundEffect(soundEffect: "Click")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         ReadStats()
+        MusicState.isOn = !defaults.bool(forKey: "Music")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        MusicPlayer().playSoundEffect(soundEffect: "Close")
+        super.viewWillDisappear(true)
     }
     
     func ReadStats(){
         HighestFloor = defaults.object(forKey: "HighestFloor") as! Int
+        Name = defaults.object(forKey: "Name") as! String
         Potions = defaults.object(forKey: "Potions") as! Double
         CurrentHP = defaults.object(forKey: "CurrentHP") as! Double
         MaxHP = defaults.object(forKey: "MaxHP") as! Double
@@ -45,14 +54,15 @@ class SideMenu: UITableViewController {
     }
     
     @IBAction func HighestFloor_Button(_ sender: Any) {
-        var TempString: String = "Class: " + (defaults.string(forKey: "HF_Class") ?? "Warrior")
-        TempString = TempString + "\n" + "Power: " + (defaults.string(forKey: "HF_Power") ?? "420")
+        var TempString: String = defaults.string(forKey: "HF_Name") ?? "Unknown Adventurer"
+        TempString = TempString + "\nClass: " + (defaults.string(forKey: "HF_Class") ?? "Warrior")
+        TempString = TempString + "\nPower: " + (defaults.string(forKey: "HF_Power") ?? "420")
         
         if(defaults.bool(forKey: "HF_KilledDeath")){
-            TempString = TempString + "\n" + "Had killed Death."
+            TempString = TempString + "\nHad killed Death."
         }
         if(defaults.bool(forKey: "HF_SquirrelMark")){
-            TempString = TempString + "\n" + "Had the Mark of The Squirrel"
+            TempString = TempString + "\nHad the Mark of The Squirrel"
         }
         DisplayAlert(title: "Best Tower Diver", message: TempString, button: "OK")
     }
@@ -63,15 +73,17 @@ class SideMenu: UITableViewController {
     }
     
     func DisplayAlert(title: String, message: String, button: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: button, style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let popup = PopupDialog(title: title, message: message)
+        let buttonOne = DefaultButton(title: button) { }
+        popup.addButtons([buttonOne])
+        self.present(popup, animated: true, completion: nil)
     }
     
     func Alert(_ message: String){
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
+        let popup = PopupDialog(title: "ERROR", message: message)
+        let buttonOne = DefaultButton(title: "OK") { }
+        popup.addButtons([buttonOne])
+        self.present(popup, animated: true, completion: nil)
     }
     @IBAction func Achievement(_ sender: Any) {
         defaults.set(true, forKey: "ShouldAchieve")
@@ -82,20 +94,15 @@ class SideMenu: UITableViewController {
     @IBAction func BuyRevives(_ sender: Any) {
         ReviveCounter = defaults.integer(forKey: "ReviveCounter")
         if(ReviveCounter != 999){
-            let alert = UIAlertController(title: "Purchase Revive Counters?",
-                                          message: "Dragon ate you? Or maybe you died by a slime? However it happens dying sucks! But don't let a little death stop you! Buy some Revival Counters today and continue adventuring stronger than before!",
-                                          preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Buy 10 Revival Counters - $1", style: .default, handler: {action in
-                self.DoBuy("Revive_10")
-            }))
-            alert.addAction(UIAlertAction(title: "Buy 30 Revival Counters - $2", style: .default, handler: {action in
-                self.DoBuy("Revive_30")
-            }))
-            alert.addAction(UIAlertAction(title: "Buy Unlimited Revival Counters - $20", style: .default, handler: {action in
-                self.DoBuy("Revive_Unlim")
-            }))
-            alert.addAction(UIAlertAction(title: "No Thanks I like Dying", style: .cancel, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+            let Title: String = "Purchase Revive Counters?"
+            let Message: String = "Dragon ate you? Or maybe you died by a slime? However it happens dying sucks! But don't let a little death stop you! Buy some Revival Counters today and continue adventuring stronger than before!"
+            let popup = PopupDialog(title: Title, message: Message)
+            let buttonOne = DefaultButton(title: "Buy 10 Revival Counters - $1") { self.DoBuy("Revive_10") }
+            let buttonTwo = DefaultButton(title: "Buy 30 Revival Counters - $2") { self.DoBuy("Revive_30") }
+            let buttonThree = DefaultButton(title: "Buy Unlimited Revival Counters - $20") { self.DoBuy("Revive_Unlim") }
+            let buttonFour = DefaultButton(title: "No thank I like dying") {}
+            popup.addButtons([buttonOne, buttonTwo, buttonThree, buttonFour])
+            self.present(popup, animated: true, completion: nil)
         }else{
             DisplayAlert(title: "Uh Oh", message: "It looks like you already have unlimited Revival Counters! You don't need to buy anymore!", button: "Oh my bad thanks")
         }
@@ -386,18 +393,17 @@ class SideMenu: UITableViewController {
     let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     
     @IBAction func About_Button(_ sender: Any) {
-        DisplayAlert(title: "Info", message: "v" + Version + " - Alpha" + "\n" + "Made by Joe Oliveira" + "\n" + "With help from Joseph Mooney" + "\n" + "For a full list of credits check out our wiki page!", button: "OK")
+        DisplayAlert(title: "Info", message: "v \(Version) - Beta\nMade by Joe Oliveira.\nSpecial thanks to Joseph Mooney.\n\n For a full list of credits check out our wiki page!", button: "OK")
     }
     
 
     
     @IBAction func Donate_Button(_ sender: Any) {
-        let alert = UIAlertController(title: "Donate?", message: "Would you like to donate $1? Each donation adds 5000 Power, Gold and HP along with 50 potions, to your current character.", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { action in
-            self.DoBuy2()
-        }))
-        self.present(alert, animated: true, completion: nil)
+        let popup = PopupDialog(title: "Donate?", message: "Would you like to donate $1? Each donation adds 5000 Power, Gold and HP along with 50 potions, to your current character.")
+        let buttonOne = DefaultButton(title: "No") { }
+        let buttonTwo = DefaultButton(title: "Yes") { self.DoBuy2() }
+        popup.addButtons([buttonOne, buttonTwo])
+        self.present(popup, animated: true, completion: nil)
     }
     
     
@@ -436,6 +442,16 @@ class SideMenu: UITableViewController {
             self.BuyProd()
         }else{
             DisplayAlert(title: "Error", message: "Cannot make purchases on this device!", button: "OK")
+        }
+    }
+    
+    @IBOutlet weak var MusicState: UISwitch!
+    @IBAction func MusicState(_ sender: Any) {
+        defaults.set(!MusicState.isOn, forKey: "Music")
+        if(MusicState.isOn){
+            MusicPlayer().startBackMusic("background")
+        }else{
+            MusicPlayer().stopBackgroundMusic()
         }
     }
     

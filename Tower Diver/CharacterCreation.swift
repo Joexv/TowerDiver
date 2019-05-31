@@ -112,18 +112,22 @@ class CharacterCreation: UIViewController {
     
     func AdjustClass(){
         if(ClassStepper.value == 0){
+            MusicPlayer().playSoundEffect(soundEffect: "Click")
             ClassLabel.text = "Warrior"
             ClassDescriptionLabel.text = "   -Warriors tend to find more weapons, but will also find more enemies. They also feature a high starting health!"}
         
         if(ClassStepper.value == 1){
+            MusicPlayer().playSoundEffect(soundEffect: "Click")
             ClassLabel.text = "Ranger"
             ClassDescriptionLabel.text = "   -Rangers are immune to traps and find lots of gold, but they gain less power from weapons."}
         
         if(ClassStepper.value == 2){
+            MusicPlayer().playSoundEffect(soundEffect: "Click")
             ClassLabel.text = "Mage"
             ClassDescriptionLabel.text = "   -Mages have a higher chance of finding potions, lower chance of finding curses, and they gain a small amount of power for each potion they drink, but they feature a very low starting health."}
         
         if(ClassStepper.value == 3 && HauntedUnlocked){
+            MusicPlayer().playSoundEffect(soundEffect: "Click")
             ClassLabel.text = "The Haunted"
             ClassDescriptionLabel.text = "   -The Haunted is a class that is not strong against nor weak against any other class. They begin with only 5 Adjustment points for their base stats and they begin with 0 stats."
         }else if(ClassStepper.value == 3 && !HauntedUnlocked){
@@ -131,14 +135,17 @@ class CharacterCreation: UIViewController {
         }
         
         if(ClassStepper.value == 4 && KingUnlocked){
+            MusicPlayer().playSoundEffect(soundEffect: "Click")
             ClassLabel.text = "King"
             ClassDescriptionLabel.text = "   -As the King you control all the gold in the land. You begin with 7500 Gold and will find larger stacks of gold. As the King you are also not trained in teh art of war and your power starts at 50 and cannot be increased with Adjustments. As the King you have knowledge of all of secrets and tactics of your kingdom and will not fall for traps."
         }else if(ClassStepper.value == 4 && !KingUnlocked){
             if(ToastUnlocked){
+                MusicPlayer().playSoundEffect(soundEffect: "Click")
                 ClassStepper.value = 5
                 ClassLabel.text = "Toaster"
                 ClassDescriptionLabel.text = "   -Quad slot toasting power for maximum toast capacity. 100 different power settings. 99 settings cause burnt toast and the perfect setting changes everytime you use it. Like wtf. Why do toasters do that."
             }else{
+                MusicPlayer().playSoundEffect(soundEffect: "Click")
                 ClassStepper.value = 0
                 ClassLabel.text = "Warrior"
                 ClassDescriptionLabel.text = "   -Warriors tend to find more weapons, but will also find more enemies. They also feature a high starting health!"
@@ -168,8 +175,9 @@ class CharacterCreation: UIViewController {
             DisplayAlert(title: "", message: "You have not unlocked this class!", button: "OK")
         }
         else{
-        DispatchQueue.main.async(execute: {
-            self.performSegue(withIdentifier: "StatsPageSegue", sender: nil)
+            MusicPlayer().playSoundEffect(soundEffect: "Confirm")
+            DispatchQueue.main.async(execute: {
+                self.performSegue(withIdentifier: "StatsPageSegue", sender: nil)
             })
         }
     }

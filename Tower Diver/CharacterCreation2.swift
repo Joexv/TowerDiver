@@ -101,6 +101,7 @@ class CharacterCreation2: UIViewController {
     var BaseHP: Int = 0
     
     @IBAction func HP_Stepper_OnChange(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Click")
         if ( HP_Stepper.value == 0 && HP > (BaseHP - 50) && Class != 4 && Class != 5) {
             HP -= 25
             if(HP < 10){
@@ -120,6 +121,7 @@ class CharacterCreation2: UIViewController {
     
     
     @IBAction func Power_Stepper_OnChange(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Click")
         if ( Power_Stepper.value == 0 && Power > 10 && Class != 4 && Class != 5) {
             Power -= 10
             Adjustments += 1
@@ -135,6 +137,7 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Gold_Stepper_OnChange(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Click")
         if ( Gold_Stepper.value == 0 && Gold > 0 && Class != 4 && Class != 5) {
             Gold -= 25
             Adjustments += 1
@@ -150,6 +153,7 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Potions_Stepper_OnChange(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Click")
         if ( Potions_Stepper.value == 0 && Potions > 0 && Class != 4 && Class != 5) {
             Potions -= 1
             Adjustments += 1
@@ -165,6 +169,7 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Reset_Button(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Close")
         ResetStats()
         SetStatLabels()
         Adjustments = 10
@@ -178,6 +183,7 @@ class CharacterCreation2: UIViewController {
     }
     
     @IBAction func Finish_Button(_ sender: Any) {
+        MusicPlayer().playSoundEffect(soundEffect: "Confirm")
         defaults.set(HP, forKey: "MaxHP")
         defaults.set(HP, forKey: "CurrentHP")
         defaults.set(Power, forKey: "Power")
