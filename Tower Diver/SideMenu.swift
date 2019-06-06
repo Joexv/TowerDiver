@@ -12,7 +12,7 @@ import SwiftyStoreKit
 import StoreKit
 import PopupDialog
 
-class SideMenu: UITableViewController {
+class SideMenuTable: UITableViewController {
     
     var HighestFloor: Int = 0
     var Potions: Double = 0
@@ -87,7 +87,8 @@ class SideMenu: UITableViewController {
     }
     @IBAction func Achievement(_ sender: Any) {
         defaults.set(true, forKey: "ShouldAchieve")
-        dismiss(animated: true, completion: nil)
+        sideMenuController?.hideMenu()
+        //dismiss(animated: true, completion: nil)
     }
     
     var ReviveCounter: Int = 0
@@ -335,7 +336,8 @@ class SideMenu: UITableViewController {
             if(CurrentHP < MaxHP){
                 defaults.set(true, forKey: "TempPotionCheck")
                 SaveStats()
-                dismiss(animated: true, completion: nil)
+                sideMenuController?.hideMenu()
+                //dismiss(animated: true, completion: nil)
                 //DisplayAlert(title: "", message: "HP healed to full!", button: "OK")
             }else{
                 DisplayAlert(title: "", message: "You are at full health no need to heal.", button: "OK")
@@ -361,13 +363,15 @@ class SideMenu: UITableViewController {
     
     @IBAction func Restart_Button(_ sender: Any) {
         defaults.set(true, forKey: "RestartCharacter")
-        dismiss(animated: true, completion: nil)
+        sideMenuController?.hideMenu()
+        //dismiss(animated: true, completion: nil)
     }
     
     @IBAction func Return_Button(_ sender: Any) {
         SaveStats()
-        defaults.set(true, forKey: "ReturnToTitle")
+        //defaults.set(true, forKey: "ReturnToTitle")
         dismiss(animated: true, completion: nil)
+        
     }
     @IBAction func BattlePredict_Switch(_ sender: Any) {
             defaults.set(BattleSwitch.isOn, forKey: "BattlePredict")
@@ -387,7 +391,8 @@ class SideMenu: UITableViewController {
         
     }
     @IBAction func ReturnButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        sideMenuController?.hideMenu()
+        //dismiss(animated: true, completion: nil)
     }
     
     let Version: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String

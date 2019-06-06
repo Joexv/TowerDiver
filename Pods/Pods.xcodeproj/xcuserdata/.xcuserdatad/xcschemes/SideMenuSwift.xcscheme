@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BB5E7C5F8D099256763B404D49D2DAFD"
-               BlueprintName = "Pods-Tower Diver"
+               BlueprintIdentifier = "5D5B1ABDC4DE80CA0EB5F9712F5DD2D3"
+               BlueprintName = "SideMenuSwift"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "Pods-Tower Diver.framework">
+               BuildableName = "SideMenuSwift.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -11,6 +11,7 @@ import SafariServices
 import AVFoundation
 import SwiftySound
 import PopupDialog
+import SideMenuSwift
 
 class MusicPlayer{
     static let shared = MusicPlayer()
@@ -91,6 +92,11 @@ class TitleScreen: UIViewController {
         SetBackground()
         try! AVAudioSession().setCategory(.ambient)
         try! AVAudioSession().setActive(true, options: .notifyOthersOnDeactivation)
+        
+        SideMenuController.preferences.basic.direction = .right
+        SideMenuController.preferences.basic.position = .above
+        SideMenuController.preferences.basic.menuWidth = 200
+        SideMenuController.preferences.basic.hideMenuWhenEnteringBackground = true
     }
    
     override func viewDidAppear(_ animated: Bool) {

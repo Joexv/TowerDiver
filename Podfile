@@ -19,7 +19,8 @@ target 'Tower Diver' do
     # Pods for testing
   end
 
-pod 'SideMenu'
+#pod 'SideMenu'
+pod 'SideMenuSwift'
 pod 'SwiftyStoreKit'
 pod 'PopupDialog'
 pod 'XLActionController'

@@ -44,7 +44,7 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SideMenu.xcscheme</key>
+		<key>SideMenuSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

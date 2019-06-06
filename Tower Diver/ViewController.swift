@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import SideMenu
+//import SideMenu
+import SideMenuSwift
 import XLActionController
 import SwiftyStoreKit
 import StoreKit
@@ -15,7 +16,7 @@ import NotificationBannerSwift
 import GTProgressBar
 import PopupDialog
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SideMenuControllerDelegate {
 
     let defaults = UserDefaults.standard
     
@@ -99,7 +100,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        sideMenuController?.delegate = self
         let image = UIImage(named: "Bricks.png")
         let scaled = UIImage(cgImage: image!.cgImage!, scale: UIScreen.main.scale, orientation: image!.imageOrientation)        
         MainView.backgroundColor = UIColor(patternImage: scaled)
@@ -419,11 +420,12 @@ class ViewController: UIViewController {
     }
     
     func disablePotions(){
-        Potion_Label.isUserInteractionEnabled = false
+        UsePotion_Button.isEnabled = false
     }
     
     func enablePotions(){
-        Potion_Label.isUserInteractionEnabled = true
+        //Potion_Label.isUserInteractionEnabled = true
+        UsePotion_Button.isEnabled = true
     }
     
     func Dead(){
@@ -1706,7 +1708,12 @@ class ViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-
+        NSLog("Did appear")
+        AppearTasks()
+        super.viewDidAppear(false)
+    }
+    
+    func AppearTasks(){
         if(!defaults.bool(forKey: "DisplaySetup")){
             DisplaySetup()
             MusicPlayer().startBackMusic()
@@ -1716,7 +1723,7 @@ class ViewController: UIViewController {
             if(defaults.bool(forKey: "hasCharacter")){
                 ReadStats()
                 if(defaults.bool(forKey: "TempPotionCheck")){
-                    if(Potion_Label.isUserInteractionEnabled){
+                    if(UsePotion_Button.isEnabled){
                         MusicPlayer().playSoundEffect(soundEffect: "heal_long")
                         Potions -= 8
                         CurrentHP = MaxHP
@@ -1819,6 +1826,11 @@ class ViewController: UIViewController {
         }
     }
     
+    @IBAction func SideMenu(_ sender: Any) {
+        SaveStats()
+        sideMenuController?.revealMenu()
+    }
+    
     func CheckForAchieves(){
         if(Floor > 10 && !defaults.bool(forKey: "Review")){
             defaults.set(true, forKey: "Review")
@@ -1865,7 +1877,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
     
     func DisplaySetup(){
         let LabelImage: UIImage = resizeImage(image: UIImage(named: "Gray_typeE_none.png")!, Label: Potion_Label)
@@ -4009,6 +4020,37 @@ class ViewController: UIViewController {
         AdventureLog.setContentOffset(.zero, animated: true)
         topEvent("Begin", #selector(Restart))
         bottomEvent("Begin", #selector(Restart))
+    }
+    
+    func sideMenuController(_ sideMenuController: SideMenuController,
+                            animationControllerFrom fromVC: UIViewController,
+                            to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return BasicTransitionAnimator(options: .transitionFlipFromLeft, duration: 0.6)
+    }
+    
+    func sideMenuController(_ sideMenuController: SideMenuController, willShow viewController: UIViewController, animated: Bool) {
+        print("[Example] View controller will show [\(viewController)]")
+    }
+    
+    func sideMenuController(_ sideMenuController: SideMenuController, didShow viewController: UIViewController, animated: Bool) {
+        print("[Example] View controller did show [\(viewController)]")
+    }
+    
+    func sideMenuControllerWillHideMenu(_ sideMenuController: SideMenuController) {
+        print("[Example] Menu will hide")
+        AppearTasks()
+    }
+    
+    func sideMenuControllerDidHideMenu(_ sideMenuController: SideMenuController) {
+        print("[Example] Menu did hide.")
+    }
+    
+    func sideMenuControllerWillRevealMenu(_ sideMenuController: SideMenuController) {
+        print("[Example] Menu will reveal.")
+    }
+    
+    func sideMenuControllerDidRevealMenu(_ sideMenuController: SideMenuController) {
+        print("[Example] Menu did reveal.")
     }
     
 }
